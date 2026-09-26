@@ -3,3 +3,5 @@
 data/LibriSpeech/
 data/*.tar.gz
 __pycache__/
+.watchdog_retries
+data/.heartbeat
