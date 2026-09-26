@@ -156,11 +156,17 @@ def plan_pieces(text, split="smart"):
     return plan
 
 
-def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True):
+def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms=None):
     """Yield audio chunks: a spoken piece, then its pause, for each piece.
 
     `pieces` can arrive over time (from a live LLM), which is why every piece
     is followed by its pause right away: we can't know yet if it's the last.
+
+    `pause_ms` is an optional callable taking (piece, ends_sentence) and
+    returning milliseconds of silence after the piece, or None to fall back
+    to the PAUSES_MS table. Returning 0 inserts no pause at all. The learned
+    pause model (toast/learned_pauses.py) plugs in here; the live-LLM path
+    keeps the table because the full text isn't known yet.
     """
     rng = np.random.default_rng(seed)
     sr = voice.sample_rate
@@ -174,22 +180,30 @@ def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True):
         speech = fade_edges(soften_ending(trim_silence(audio, sr), sr), sr)
         yield np.clip(speech + room.next(len(speech)), -1.0, 1.0)
 
-        low, high = OPENER_PAUSE_MS if is_opener(piece) else PAUSES_MS.get(ending_mark(piece), PAUSES_MS[""])
-        yield room.next(int(sr * rng.uniform(low, high) / 1000))
+        ms = pause_ms(piece, ends_sentence) if pause_ms is not None else None
+        if ms is None:
+            low, high = OPENER_PAUSE_MS if is_opener(piece) else PAUSES_MS.get(ending_mark(piece), PAUSES_MS[""])
+            ms = rng.uniform(low, high)
+        if ms > 0:
+            yield room.next(int(sr * ms / 1000))
         starts_sentence = ends_sentence
 
 
-def stream_speech(voice, text, split="smart", speed=1.0, seed=0):
+def stream_speech(voice, text, split="smart", speed=1.0, seed=0, pause_ms=None):
     """Speech for text that is already complete."""
-    return speak_pieces(voice, plan_pieces(text, split), speed, seed, final_slowdown=split != "sentence")
+    return speak_pieces(voice, plan_pieces(text, split), speed, seed,
+                        final_slowdown=split != "sentence", pause_ms=pause_ms)
 
 
-def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None):
+def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=None):
     """Speech for text that arrives bit by bit, e.g. an LLM reply.
 
     Playback starts with the first chunk, so at any moment we know how much
     audio is still queued ahead of the listener. When that gets low, the
     chunker is told to hurry.
+
+    `pause_ms`: optional callable (piece, ends_sentence) -> ms, as in
+    speak_pieces. None (default) uses the hand-written PAUSES_MS table.
     """
     chunker = chunker or StreamChunker()
     first_audio_at = None
@@ -208,13 +222,13 @@ def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None):
             yield from chunker.feed(token)
         yield from chunker.finish()
 
-    for chunk in speak_pieces(voice, pieces(), speed, seed):
+    for chunk in speak_pieces(voice, pieces(), speed, seed, pause_ms=pause_ms):
         if first_audio_at is None:
             first_audio_at = time.perf_counter()
         audio_made += len(chunk) / voice.sample_rate
         yield chunk
 
 
-def speak_naturally(voice, text, split="smart", speed=1.0, seed=0):
+def speak_naturally(voice, text, split="smart", speed=1.0, seed=0, pause_ms=None):
     """The whole text as one audio array."""
-    return np.concatenate(list(stream_speech(voice, text, split, speed, seed)))
+    return np.concatenate(list(stream_speech(voice, text, split, speed, seed, pause_ms=pause_ms)))

@@ -44,7 +44,7 @@ class SpeechResult:
 
 class ToastEngine:
     def __init__(self, voice=DEFAULT_VOICE, speed=DEFAULT_SPEED, seed=None, open_audio=False,
-                 wake_s=None, idle_db=None, attach_openers=False):
+                 wake_s=None, idle_db=None, attach_openers=False, pause_model=None):
         """voice: any name load_voice() accepts ("amy", "lessac", "piper:en_US-ryan-medium",
         "kitten", ...). seed: fix it for repeatable pause lengths; None varies them.
         open_audio: open the sound device now rather than on the first say(), so
@@ -52,12 +52,18 @@ class ToastEngine:
         already awake when the first word arrives. wake_s / idle_db: see
         LivePlayer (for speakers that swallow the first word). attach_openers:
         keep "Well," / "So," with the words after it (more natural, slower start;
-        research/notebook/12)."""
+        research/notebook/12). pause_model: None (default) uses the hand-written
+        PAUSES_MS table in toast/pacing.py. Pass a pause predictor (anything with
+        predict_pauses(text), e.g. experiments/e16_pause_model's PausePredictor)
+        to use learned pauses instead. The model only applies when the full text
+        is known up front; live token streams and any misaligned piece fall back
+        to the table."""
         self.voice = load_voice(voice)
         self.speed = speed
         self.seed = seed
         self.sample_rate = self.voice.sample_rate
         self.attach_openers = attach_openers
+        self.pause_model = pause_model
         self._player = None
         self._audio_options = {k: v for k, v in (("wake_s", wake_s), ("idle_db", idle_db)) if v is not None}
         self.voice.synthesize("Warm up.")  # the first call is always slower
@@ -95,7 +101,12 @@ class ToastEngine:
         tokens = [text] if isinstance(text, str) else text
         chunker = (_RecordingChunker(pieces, attach_openers=self.attach_openers) if pieces is not None
                    else StreamChunker(attach_openers=self.attach_openers))
-        return stream_from_llm(self.voice, tokens, speed=self.speed, seed=self.seed, chunker=chunker)
+        pause_ms = None
+        if isinstance(text, str) and self.pause_model is not None:
+            from toast.learned_pauses import learned_pauses
+            pause_ms = learned_pauses(self.pause_model, text)
+        return stream_from_llm(self.voice, tokens, speed=self.speed, seed=self.seed,
+                               chunker=chunker, pause_ms=pause_ms)
 
     def synthesize(self, text):
         return self.run(text, play=False).audio
