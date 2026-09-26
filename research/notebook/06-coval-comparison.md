@@ -1,10 +1,10 @@
-# 06: How do we compare with cloud TTS providers?
+# 06: Comparing against cloud TTS providers
 
 *2026-09-25 · Script: [`scripts/bench_coval.py`](../../scripts/bench_coval.py) · Data: [`benchmarks/coval_tts_v1_whisper1.csv`](../../benchmarks/coval_tts_v1_whisper1.csv), [`benchmarks/coval_tts_v1.csv`](../../benchmarks/coval_tts_v1.csv) · Analysis: [E07](../../experiments/e07_coval_time_format.py)*
 
 ## Question
 
-A published comparison ([Gradium, "TTS WER Benchmark 2026"](https://gradium.ai/content/tts-wer-benchmark-2026)) cites the **Coval** leaderboard (benchmarks.coval.ai/tts), which ranks 26 cloud TTS services. Can we run our best voices through the same test and place them on that board?
+A published comparison ([Gradium, "TTS WER Benchmark 2026"](https://gradium.ai/content/tts-wer-benchmark-2026)) cites the **Coval** leaderboard (benchmarks.coval.ai/tts), which ranks 26 cloud TTS services. Can the best local voices run through the same test and place on that board?
 
 ## Replicating Coval's method
 
@@ -13,7 +13,7 @@ Coval publishes its benchmark code ([github.com/coval-ai/benchmarks](https://git
 | Part | Coval | Ours |
 |---|---|---|
 | Prompts | `tts-v1`: 30 customer-service sentences with order numbers, tracking codes, prices, times, names | Same file, copied to `samples/coval_tts_v1.json` (Apache-2.0) |
-| Transcription | OpenAI hosted **`whisper-1`** | **`whisper-1`** via the author's API key (about $0.17 of audio at $0.006/min); also Whisper large-v2 locally for comparison |
+| Transcription | OpenAI hosted **`whisper-1`** | **`whisper-1`** via the OpenAI API (about $0.17 of audio at $0.006/min); also Whisper large-v2 locally for comparison |
 | Normalization | `whisper_normalizer` `EnglishTextNormalizer` | same |
 | WER | pooled: sum of S+D+I ÷ sum of reference words | same (`jiwer`) |
 | TTFA | first chunk + leading silence (10 ms frames, RMS > 0.01, 1 ms hop) | same rule, applied to our first chunk |
@@ -21,7 +21,7 @@ Coval publishes its benchmark code ([github.com/coval-ai/benchmarks](https://git
 
 Our voices ran through the full pipeline (`smart` split, speed 0.9). TTFA was re-measured for all voices together in one session ("Best performance" power mode), because lessac-high had been timed earlier in balanced mode (709 ms at the time, versus 333 ms re-timed).
 
-Cloud numbers are the Coval board for 2026-09-08 as reprinted in the Gradium article, which lists 14 of the 26 models. The live board loads its data with JavaScript, so we couldn't read it directly.
+Cloud numbers are the Coval board for 2026-09-08 as reprinted in the Gradium article, which lists 14 of the 26 models. The live board loads its data with JavaScript, so it couldn't be read directly.
 
 ## Results
 
@@ -65,7 +65,7 @@ The local large-v2 scoring agreed within about 1 point: ryan 5.6%, amy 6.1%, les
 | lessac | 6.0% | 2.9% |
 | lessac-high | 6.3% | 3.0% |
 
-The adjusted numbers are **not** comparable with the leaderboard, because we don't know whether cloud voices were affected. Whisper does write "3.15 pm" for Deepgram and Soniox recordings too ([E06](../../experiments/e06_cloud_pacing.py)), so they probably were. Only the raw WER belongs in a comparison.
+The adjusted numbers are **not** comparable with the leaderboard, because it is unknown whether cloud voices were affected. Whisper does write "3.15 pm" for Deepgram and Soniox recordings too ([E06](../../experiments/e06_cloud_pacing.py)), so they probably were. Only the raw WER belongs in a comparison.
 
 **Real mistakes that remain** (across voices; E07 lists amy's in full):
 

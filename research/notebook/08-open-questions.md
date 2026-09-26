@@ -4,7 +4,7 @@
 
 ## The remaining gap is prosody, not pacing
 
-Listening next to Soniox Grace, the listener's words: *"it knows where to stress the word, how to sound the word before a natural pause, and how to end if it's a question."* Our engine now matches cloud voices on speaking rate and pause lengths ([07](07-cloud-reference-and-pacing.md)), and its predicted naturalness is in the same range. But three things are missing:
+Listening next to Soniox Grace showed the gap clearly: a natural voice knows where to stress a word, how to shape the word before a natural pause, and how to end a question. Our engine now matches cloud voices on speaking rate and pause lengths ([07](07-cloud-reference-and-pacing.md)), and its predicted naturalness is in the same range. But three things are missing:
 
 1. **Stress:** which word in a sentence carries the emphasis.
 2. **Pre-pause shaping:** the lengthening and pitch movement on the word *before* a pause.
@@ -23,7 +23,7 @@ The engine controls *when* speech happens; it can't give a small model understan
 | **C. Distillation:** generate hours of Kokoro speech and fine-tune a fast Piper voice on it (GPU via Modal credits) | weeks | potentially large: Kokoro-like prosody at Piper speed | not guaranteed to work; GPU cost |
 | **D. Learned pause model:** predict pause positions and lengths from real speech (e.g. LibriTTS alignments) instead of the hand-written table | 1–2 weeks | moderate, and a genuine ML component | low: falls back to the table |
 
-**Suggested order:** measure Kokoro on this laptop with the existing tools (naturalness, word check, TTFA, listening next to `cloud_voices/`). That answers B directly and tells us whether Kokoro is a good enough teacher for C. Option A can run in parallel.
+**Suggested order:** measure Kokoro on this laptop with the existing tools (naturalness, word check, TTFA, listening next to `cloud_voices/`). That answers B directly and indicates whether Kokoro is a good enough teacher for C. Option A can run in parallel.
 
 ## Engine issues found by the Coval test ([06](06-coval-comparison.md))
 

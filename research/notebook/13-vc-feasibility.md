@@ -17,7 +17,7 @@ The distillation plan ([distillation-plan.md](../distillation-plan.md)) depends 
   - **OpenVoice v2** tone-color converter (22.05 kHz).
 - **Laptop (free):** evaluation with our tools, plus **speaker similarity** (SpeechBrain ECAPA): does it sound like amy or like Kokoro?
 
-**Credit hygiene** (following the author's Gaze-Detection project, where a failing final export once lost a run):
+**Run safeguards:** a failed final export once lost a whole training run, so:
 - A `--smoke` run on 1 clip goes first.
 - Every clip is validated and written to a Modal Volume and committed the moment it exists.
 - The laptop saves the audio before evaluating.

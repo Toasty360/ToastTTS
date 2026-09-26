@@ -2,13 +2,11 @@
 
 *2026-09-25 · Experiments [E09](../../experiments/e09_phrase_final_softening.py) ([output](../../experiments/results/e09_phrase_final_softening.txt)), [E10](../../experiments/e10_softening_amy.py) ([output](../../experiments/results/e10_softening_amy.txt)) · Code: `toast/pacing.py` `soften_ending()`, `toast/text_normalize.py`*
 
-## The listener's verdict on Kokoro ([10](10-kokoro.md))
+## Finding: the soft last word
 
-> "Kokoro sounded so natural, because they managed to handle the last word's amplitude before a natural pause. It's soft compared to our amy. That makes the total difference."
+Listening to Kokoro ([10](10-kokoro.md)) identified the key difference: Kokoro softens the last word's amplitude before a natural pause, where amy stays loud. That single difference accounts for much of the naturalness gap. This matches the project's opening idea (bring the volume down before a pause instead of stopping abruptly), now observed in a model that does it naturally.
 
-This is the project's opening idea (bring the volume down before a pause instead of stopping abruptly), now identified in a model that does it naturally.
-
-The listener also heard Kokoro pause inside "3:15 PM". The author's direction afterwards: **don't try to fix Kokoro's behaviour** ("that's how it's designed; cloud models handle those well"). Only one general fix was kept: times are written as words before synthesis ("three fifteen PM"), which removed the 480 ms pause Kokoro put between "3" and "15" and is harmless for every voice (`text_normalize.py`, tests). Kokoro's remaining pause after "PM" (360–580 ms with any spelling of PM) was left alone. The cloud voices and amy don't pause inside "3:15 PM" at all.
+Kokoro was also heard pausing inside "3:15 PM". Kokoro's own behaviour was left alone as out of scope (D25). Only one general fix was kept: times are written as words before synthesis ("three fifteen PM"), which removed the 480 ms pause Kokoro put between "3" and "15" and is harmless for every voice (`text_normalize.py`, tests). Kokoro's remaining pause after "PM" (360–580 ms with any spelling of PM) was left alone. The cloud voices and amy don't pause inside "3:15 PM" at all.
 
 ## E09: measuring the soft last word
 
@@ -27,7 +25,7 @@ Whisper word timestamps locate every word followed by a pause of 150 ms or more.
 
 The direction matches what was heard: Kokoro and Soniox get softer into a pause, while amy's last word is *louder* than the speech before it. (Deepgram Thalia also doesn't soften by this measure.)
 
-## What we built: `soften_ending()`
+## Implementation: `soften_ending()`
 
 Over the last `SOFT_TAIL_MS` of every piece, which is roughly the last word since every piece is followed by a pause, the volume eases down smoothly (raised cosine) to `SOFT_TAIL_DB`. It runs before the 12 ms edge fades, and costs nothing measurable (live TTFA 94 ms, no stalls).
 

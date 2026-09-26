@@ -6,7 +6,7 @@
 
 Which Piper voice gives the best mix of naturalness, correct words and speed? And do any of them beat KittenTTS?
 
-We searched for existing per-voice numbers first. There are published benchmarks for commercial TTS services, but nothing comparing Piper voices with each other, so we measured.
+No published benchmark compares Piper voices with each other (commercial TTS services have published numbers), so the voices were measured directly.
 
 ## Setup
 

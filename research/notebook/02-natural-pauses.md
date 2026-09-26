@@ -1,17 +1,17 @@
-﻿# 02: Natural pauses: we have to insert them ourselves
+﻿# 02: Natural pauses have to be inserted explicitly
 
 *2026-09-25 · Experiments [E02](../../experiments/e02_model_pause_gaps.py), [E03](../../experiments/e03_randomness_breathiness.py), [E04](../../experiments/e04_piece_end_punctuation.py)*
 
 ## The idea
 
-The author's starting idea: at the end of each piece of audio, *fade the volume down* instead of cutting to digital zero, so pauses sound natural. Two existing audio practices back this up:
+The starting idea: at the end of each piece of audio, *fade the volume down* instead of cutting to digital zero, so pauses sound natural. Two existing audio practices back this up:
 
 - **Fades prevent clicks.** Stopping mid-waveform produces an audible pop, and a 5–20 ms fade removes it.
 - **Real pauses aren't silent.** Every recording has faint room hiss. Podcast editors fill gaps with "room tone" so pauses don't sound dead.
 
 ## First attempt: stretch the model's own pauses (failed)
 
-If the model already leaves gaps at punctuation, we could find them in the audio and lengthen them, keeping whole-sentence intonation intact. **E02** checked for 10 ms frames below -40 dB, keeping runs of 30 ms or more:
+If the model already leaves gaps at punctuation, they could be found in the audio and lengthened, keeping whole-sentence intonation intact. **E02** checked for 10 ms frames below -40 dB, keeping runs of 30 ms or more:
 
 | Voice | Commas/;/: in the text | Gaps found | Typical gap |
 |---|---|---|---|
@@ -24,9 +24,9 @@ If the model already leaves gaps at punctuation, we could find them in the audio
 - 3922 barely pauses at commas at all, which is why it sounded "rushed".
 - Kitten and amy leave gaps between ordinary words (and stop consonants), so real pauses can't be told apart.
 
-**Conclusion:** pauses can't be reliably found in the audio. We insert our own.
+**Conclusion:** pauses can't be reliably found in the audio. The engine inserts its own.
 
-## What we built (`toast/pacing.py`)
+## Implementation (`toast/pacing.py`)
 
 For each piece of text:
 

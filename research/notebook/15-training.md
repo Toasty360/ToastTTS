@@ -64,14 +64,14 @@ All **1,023 clips converted, 0 failures** (Seed-VC f0-conditioned, 30 diffusion 
 
 ## Listening check of the training audio, and a change of goal
 
-The author listened to the converted clips (`61_dt_seedvc_f0.wav`): *"not amy's voice, the voice isn't good, sounds unnatural, but it has the prosody and the slang; certain words sounded different."* Then: *"I don't really need amy's voice, I just want a proper voice"* ([D38](../decisions.md)).
+The converted clips (`61_dt_seedvc_f0.wav`) were heard as an unnatural voice, though the prosody and delivery transferred. Since a student learns whatever its training audio sounds like, training only on converted audio risked teaching that unnatural voice along with the delivery — and keeping amy's identity was no longer required. The goal was therefore changed from "amy with better delivery" to "a proper, natural voice" ([D38](../decisions.md)).
 
 A student learns whatever its training audio sounds like. So training only on converted audio risks teaching the "unnatural voice" along with the delivery. Three runs, the same 2-hour cap each (L4):
 
 | Run | Training audio | Change | Status |
 |---|---|---|---|
 | A `20260926-0109` | converted (757 clips) | everything trains | **stopped after ~15 min** (would learn the converted voice) |
-| B `20260926-0120-freeze-decoder` | converted (757 clips) | **decoder frozen** (the part that renders the waveform, largely the voice) to keep amy's clean sound while the rest learns delivery | **stopped after ~20 min** ([D39](../decisions.md): by design it blends amy's sound with another voice's delivery; the author wants one clean voice) |
+| B `20260926-0120-freeze-decoder` | converted (757 clips) | **decoder frozen** (the part that renders the waveform, largely the voice) to keep amy's clean sound while the rest learns delivery | **stopped after ~20 min** ([D39](../decisions.md): by design it blends amy's sound with another voice's delivery, violating the one-clean-voice requirement) |
 | C `20260926-0121` | **original human recordings** (1,023 clips, 50.8 min) | everything trains; the student becomes the human speaker's voice, as Piper voices normally are | running; extended in stages until it is **one clean voice** (D39) |
 
 ### The run C speaker
@@ -80,9 +80,9 @@ DailyTalk ([Lee et al., arXiv:2207.01063](https://arxiv.org/abs/2207.01063)):
 
 - **"Two English-fluent speakers were employed as voice actors, each having lived in the US for at least 3 years."**
 - Recorded in a studio at KAIST, South Korea. The actors "recorded actual conversations rather than just reading the script", and were asked to add fillers (*uh, um*) in about half the dialogues.
-- The female speaker has 11,906 clips, 39,124 s (about 10.9 h) in total; we use 1,023 clips (50.8 min) from the first data shard.
+- The female speaker has 11,906 clips, 39,124 s (about 10.9 h) in total; 1,023 clips (50.8 min) from the first data shard were used.
 
-The author hears her as not American-accented ("but that's okay") and liked her voice from a raw training clip ("`dt00166_09.wav` … it's pretty"). A student trained on her recordings learns her accent. The input phonemes stay espeak `en-us`, and the model learns her realisation of them. Some Whisper mismatches in the gate were likely accent, which is why a mismatch was forgiven when the original recording had the same one.
+The speaker's accent was judged non-American but acceptable, and her raw voice was preferred from a training clip (`dt00166_09.wav`). A student trained on her recordings learns her accent. The input phonemes stay espeak `en-us`, and the model learns her realisation of them. Some Whisper mismatches in the gate were likely accent, which is why a mismatch was forgiven when the original recording had the same one.
 
 ## Training runs
 
@@ -104,15 +104,13 @@ Her own recordings' consistency is 0.62; her recordings vs amy score 0.21.
   VITS keeps removing artifacts through its adversarial losses long after the mel error flattens (piper's own note in `__main__.py`), so more training is the expected fix. Some of the word mismatches may be her accent: Whisper also mismatched her real recordings.
 - Speed unchanged (the same architecture), as D32 requires.
 
-**Listening verdict (author, midpoint clips):** *"this is bad… 61_dt_seedvc_f0 sounded better. The first 2 clips didn't sound natural. It's like voice breaking. These 2 clips don't have natural slang."*
-
-- The metrics had correctly flagged trouble (26 wrong words, and the alarm), but the headline numbers (melody, one voice) looked good. **Listening overruled the good-looking numbers, as intended (D37).**
+**Listening verdict (midpoint clips):** voice breaking on the first clips, unnatural delivery — judged worse than the converted clips. The metrics had correctly flagged trouble (26 wrong words, and the alarm), but the headline numbers (melody, one voice) looked good. **Listening overruled the good-looking numbers, as intended (D37).**
 - **Why the converted clip sounds better:** `61_dt_seedvc_f0` is not text-to-speech. It is the human's *recorded performance* (timing, slang, melody) re-voiced by a large diffusion model. The delivery is copied from a person. The student must *generate* delivery from text with ~16M parameters. So 61 is closer to an upper bound than to a fair competitor, and a small TTS student may not reach it.
 - "Voice breaking" is typical of a partly trained VITS fine-tune (pitch and timbre not yet stable).
 
 **Decision ([D40](../decisions.md)):**
 - Let run C finish its stage.
-- **Resume run A** (converted audio, everything trains, so one voice, the 61-style voice the author prefers) from its checkpoint at epoch 6699, for 2 h.
+- **Resume run A** (converted audio, everything trains, so one voice — the 61-style delivery that listening preferred) from its checkpoint at epoch 6699, for 2 h.
 - Compare A and C at matched training time, by ear.
 
 ## Evaluation
@@ -121,7 +119,7 @@ Her own recordings' consistency is 0.62; her recordings vs amy score 0.21.
 
 ### Is the shaking measurable? ([E15](../../experiments/e15_voice_stability.py), [output](../../experiments/results/e15_voice_stability.txt))
 
-The author then heard **the converted clips shaking too** (*"even 61 voice is shaking or breaking"*), so run A (which learns from them) was stopped. Standard Praat voice-stability measures, medians over the same 10 held-out sentences:
+The converted clips were then also heard as shaky/breaking, so run A (which learns from them) was stopped. Standard Praat voice-stability measures, medians over the same 10 held-out sentences:
 
 | Condition | Jitter | Shimmer | HNR |
 |---|---|---|---|
@@ -136,7 +134,7 @@ The author then heard **the converted clips shaking too** (*"even 61 voice is sh
 - **The run C student's "breaking" is barely visible here:** jitter is 20% above the human's, but HNR equals the human's. What is heard is likely pitch breaks or unstable intonation over a phrase, which cycle-level measures miss.
 - These measures are defined for sustained vowels; on connected speech every voice exceeds the textbook norms, so only the comparisons are meaningful.
 
-The author, at this point: *"I'm losing hope."* The stopping rule was stated to the author in advance: **if run C still breaks at the end of its 2 h stage, stop and report a negative result; amy stays the default.**
+The stated stopping rule: **if run C still breaks at the end of its 2 h stage, stop and report a negative result; amy stays the default.**
 
 ## Run C at 1.5 h (2026-09-26 03:00)
 
@@ -151,13 +149,13 @@ Exported mid-stage (tag `-1h30`, all 11 checkpoints verified). Same held-out tes
 
 Improving slowly, 6/9 criteria (fails: melody ≥ 9 st, UTMOS alarm, wrong words ≤ amy). By the stability measures it is no shakier than amy.
 
-**Training data length (author's hypothesis: "we train on small 2–6 s chunks").** The raw set is 1,023 clips, 50.8 min. Median clip length is 2.6 s (10th–90th percentile 1.3–5.3 s). 78% of clips are under 4 s, 41% contain more than one sentence, and 36% contain a comma. However:
+**Training data length.** One hypothesis was the short training clips (median 2.6 s). The raw set is 1,023 clips, 50.8 min. Median clip length is 2.6 s (10th–90th percentile 1.3–5.3 s). 78% of clips are under 4 s, 41% contain more than one sentence, and 36% contain a comma. However:
 - amy's own training set is about the same (1,019 clips in ~1 h, so ~3.5 s on average), so clip length alone doesn't explain the gap to amy.
 - Piper synthesizes one sentence at a time, so multi-sentence training clips would add little at inference.
 
-The bigger difference is **quantity**: we used 51 of her ~10.9 h, chosen originally as a conversion test set. The next run should use all of her speech except the held-out conversations, including her longest turns.
+The bigger difference is **quantity**: 51 of her ~10.9 h were used, chosen originally as a conversion test set. The next run should use all of her speech except the held-out conversations, including her longest turns.
 
-**Gibberish (author: "a gibberish in the middle, both clips").** Each piece of the reference paragraph was checked with local Whisper. amy made 0 errors. The 1.5 h student garbled these, identically at 1.0× and 1.2×:
+**Garbled words in the middle of the paragraph.** Each piece of the reference paragraph was checked with local Whisper. amy made 0 errors. The 1.5 h student garbled these, identically at 1.0× and 1.2×:
 - "it's about cadence, rhythm," heard as "It's of our cadence. Welcome!";
 - "Does it handle subtle micro-breaks, like after a semicolon;" heard as "since it handles subtle micro-breaks like afters and colon" (5 wrong);
 - "dead" heard as "that";

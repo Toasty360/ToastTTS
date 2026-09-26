@@ -8,7 +8,7 @@ Small on-device TTS models are fast but speak like they're reading a list: no pa
 - inserts punctuation-dependent pauses with smooth fades and continuous room tone;
 - starts speaking before the reply is complete.
 
-**What we found, on one laptop CPU (i7-13700H, 2026-09-25):**
+**Results** on one laptop CPU (i7-13700H, 2026-09-25):
 
 - **Fast start:** speech begins **89–104 ms after the first LLM token** at 30 tokens/s (223 ms at 10 tokens/s), with no playback stalls in either case. Most of that time is spent waiting for the LLM, not synthesizing.
 - **Voice choice:** 38 English Piper voices were benchmarked on naturalness (UTMOS), word errors (Whisper) and speed. Several match KittenTTS on predicted naturalness while starting **5–40× sooner**.
@@ -22,12 +22,12 @@ Small on-device TTS models are fast but speak like they're reading a list: no pa
 |---|---|
 | [methodology.md](methodology.md) | How every metric is measured, the environment, and known limits |
 | [decisions.md](decisions.md) | Decision log with evidence, including reversed decisions |
-| [distillation-plan.md](distillation-plan.md) | **Proposed:** give our own Piper voices (amy first, then US/UK voices) Kokoro-like delivery via voice conversion + fine-tuning; free feasibility test first |
+| [distillation-plan.md](distillation-plan.md) | **Superseded:** the original Kokoro-teacher distillation design; replaced by human-speech sourcing ([14](notebook/14-human-source-and-converter.md)) and attempted in [15](notebook/15-training.md) |
 | **Lab notebook** | |
 | [01: Baseline](notebook/01-baseline.md) | Piper vs Kitten; fragment prosody, the core trade-off |
-| [02: Natural pauses](notebook/02-natural-pauses.md) | Why we insert our own pauses; the pacing design; two corrected claims |
+| [02: Natural pauses](notebook/02-natural-pauses.md) | Why the engine inserts its own pauses; the pacing design; two corrected claims |
 | [03: Streaming](notebook/03-streaming.md) | Live chunker rules, TTFA, stalls, the "running low" rule |
-| [04: Intelligibility](notebook/04-voice-intelligibility.md) | "It never said semicolon": the word check, and why we changed voices |
+| [04: Intelligibility](notebook/04-voice-intelligibility.md) | "It never said semicolon": the word check, and why the voices were changed |
 | [05: Voice benchmark](notebook/05-voice-benchmark.md) | All 38 English Piper voices + Kitten |
 | [06: Cloud comparison](notebook/06-coval-comparison.md) | Coval replication vs ElevenLabs, Deepgram, Cartesia and others |
 | [07: Cloud pacing](notebook/07-cloud-reference-and-pacing.md) | Speaking rate and pauses vs Deepgram and Soniox; why amy at 1.2× |

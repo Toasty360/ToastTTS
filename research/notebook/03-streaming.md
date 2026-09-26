@@ -4,17 +4,17 @@
 
 ## Question
 
-Can we start speaking an LLM reply almost immediately, with natural pauses, and never let the audio run dry?
+Can speech of an LLM reply start almost immediately, with natural pauses, and never let the audio run dry?
 
 ## Setup
 
-- **Fake LLM** (`toast/fake_llm.py`): sends `reference.txt` as ~4-character tokens (" buil", "ding") on a fixed schedule, by default 30 tokens/s, typical for a fast chat model. If we're busy, tokens queue up just like a real stream.
+- **Fake LLM** (`toast/fake_llm.py`): sends `reference.txt` as ~4-character tokens (" buil", "ding") on a fixed schedule, by default 30 tokens/s, typical for a fast chat model. If the player is busy, tokens queue up just like a real stream.
 - **Live chunker** (`toast/stream_chunker.py`): decides when enough text has arrived to speak the next piece.
 - **Measurement:** TTFA is taken from the arrival of the **first token**, so it includes waiting for words. Playback is simulated to count stalls (see [methodology](../methodology.md)).
 
 ## Chunker rules
 
-A cut happens only when we have **already seen the start of the next word**. That one rule keeps these intact:
+A cut happens only once **the start of the next word has been seen**. That one rule keeps these intact:
 
 - "3:15" (no space after the colon)
 - "1,000" (no space after the comma)

@@ -1,10 +1,10 @@
-# 04: "It never said semicolon": intelligibility, and why we changed voices
+# 04: "It never said semicolon": intelligibility, and why the voices were changed
 
 *2026-09-25 · Experiment [E05](../../experiments/e05_word_clarity_by_voice.py) · Scan: [`scripts/find_voices.py`](../../scripts/find_voices.py), data [`benchmarks/voice_scan_en_US-libritts_r-medium.csv`](../../benchmarks/voice_scan_en_US-libritts_r-medium.csv) · Code: `toast/word_check.py`, `toast/pronounce.py`*
 
 ## The problem
 
-After two rounds of fixes (see [02](02-natural-pauses.md)), the listener reported: *"it never said semicolon in the audio."* Measuring audio length could only show the word was compressed: the phrase with "semicolon" was about 0.25 s longer than without it, while the word alone takes about 0.5 s. We needed to know what was actually said, and the author could listen but the tooling couldn't.
+After two rounds of fixes (see [02](02-natural-pauses.md)), listening caught it: "semicolon" was never spoken in the audio. Measuring audio length could only show the word was compressed: the phrase with "semicolon" was about 0.25 s longer than without it, while the word alone takes about 0.5 s. We needed to know what was actually said, and ears could catch it but the tooling couldn't.
 
 ## New instrument: the word check
 
@@ -47,7 +47,7 @@ libritts / libritts_r are trained on hundreds of audiobook speakers with little 
 
 ## Decision
 
-Switch the default voice from libritts_r 3922 to **lessac-medium**: 0 wrong words out of 95 in two paragraph takes, 38 ms TTFA, 22× real time. The listener confirmed "sounded pretty good, and fixed the semicolon issue too". Later replaced by amy after the full benchmark ([05](05-voice-benchmark.md), [07](07-cloud-reference-and-pacing.md)).
+Switch the default voice from libritts_r 3922 to **lessac-medium**: 0 wrong words out of 95 in two paragraph takes, 38 ms TTFA, 22× real time. Listening confirmed it sounded good and fixed the semicolon issue. Later replaced by amy after the full benchmark ([05](05-voice-benchmark.md), [07](07-cloud-reference-and-pacing.md)).
 
 Paragraph check at the time (`render.py --check-words`, one take):
 

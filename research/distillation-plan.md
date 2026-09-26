@@ -1,8 +1,10 @@
 ﻿# Distillation plan: Kokoro-like delivery in our own Piper voices
 
-*Drafted 2026-09-25, revised the same day · Status: **proposed**, not started · Budget: Modal credits (~$20)*
+*Drafted 2026-09-25, revised the same day · Status: **superseded** · Budget: Modal credits (~$20)*
 
-**Revision note:** the first draft trained the student directly on Kokoro's audio, which would have produced a Kokoro-sounding voice. The author clarified: *"I specifically don't need Kokoro voices. They sounded soft; it's just a reference."* So Kokoro now provides only the **way of speaking** (melody, timing, soft endings). Each student keeps **its own Piper voice**, and several voices and accents are the goal.
+> This plan is kept as a record of the original design. The Kokoro-teacher approach was replaced by openly licensed human speech ([notebook 14](notebook/14-human-source-and-converter.md)), and the voice-conversion + fine-tuning method was attempted in [notebook 15](notebook/15-training.md).
+
+**Revision note:** the first draft trained the student directly on Kokoro's audio, which would have produced a Kokoro-sounding voice. Revised: Kokoro provides only the **way of speaking** (melody, timing, soft endings). Each student keeps **its own Piper voice**, and several voices and accents are the goal.
 
 ## Goal
 
@@ -14,8 +16,6 @@ Fast Piper voices, starting with amy, that keep their own sound but speak with K
 They must stay at Piper speed (about 0.1 s to first audio, about 25× real time) and come in several voices and accents.
 
 ## Hard constraint: the student is not a heavier model
-
-*Added after the author asked: "are we sure we don't end up making another heavy Kokoro variant? That loses the purpose."*
 
 - **What ships is a Piper medium model, identical in architecture and size to amy:** ~15.8M parameters, 63 MB (Kokoro: ~81.4M, 326 MB). Fine-tuning changes the *values* of amy's weights, not their number, so inference cost is unchanged by construction.
 - **Kokoro and the voice-conversion model run only offline**, once, to create training audio. They never ship and never run inside ToastTTS.
@@ -35,7 +35,7 @@ text ──► Kokoro (teacher: melody + timing) ──► voice conversion ─�
 ```
 
 1. **Kokoro** speaks the training sentences, giving natural melody, timing and soft endings.
-2. A **voice-conversion (VC)** model re-voices that audio as the target Piper voice. It replaces *who* is speaking and keeps *how* it's said. The target's reference audio is unlimited, because we can generate it with Piper.
+2. A **voice-conversion (VC)** model re-voices that audio as the target Piper voice. It replaces *who* is speaking and keeps *how* it's said. The target's reference audio is unlimited, because it can be generated with Piper.
 3. The target voice's own Piper checkpoint is **fine-tuned** on the converted audio, so it learns the new delivery while starting from its own voice.
 
 **Accent:** VC keeps the source's pronunciation, so each target is paired with a Kokoro teacher of the same accent (British Piper voices learn from a British Kokoro voice).
@@ -69,7 +69,7 @@ See [notebook/13](notebook/13-vc-feasibility.md).
 
 ## Never lose a GPU run (applies to every Modal job)
 
-*Added at the author's request, after a failing final export lost a run in the Gaze-Detection project.*
+A failed final export once lost a whole training run, hence these safeguards:
 
 - **Smoke first:** every job has a `--smoke` mode that runs the whole chain (including saving and fetching) on a tiny input.
 - **Persist as you go:** results and **training checkpoints go to a Modal Volume and are committed as soon as they exist**, before any later step can fail.
@@ -144,9 +144,3 @@ Rates are Modal's published per-second prices (L4 ~$0.80/h, A10G ~$1.10/h; [moda
 | Too little capacity | Measured; try 2,000 sentences. A Piper-high student would break the speed constraint, so it needs an explicit decision and isn't a default fallback |
 | Cost overrun | Pilot first, hard timeouts, per-second billing |
 | Licensing | Kokoro, OpenAssistant, kNN-VC and OpenVoice are permissive (Apache-2.0 / MIT). Each Piper voice's own dataset license must be checked before *publishing* a student (amy: "see mimic3-voices"); private use is fine. piper1-gpl is GPL-3.0. `cloud_voices/` is never used ([D18](decisions.md)) |
-
-## Decisions needed
-
-1. **Run Step 0 now?** It's free, about an hour, on the laptop, and answers whether this is possible at all.
-2. After Step 0: go / no-go on **Phase 1 (amy, ≤ ~$15)**.
-3. Which voices for Phase 2 (the table above is a proposal).

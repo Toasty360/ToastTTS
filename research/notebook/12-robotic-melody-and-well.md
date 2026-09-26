@@ -4,7 +4,7 @@
 
 ## Question
 
-Even with the soft last word ([11](11-phrase-final-softening.md)), the listener found that "amy sounds robotic compared to af_heart" and asked whether af_heart's or Grace's "voice profile" could be applied to amy.
+Even with the soft last word ([11](11-phrase-final-softening.md)), amy was heard as robotic next to af_heart, raising the question of whether af_heart's or Grace's prosody could be transferred onto amy.
 
 A voice has two layers:
 - **Timbre:** what the voice sounds like. Voice conversion could transfer it, but it isn't what makes speech robotic.
@@ -33,7 +33,7 @@ Listening files: `out/listen/40_amy_pitch_as_is.wav`, `40_amy_pitch_like_af_hear
 
 ## E12: "the way they say 'Well,' is totally different"
 
-**Is it the pronunciation?** The listener asked whether amy says "wl" where the others say "wɛl". Both models receive the **same phonetic spelling**, `wˈɛl`. The difference is in how the word is performed: vowel length and pitch.
+**Is it the pronunciation?** One hypothesis was that amy says "wl" where the others say "wɛl". Both models receive the **same phonetic spelling**, `wˈɛl`. The difference is in how the word is performed: vowel length and pitch.
 
 **Pitch shape** (Whisper word boundaries at the very start of a file include leading silence, so the loudness and duration figures in E12 are unreliable; pitch shape is usable):
 - **Kokoro:** rise then fall (−1.0 → +1.9 → −1.9 st), which sounds like "…and I'm continuing".

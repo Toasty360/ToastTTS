@@ -4,11 +4,11 @@
 
 ## Question
 
-The listener's verdicts after the benchmark were: ryan "doesn't sound natural"; amy "is good but needs about 1.1× speed". Rather than guess a speed, can we measure how cloud voices pace the same text and tune toward it?
+After the benchmark, ryan was judged unnatural and amy good but slow ("needs about 1.1× speed"). Rather than guessing a speed, can cloud pacing of the same text be measured and tuned toward?
 
 ## Setup
 
-The author provided three cloud recordings of `samples/reference.txt`: Deepgram Aura-2 (Thalia), Deepgram Flux (Hannah, generated at 1.1× speed) and Soniox TTS (Grace). All are 24 kHz mono. They're used here only as a measurement reference ([D18](../decisions.md)).
+Three cloud recordings of `samples/reference.txt` were used as a measurement reference ([D18](../decisions.md)): Deepgram Aura-2 (Thalia), Deepgram Flux (Hannah, generated at 1.1× speed) and Soniox TTS (Grace). All are 24 kHz mono.
 
 `toast/speech_stats.py` uses Whisper word timestamps to measure:
 - **Words per minute:** overall, and while talking (pauses of 80 ms or more removed).
@@ -33,7 +33,7 @@ Pause values are medians. Naturalness on a single 20 s clip varies by about ±0.
 ## Findings
 
 - **Our pause lengths already match the cloud voices** when measured the same way (commas ~440–520 ms vs 380–500; periods ~800–840 vs 800–910). They looked short on paper (the configured comma pause is 180–260 ms) only because Whisper's gaps also include the quiet edges of words.
-- **The gap was speaking rate.** amy at 0.9× talked at 152 wpm against 183–195 for the cloud voices, which confirms the listener's "needs to be faster". At 1.2× amy reaches 179 wpm.
+- **The gap was speaking rate.** amy at 0.9× talked at 152 wpm against 183–195 for the cloud voices, confirming it needed to be faster. At 1.2× amy reaches 179 wpm.
 - **Predicted naturalness is in the same range as Soniox and Deepgram Thalia** at every speed. The measurable differences are now smaller than the metric's noise, so the remaining gap has to be judged by ear ([08](08-open-questions.md)).
 - Whisper writes "3.15 pm" for the cloud recordings too, which is relevant to the Coval time-format question ([06](06-coval-comparison.md)).
 

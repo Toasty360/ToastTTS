@@ -4,7 +4,7 @@
 
 ## Question
 
-The author: *"Is it not possible to make the model stress some words? Stressing words changes the entire sentence meaning."* A small TTS sees only words, not meaning, so it can't know which word carries the contrast.
+A small TTS sees only words, not meaning, so it cannot know which word carries contrastive focus — yet stressing the wrong word changes the entire sentence meaning.
 
 ## Idea: the LLM decides, the engine performs
 
@@ -34,8 +34,8 @@ Word boundaries are the space phonemes. If espeak splits words differently from 
 The sentence-final "it." can't be measured: creaky voice at the end defeats the pitch tracker (a false +31.7 st in the subtle run, no value in the strong run). It has to be judged by ear.
 
 **Listening:**
-- **subtle:** *"I think I noticed a small difference … but not sure."* Too weak to carry meaning reliably.
-- **strong:** *"Yeah I can notice it clearly."* The strong preset is the default for integration.
+- **subtle:** barely noticeable — too weak to carry meaning reliably.
+- **strong:** clearly noticeable. The strong preset is the default for integration.
 
 ## Status
 
@@ -44,4 +44,4 @@ A working prototype, not yet part of the streaming engine. Integration means:
 - a Piper voice with the alignment output is used;
 - the LLM is prompted to mark contrastive focus.
 
-**Emotion** (asked next by the author) can use the same machinery at sentence level: pitch level and range, rate and energy presets from LLM tags. The alternative is an emotion-conditioned student trained on DailyTalk's per-utterance emotion labels ([08](08-open-questions.md)).
+**Emotion** is a natural next step on the same machinery, at sentence level: pitch level and range, rate and energy presets from LLM tags. The alternative is an emotion-conditioned student trained on DailyTalk's per-utterance emotion labels ([08](08-open-questions.md)).

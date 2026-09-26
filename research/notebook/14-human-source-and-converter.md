@@ -4,11 +4,11 @@
 
 ## Why change the teacher
 
-After listening to E13 ([13](13-vc-feasibility.md)), the author made three points:
+Listening to E13 ([13](13-vc-feasibility.md)) raised three issues:
 
-- **The converted voice "sounded soft".** Measured: it was 27% darker than amy (spectral centroid 580 vs 795 Hz). The causes were kNN-VC's 16 kHz output and Kokoro's own dark tone bleeding through.
-- **"dead" had "a different expression".** Kokoro says "dead," with a 9-semitone pitch swoop, and the converter faithfully copied it. **A student inherits its teacher's taste.**
-- **"Why not Soniox?"** Its terms forbid using outputs *or derived data* to train or improve any speech-synthesis model ([D35](../decisions.md)).
+- **The converted voice sounded soft.** Measured: it was 27% darker than amy (spectral centroid 580 vs 795 Hz). The causes were kNN-VC's 16 kHz output and Kokoro's own dark tone bleeding through.
+- **Kokoro's quirks were copied.** Kokoro says "dead," with a 9-semitone pitch swoop, and the converter faithfully copied it. **A student inherits its teacher's taste.**
+- **Licensing.** Soniox's terms forbid using outputs *or derived data* to train or improve any speech-synthesis model ([D35](../decisions.md)).
 
 **New teacher: real people.** DailyTalk is 20 hours of studio-recorded everyday conversation (CC BY-SA 4.0, 2,541 dialogues). We use speaker 1, the woman (median pitch 212 Hz vs 156 Hz for speaker 0). **Held-out rule:** conversations with `id % 10 == 0` are never used for training; evaluation clips come only from them.
 
