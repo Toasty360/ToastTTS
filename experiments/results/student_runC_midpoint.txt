@@ -1,0 +1,17 @@
+﻿Held-out test: 30 DailyTalk sentences (+10 of our own for word errors)
+Human DailyTalk speaker: core pitch range 9.00 st
+
+voice                              core st drop dB natural wrong sim amy sim hum TTFA ms  x rt
+amy                                   4.77     0.5    4.42     7    0.87    0.22      35  23.4
+20260926-0121-mid_last                7.78    -0.1    3.88    26    0.29    0.76      31  24.5
+
+amy's own consistency: 0.75; the human speaker's own consistency: 0.62; her real recordings vs amy: 0.21
+
+"Well," in 'Well, both have advantages and disadvantages.':
+  amy                                280 ms | loudness by quarter (dB, rel. to 1st): +0.0 +11.9 +11.9 +10.2 | pitch start +1.9 / mid -0.1 / end -0.6 st, range 4.7 st
+  20260926-0121-mid_last             300 ms | loudness by quarter (dB, rel. to 1st): +0.0 +7.9 +7.2 +3.8 | pitch start -0.6 / mid -0.1 / end +0.6 st, range 2.6 st
+
+Verdict (criteria fixed in advance, research/distillation-plan.md step 5):
+  20260926-0121-mid_last: 6/9 -> melody >= 9.0 st: NO; melody above amy: yes; soft endings (drop <= 0 dB): yes; no artifact alarm (UTMOS >= amy - 0.3): NO; wrong <= amy (7): NO; single voice: sounds like her (>= 80% of her own 0.62): yes; not blended with amy (<= her real recordings' 0.21 + 0.15): yes; TTFA within 10% (or 5 ms) of amy: yes; speed within 10% of amy: yes
+
+Metrics only shortlist. Decide with a blind test: .venv\Scripts\python distill\blind_test.py <student voice>

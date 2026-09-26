@@ -1,0 +1,10 @@
+﻿file                     wrong  marked word pitch vs plain  text
+plain.wav                    0                              I didn't say he stole it.
+strong_stress_1_i.wav        0                    +4.7 st  *I* didn't say he stole it.
+strong_stress_2_didn't.wav     0                    +5.2 st  I *didn't* say he stole it.
+strong_stress_3_say.wav      0                    +6.6 st  I didn't *say* he stole it.
+strong_stress_4_he.wav       0                    +5.7 st  I didn't say *he* stole it.
+strong_stress_5_stole.wav     0                    +6.5 st  I didn't say he *stole* it.
+strong_stress_6_it.wav       0                    +nan st  I didn't say he stole *it.*
+
+Listen: out\listen\emphasis

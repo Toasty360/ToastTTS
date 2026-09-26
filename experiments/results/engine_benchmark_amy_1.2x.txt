@@ -1,0 +1,10 @@
+﻿Engine benchmark: piper:en_US-amy-medium at 1.2x, median of 7 runs, CPU only (Intel64 Family 6 Model 186 Stepping 2, GenuineIntel, 20 threads)
+
+  load + warm-up        1.59 s
+  memory               166 MB process total (+132 MB for the voice)
+  full text, 95-word paragraph                               TTFA   30.8 ms, 0 stalls, 28.6x real time 
+  streaming from LLM, 30 tokens/s (TTFA from first token)    TTFA   98.5 ms, 0 stalls 
+  streaming from LLM, 10 tokens/s (TTFA from first token)    TTFA  229.4 ms, 0 stalls 
+  short single sentences (median of 5 sentences)             TTFA   32.7 ms range 30-164 ms
+
+Saved to benchmarks\engine_benchmark.csv

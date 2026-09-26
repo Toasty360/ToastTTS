@@ -1,0 +1,10 @@
+﻿# e12_well
+# run: 2026-09-25 21:01 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e12_well.py
+Soniox Grace           'Well,'   280 ms | loudness by quarter (dB, rel. to 1st): +0.0 +69.3 +74.1 +71.9 | pitch start +1.1 / mid -0.1 / end -0.1 st, range 3.6 st
+Deepgram Thalia        'Well,'   460 ms | loudness by quarter (dB, rel. to 1st): +0.0 -2.1 +23.8 +34.1 | pitch start -0.3 / mid -0.1 / end +0.1 st, range 0.7 st
+Kokoro af_heart        'Well,'   260 ms | loudness by quarter (dB, rel. to 1st): +0.0 +4.4 +1.8 -0.3 | pitch start -1.0 / mid +1.9 / end -1.9 st, range 5.6 st
+amy pipeline           'Well,'   220 ms | loudness by quarter (dB, rel. to 1st): +0.0 +3.6 +2.8 +0.4 | pitch start +1.4 / mid -0.0 / end -1.8 st, range 4.0 st
+amy isolated           'Well.'   220 ms | loudness by quarter (dB, rel. to 1st): +0.0 +3.2 +2.2 -0.9 | pitch start +1.7 / mid +0.0 / end -1.6 st, range 4.1 st
+amy in context         'Well,'   240 ms | loudness by quarter (dB, rel. to 1st): +0.0 +15.5 +17.3 +15.7 | pitch start +0.4 / mid +0.3 / end -1.4 st, range 3.9 st
+amy slow isolated      'Well...'  560 ms | loudness by quarter (dB, rel. to 1st): +0.0 +0.5 -4.8 -25.0 | pitch start +2.5 / mid -0.1 / end -0.6 st, range 4.4 st

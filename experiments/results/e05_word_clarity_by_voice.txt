@@ -1,0 +1,33 @@
+﻿# e05_word_clarity_by_voice
+# run: 2026-09-25 19:55 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e05_word_clarity_by_voice.py
+== libritts_r-medium 3922 (file defaults)
+  A semicolon is useful here.                                  wrong [1, 1]  heard: ['A sema is useful here.', 'A sema is useful here.']
+  Use a semicolon, then stop.                                  wrong [1, 2]  heard: ['Use a sema, then stop.', 'Use the center, then stop.']
+  It is about cadence.                                         wrong [2, 1]  heard: ['is about kids.', 'It is about kittens.']
+  Does it handle subtle micro-breaks, like after a semicolon?  wrong [2, 1]  heard: ['Does it handle civil micro-breaks like after a Sima?', 'Does it handle subtle micro-breaks like after a sema?']
+== libritts_r-medium 3922 @0.5/0.8
+  A semicolon is useful here.                                  wrong [1, 1]  heard: ['a cement is useful here.', 'A semit is useful here.']
+  Use a semicolon, then stop.                                  wrong [3, 1]  heard: ['Use the sema and then stop.', 'Use a cemeth, then stop.']
+  It is about cadence.                                         wrong [0, 1]  heard: ['It is about cadence.', 'It is about kittens.']
+  Does it handle subtle micro-breaks, like after a semicolon?  wrong [1, 1]  heard: ['Does it handle subtle micro-breaks like after a summer?', 'Does it handle subtle micro-breaks like after a sema?']
+== libritts-high p3922 @0.5/0.8
+  A semicolon is useful here.                                  wrong [1, 2]  heard: ['A sema is useful here.', 'cement is useful here.']
+  Use a semicolon, then stop.                                  wrong [2, 3]  heard: ['Use a simmer and stop.', 'Use the cement and stop.']
+  It is about cadence.                                         wrong [1, 0]  heard: ['It is about Cairns.', 'It is about cadence.']
+  Does it handle subtle micro-breaks, like after a semicolon?  wrong [1, 1]  heard: ['Does it handle subtle micro-breaks, like after a seminar?', 'Does it handle subtle micro-breaks, like after a synod?']
+== lessac-medium
+  A semicolon is useful here.                                  wrong [0, 0]  heard: ['A semicolon is useful here.', 'A semicolon is useful here.']
+  Use a semicolon, then stop.                                  wrong [0, 0]  heard: ['Use a semicolon, then stop.', 'Use a semicolon, then stop.']
+  It is about cadence.                                         wrong [0, 0]  heard: ['It is about cadence.', 'It is about cadence.']
+  Does it handle subtle micro-breaks, like after a semicolon?  wrong [0, 0]  heard: ['Does it handle subtle micro-breaks, like after a semicolon?', 'Does it handle subtle micro-breaks, like after a semicolon?']
+== amy-medium
+  A semicolon is useful here.                                  wrong [0, 0]  heard: ['A semicolon is useful here.', 'A semicolon is useful here.']
+  Use a semicolon, then stop.                                  wrong [0, 0]  heard: ['Use a semicolon, then stop.', 'Use a semicolon, then stop.']
+  It is about cadence.                                         wrong [0, 0]  heard: ['It is about cadence.', 'It is about cadence.']
+  Does it handle subtle micro-breaks, like after a semicolon?  wrong [0, 0]  heard: ['Does it handle subtle micro-breaks, like after a semicolon?', 'Does it handle subtle micro-breaks, like after a semicolon?']
+== respellings on libritts_r-medium 3922 @0.5/0.8 (3 takes)
+  semicolon    pronunciation ɐ sˌɛmɪkˈoʊlən     heard: ['Use a summon here.', 'Use the cement in here.', 'Use a cement in here.']
+  semi-colon   pronunciation ɐ sˈɛmaɪkˈoʊlən    heard: ['Use a semi here.', 'Use the semay here.', 'Use a semi here.']
+  semi colon   pronunciation ɐ sˈɛmaɪ kˈoʊlən   heard: ['Use a semive here.', 'Use a semi here.', 'Use a semi here.']
+  semmy-colon  pronunciation ɐ sˈɛmikˈoʊlən     heard: ['Use a semi here.', 'Use the semi in here.', 'Use a semi here.']

@@ -1,0 +1,25 @@
+﻿# Needs Python 3.12 (KittenTTS depends on misaki, which doesn't support 3.13+ yet).
+# Setup:  uv venv --python 3.12 .venv
+#         uv pip install --python .venv\Scripts\python.exe -r requirements.txt
+#         .venv\Scripts\python -m piper.download_voices --download-dir models en_US-amy-medium
+# For scripts\bench_voices.py, download every English voice (about 2.6 GB):
+#         .venv\Scripts\python -m piper.download_voices   (lists them; pass all en_* names)
+
+# The engine (installs the `toast` package in editable mode)
+-e .
+numpy
+soundfile
+sounddevice
+piper-tts
+kokoro-onnx   # model files: see README (models/kokoro/)
+kittentts @ https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl
+
+# Measuring: word check (Whisper), naturalness (UTMOS), Coval replication
+faster-whisper
+torchaudio
+whisper-normalizer
+jiwer
+openai
+
+# Tests
+pytest

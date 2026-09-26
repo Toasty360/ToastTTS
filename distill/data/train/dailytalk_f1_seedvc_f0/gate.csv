@@ -1,0 +1,1024 @@
+id|kept|reasons|wrong|source_wrong|natural|jumps|seconds|text
+dt00007_01|True||1|1|4.25|0.0|1.79|This is Mrs. White speaking.
+dt00007_07|True||0|0|4.03|0.0|1.97|Thank you for calling. Goodbye.
+dt00052_01|True||1|1|4.34|0.5|3.31|Nah, I just check my weight, I'm getting fatter.
+dt00052_03|True||2|2|3.84|0.0|1.88|I'll get you for that comments, George.
+dt00052_05|False|natural 3.44|3|5|3.44|0.53|5.58|Ah, I don't know a fit works. Last time, all I saw the gym were bunch of lidos, like me.
+dt00052_07|False|natural 3.19|2|2|3.19|0.0|3.09|All right. But so help me it better work.
+dt00052_09|False|words 1>0|1|0|3.81|0.0|3.98|Umm not me. I'm too hot and I'm too tired.
+dt00052_11|True||0|0|4.22|0.76|1.78|Well, that's not for me.
+dt00052_13|False|words 1>0|1|0|3.97|0.0|2.82|Get out of it! It wasn't as good as you think.
+dt00059_01|True||2|2|3.77|0.0|5.3|This book is so good. I just can't put it down! It's called 'The Power of One'.
+dt00059_03|True||0|0|3.7|0.0|4.58|Me either. From the very first page, this author just pulled me right in!
+dt00059_05|True||0|0|4.4|0.94|3.73|Yes. I'm in the last chapter now and it is just gripping.
+dt00059_07|True||1|1|3.55|0.52|6.33|OK. But be prepared for an all-nighter! I doubt you will want to put it down either.
+dt00072_00|True||0|0|4.0|0.0|1.54|What shall we do now?
+dt00072_02|False|natural 2.94|0|0|2.94|0.0|1.91|I've got all I need.
+dt00072_04|True||0|0|4.09|0.29|5.46|It smells good. Look at these. They make my mouth watering.
+dt00072_06|True||0|0|3.58|0.0|1.75|It will be our turn soon.
+dt00072_08|True||1|1|4.01|0.51|3.26|OK. I'll have many cream cakes today.
+dt00096_01|True||0|0|4.3|0.0|2.04|He's a little sick under the weather.
+dt00096_03|False|words 2>1|2|1|3.76|0.0|1.55|He has the flu.
+dt00106_01|True||0|0|3.68|0.0|3.84|Sorry, I don't know, there's something wrong with my watch.
+dt00106_03|True||0|0|4.37|0.0|2.24|In the coming, before going to work.
+dt00106_05|True||1|1|3.56|0.0|1.83|OK. I'll turn it on.
+dt00106_07|True||0|0|4.15|0.53|3.08|Well, I'm setting my watch at four. Thank you.
+dt00145_01|True||0|0|4.35|0.0|1.92|It's really different, isn't it?
+dt00145_03|True||0|0|4.21|0.0|4.98|I hope you're hungry because the pizza here is huge as well as to die for.
+dt00145_05|True||0|0|3.93|0.0|2.6|Well, let's order one for starters.
+dt00145_07|True||1|1|4.18|0.37|4.22|That happens to be my favorite. Waiter, I think we're ready to order.
+dt00161_03|True||0|0|4.1|0.0|2.73|Oh, I see. I'll have beer, please.
+dt00161_05|True||0|0|4.19|0.0|2.22|Thank you. How much is it?
+dt00161_07|False|natural 3.47|0|0|3.47|0.47|3.63|Are you sure? Then, I will have more beer, please.
+dt00163_00|False|jumps 1.31%|0|0|3.64|1.31|2.1|Good morning. Wilson Association.
+dt00163_02|True||0|0|4.09|0.0|4.39|I'm sorry, but Mr. Thomas left the office a few minutes ago.
+dt00163_04|True||0|0|3.79|0.0|3.26|I'm afraid not. He's gone for the rest of the day.
+dt00163_06|False|words 2>0|2|0|3.82|0.0|4.88|I don't believe so. He's going out of town on business. May I take a message?
+dt00163_08|True||0|0|4.1|0.0|2.5|Would you care to make another appointment?
+dt00163_10|True||0|0|4.46|0.0|3.4|I see. I can tell Mr. Thomas that you phoned.
+dt00166_01|True||0|0|3.77|0.0|2.02|Yes, but it's quite a ways.
+dt00166_03|True||0|0|4.12|0.0|5.86|This bus doesn't take you directly there. You'd have to change buses twice. I suggest you walk.
+dt00166_05|True||0|0|4.47|0.0|2.49|Go straight ahead through the intersection.
+dt00166_07|True||0|0|4.35|0.0|7.27|Keep walking till you pass the square, then turn right. Walk past two lights and turn left at the third.
+dt00166_09|True||0|0|3.78|0.61|2.56|Keep walking and look for a tall building.
+dt00166_11|True||0|0|3.88|0.0|3.69|The right side. ICCC should be on the first floor.
+dt00168_00|True||0|0|3.85|0.38|4.24|I'm so glad we decided to go on a cruise for our vacation.
+dt00168_02|True||1|1|4.41|0.0|4.51|Ah, that's all part of the fun. What do you think of these shorts?
+dt00168_04|True||0|0|4.06|0.0|2.33|They are. I think I'm going to get a hat too.
+dt00168_06|True||0|0|4.31|0.0|1.74|Wow. You look great.
+dt00171_06|True||0|0|3.52|0.0|1.1|Good luck to you.
+dt00175_02|False|words 1>0|1|0|3.87|0.0|2.18|How much do I need to pay for it?
+dt00175_06|True||0|0|3.99|0.0|2.38|Are there any parking lots for the tenants?
+dt00178_00|True||0|0|4.27|0.0|2.37|Is everything to your satisfaction?
+dt00178_02|True||0|0|3.63|0.26|6.19|Oh! Sorry to hear that. This is quite unusual as we have steak from the market every day.
+dt00178_04|True||0|0|3.98|0.0|5.58|I'm sorry, sir. Do you wish to try something else? That would be on the house, of course.
+dt00181_00|True||0|0|3.62|0.0|1.83|Say, what's your favorite sport?
+dt00181_02|True||0|0|4.26|0.0|1.82|Do you play much tennis?
+dt00181_04|False|natural 3.47|0|0|3.47|0.0|7.21|Sorry. I'm strictly a spectator-football, baseball, basketball, golf... I watch them all.
+dt00192_01|True||0|0|3.9|0.0|3.82|Do you want to send it by airmail or by surface mail?
+dt00192_03|True||0|0|4.11|0.0|1.49|About five weeks.
+dt00192_05|False|natural 3.45|0|0|3.45|0.0|1.93|Just a moment. I'll weigh it.
+dt00202_07|True||0|0|4.38|0.0|1.17|Whatever you say.
+dt00207_01|False|natural 3.10|0|0|3.1|0.0|1.63|What are you so excited about?
+dt00207_03|True||1|1|3.64|0.56|3.66|What's the big deal? It's just a picture of some woman.
+dt00207_05|True||0|0|3.75|0.0|3.25|There are tons of other paintings that I think are better.
+dt00207_07|True||1|1|3.5|0.57|2.86|Umm... No, how much is it worth?
+dt00213_00|True||0|0|3.74|0.0|5.46|I think you are an excellent person. Honestly speaking, you are very suitable for this job.
+dt00213_02|True||0|0|3.66|0.4|3.2|I want to know your earliest available entry time.
+dt00213_04|True||0|0|3.63|0.0|4.22|It's too late. If you could get the job, could you start a little earlier?
+dt00213_06|True||0|0|3.64|0.0|1.16|What a pity!
+dt00213_08|True||0|0|3.85|0.29|5.47|Within two weeks, because the new employees need to receive induction training.
+dt00213_10|True||0|0|4.37|0.0|2.37|I hope you can come to our company to work.
+dt00213_12|True||1|1|4.24|0.0|3.65|OK, I will keep this position for you for one week.
+dt00246_00|True||0|0|3.72|0.0|3.18|Hi, why do you look so depressed today, Mike?
+dt00246_04|True||0|0|3.99|0.31|5.47|I know everyone suffers when he is misunderstood. But why not take it easy?
+dt00251_00|True||0|0|4.2|0.0|1.48|Where do you have to go?
+dt00251_02|False|natural 3.07|1|1|3.07|0.63|1.89|Umm when do you have to be there?
+dt00251_04|True||0|0|4.01|0.0|1.65|How long do you have to be there?
+dt00251_06|True||0|0|3.68|0.0|1.47|When will you be back?
+dt00254_00|False|natural 3.37|0|0|3.37|0.0|2.46|Hi, who has the remote control?
+dt00254_02|True||1|1|4.16|0.0|4.17|Yes, please. I can't stand watching the channel any more.
+dt00254_04|True||1|1|4.17|0.0|1.83|Put it on Channel five, OK?
+dt00254_06|True||0|0|3.84|0.46|4.08|Don't make such a fuss. I'm sure you will like today's programme.
+dt00254_08|True||0|0|4.11|0.0|3.43|A basketball match between Chinese team and American team.
+dt00254_10|True||0|0|4.28|0.0|1.25|It might begin now.
+dt00258_01|True||0|0|4.32|0.0|4.94|I hope that they have a good menu. Most coffee shops only have coffee and Danish.
+dt00258_03|False|natural 3.49|0|0|3.49|0.0|5.01|No, so it's usually boring to join my friends in the afternoon at a regular coffee shop.
+dt00258_05|True||0|0|4.36|0.0|3.99|Maybe a fruit salad and a few different hot sandwiches at least.
+dt00258_07|True||0|0|4.21|0.0|1.09|Let's try it!
+dt00281_00|True||0|0|4.04|0.0|1.61|It's raining heavily.
+dt00281_04|True||0|0|3.92|0.0|2.16|No, we can't. It's thundering.
+dt00283_03|True||0|0|4.26|0.0|1.52|Come by any time.
+dt00283_05|True||0|0|3.9|0.0|3.53|Yes, I'll be waiting for you in my home by ten.
+dt00293_00|True||0|0|3.99|0.0|2.25|Now you're my boss, Mr. Henry.
+dt00293_02|True||0|0|4.03|0.0|2.07|No, nothing in particular.
+dt00293_04|True||2|2|3.59|0.0|2.14|All right. When can I start?
+dt00311_00|True||0|0|4.19|0.0|3.53|Would you care to join for the picnic tomorrow?
+dt00311_02|False|natural 3.40|1|1|3.4|0.0|4.07|We'd like to invite you for our dress party tomorrow evening, are you free?
+dt00311_04|True||0|0|4.42|0.7|2.65|What a pity! You can't join us.
+dt00312_01|True||0|0|4.34|0.89|1.68|No. What did it say?
+dt00312_03|True||0|0|3.61|0.0|3.86|A garage sale... that's where people check out cars, right?
+dt00312_05|False|words 1>0|1|0|3.64|0.21|7.67|I'm pulling your leg, Paul. I'm a shopping queen, remember? So of course I know what a garage sale is all about!
+dt00328_07|True||2|2|4.28|0.0|1.72|December twenty third, please.
+dt00328_13|False|natural 3.24|0|0|3.24|0.0|1.4|Around three p.m.
+dt00329_00|True||0|0|3.74|0.0|1.76|Are you ready to order now, sir?
+dt00329_02|True||0|0|4.12|0.0|1.76|Would you like an appetizer?
+dt00329_04|True||0|0|4.02|0.0|1.85|Would you like some soup first?
+dt00329_06|False|jumps 1.01%|1|1|3.75|1.01|1.95|What kind of soup would you like?
+dt00329_08|True||0|0|3.81|0.0|1.57|Have you decided on anything?
+dt00329_10|False|words 4>0|4|0|4.32|0.0|2.08|How about stewed-fried steamed pork?
+dt00329_12|False|jumps 1.72%|0|0|4.08|1.72|2.21|Are you interested in today's special?
+dt00329_14|True||1|1|4.25|0.0|2.42|Twice cooked spicy pork slices.
+dt00331_00|True||0|0|3.65|0.0|6.25|Mr. Ludlow, hello. It's good to see you again. What can we do for you today?
+dt00331_02|True||0|0|3.98|0.0|4.54|No problem. Could I please see the bill and all of the other documents?
+dt00331_04|True||0|0|4.07|0.0|5.94|There's no problem here, everything's in order. I can transact that for you now.
+dt00331_06|True||0|0|4.33|0.32|5.38|No, you don't need to pay anything on top. We just simply deduct the discounting interest.
+dt00346_00|True||0|0|4.2|0.83|2.1|Nice day today, isn't it?
+dt00346_02|True||0|0|4.04|0.0|2.73|We can't complain about the weather recently.
+dt00346_04|False|words 1>0|1|0|3.83|0.0|2.97|I wonder how long this weather can last.
+dt00369_00|True||0|0|3.71|0.0|2.46|What's your new girlfriend like?
+dt00369_02|True||0|0|3.81|0.0|2.14|Does she know how to speak Spanish?
+dt00374_00|False|natural 3.40|0|0|3.4|0.0|1.92|Welcome. How can I help you?
+dt00374_02|True||1|1|3.53|0.28|6.14|There are double rooms with twin beds, suites, if you'd like, we have presidential suite on the top floor.
+dt00374_04|True||2|2|4.34|0.0|2.48|All right sir. How many nights will you be staying?
+dt00374_06|False|natural 3.37|2|2|3.37|0.0|4.13|OK. Umm I'll just need to see a credit card and passport.
+dt00374_08|True||2|2|3.6|0.0|5.63|Since it is low season, we are running a special rate right now of one fifty yuan per night.
+dt00374_10|True||1|1|4.0|0.85|3.65|Our rooms include television set, air-conditioning and a bathroom.
+dt00379_00|True||0|0|3.93|0.0|5.11|I would like to buy a bottle of cleansing milk. Can you recommend me some kinds?
+dt00379_02|True||0|0|4.38|0.0|1.42|My skin is oily.
+dt00379_04|True||1|1|3.73|0.0|1.82|Umm, can you tell me more?
+dt00399_00|True||2|2|4.32|0.0|1.77|Here you are. How is Danny?
+dt00399_02|True||0|0|3.6|0.0|1.47|What did the doctor say?
+dt00399_04|True||0|0|4.23|0.0|1.49|Shall we go back home now?
+dt00399_06|True||0|0|4.32|0.0|3.11|I bought some advanced medicine. Is there anything you need?
+dt00399_10|True||1|1|4.34|0.0|2.21|OK, this is the third time.
+dt00399_12|True||0|0|4.29|0.0|2.28|You don't have to know. Bye for now.
+dt00421_00|True||0|0|4.34|0.0|2.26|Good morning, sir. What can I do for you?
+dt00421_02|True||4|4|3.96|0.0|2.82|You have stayed for six day. Here is your bill.
+dt00421_04|True||1|1|3.84|0.0|6.57|Surely of course. But you have to be back by five o'clock, otherwise we will charge you ten dollars.
+dt00434_01|False|jumps 1.46%|1|1|3.64|1.46|2.94|Umm, yes, please bring us two steaks.
+dt00434_03|True||0|0|4.1|0.0|2.37|What vegetables come with the steaks?
+dt00435_04|True||0|0|4.37|0.87|2.31|Yes, children are half price.
+dt00453_00|False|natural 3.43|2|2|3.43|0.3|6.17|Let me suggest this one. It's an excellent watch, it looks good, and it's only hundred dollars.
+dt00453_02|False|natural 3.20|0|0|3.2|0.23|7.68|Uh, no. Analog watches don't come with stopwatches. You'll have to get a digital if you want a stopwatch.
+dt00453_06|True||0|0|3.66|0.0|2.62|Yes. Make it out to Time After Time.
+dt00463_01|True||0|0|4.43|0.0|2.5|Sorry, I can't. I am busy.
+dt00463_03|True||0|0|3.58|0.0|4.18|I always do volunteer work on the first Saturday of every month.
+dt00463_05|True||1|1|3.86|0.0|4.45|I help out at the children's hospital. I help plan activities.
+dt00464_00|True||0|0|4.22|0.0|1.54|How are you tonight, sir?
+dt00464_02|False|natural 3.39|0|0|3.39|0.0|3.01|I know what you mean. What can I get for you?
+dt00467_00|True||0|0|3.5|0.0|3.73|So... what kind of things do you do in your free time?
+dt00467_02|True||0|0|4.29|0.0|4.47|I like to do just about anything outdoors. Do you enjoy camping?
+dt00467_04|True||0|0|4.34|0.52|2.88|Have you ever been camping in the Boundary Waters?
+dt00467_06|True||0|0|3.78|0.0|4.71|It's fantastic. My family and I are very fond of the place.
+dt00467_08|True||0|0|3.69|0.0|1.9|Sure, would you like to see them?
+dt00467_10|False|natural 3.45|0|0|3.45|0.0|1.78|I have a Canon SLR.
+dt00467_12|True||0|0|3.88|0.31|4.94|I'd call it one of my hobbies. Do you know much about photography?
+dt00467_14|False|natural 3.06|0|0|3.06|0.0|5.23|Have you heard about the photography exhibit that's going on at the art gallery this weekend?
+dt00467_16|True||0|0|4.39|0.0|3.06|Yes. In fact, maybe we could go together.
+dt00467_18|False|words 2>0; natural 3.24|2|0|3.24|0.0|1.36|How about at eleven?
+dt00469_01|True||0|0|4.29|0.0|2.68|Yes, can I return this article, please?
+dt00469_03|True||0|0|3.69|0.44|4.14|You see, I bought it for my husband, but he doesn't like it.
+dt00478_00|True||0|0|4.17|0.0|1.61|You're having coffee, aren't you?
+dt00478_02|False|natural 3.22|0|0|3.22|0.63|2.7|Uh, what are you going to have to eat?
+dt00478_04|True||2|2|4.28|0.69|2.43|That sounds good to me. I'll have the same.
+dt00479_00|True||1|1|3.67|0.0|3.82|Umm excuse me. I want to pay for these items.
+dt00479_02|True||0|0|4.47|0.0|1.85|How much is it all together?
+dt00479_04|True||0|0|3.71|0.0|1.54|Can I pay by credit card?
+dt00479_06|True||1|1|4.17|0.0|1.57|OK. Here you are.
+dt00479_08|True||0|0|4.45|0.0|3.13|Yes. And can you pack the things up, please?
+dt00481_01|True||0|0|3.7|0.0|3.54|Yes, sir. There'll be no problem with the quality.
+dt00481_03|False|natural 3.15|0|0|3.15|0.0|3.89|You don't have to worry about it. We have a one year warranty.
+dt00481_05|True||0|0|3.61|0.36|4.74|Sure. We have a good after-sale service. Your satisfaction is guaranteed.
+dt00483_03|False|words 1>0|1|0|3.95|0.65|2.6|My car didn't want to start either at first.
+dt00483_05|True||0|0|4.29|0.36|4.59|Not in the new apartment. We have to leave the car in the parking lot.
+dt00483_07|True||0|0|3.6|0.0|4.29|I do. Right now I have it protected up to thirty below zero.
+dt00483_09|True||0|0|3.88|0.46|3.67|Not really. It sometimes gets to twenty below.
+dt00496_00|True||0|0|4.07|0.0|4.34|Steven, have you ever met Hanson ever since he went back to London?
+dt00496_02|False|natural 3.28|0|0|3.28|0.0|2.32|What's the way you keep in contact?
+dt00496_04|False|words 1>0|1|0|3.61|0.37|4.07|Email is not always the best form. I think QQ is way better.
+dt00508_00|True||0|0|4.41|0.0|1.49|I had a busy morning.
+dt00508_02|True||0|0|4.28|0.0|1.8|I watered all the plants.
+dt00508_04|True||0|0|4.34|0.0|1.22|Then I did my laundry.
+dt00508_06|False|words 1>0|1|0|4.27|0.0|1.58|I took the dog for a walk.
+dt00508_08|True||0|0|3.62|0.0|1.85|I vacuumed the entire house.
+dt00508_10|True||0|0|4.28|0.0|1.52|And then I made lunch.
+dt00517_02|True||1|1|3.69|0.0|1.91|How many carats would you like it to be?
+dt00517_04|True||0|0|4.3|0.0|1.73|Is this one suitable for you?
+dt00517_06|False|words 2>1|2|1|3.96|0.0|1.29|What about this?
+dt00517_08|True||0|0|3.92|0.0|4.33|Then you can buy this one. It's very nice and latest in style.
+dt00529_00|False|jumps 1.14%|0|0|4.38|1.14|1.45|I need to buy some fruit.
+dt00529_02|False|natural 3.43|1|1|3.43|0.0|1.55|How much are the pears?
+dt00529_04|True||0|0|3.83|0.0|4.25|Give me one kilo of those, please. Do you have any fresh plums?
+dt00529_06|True||4|4|4.39|0.0|4.55|It's a bit too expensive. We can get it for six yuan in the shop next here.
+dt00529_08|True||0|0|4.45|0.0|3.13|Sounds reasonable. I'll take three kilos.
+dt00562_00|True||0|0|4.2|0.0|1.1|What can I do for you?
+dt00562_02|True||0|0|3.62|0.0|1.32|How would you like your hair cut?
+dt00562_04|True||0|0|4.26|0.0|2.21|Well, how about like this?
+dt00562_06|False|natural 3.41|1|1|3.41|0.0|2.26|OK. How about this style?
+dt00562_08|True||0|0|4.39|0.0|2.79|Can you give me some idea of what you'd like?
+dt00562_10|False|natural 3.16|1|1|3.16|0.0|1.55|OK, I see.
+dt00563_01|True||0|0|3.91|0.67|4.01|It means young girls. That's where you'll find clothes for young girls.
+dt00563_03|True||1|1|3.57|0.0|3.2|Umm you're small, but you're not a child.
+dt00563_05|False|words 1>0; jumps 1.45%|1|0|3.52|1.45|2.71|There's a petite section that you can check out.
+dt00563_07|True||0|0|4.0|0.0|2.71|It has clothes in small sizes for small women.
+dt00587_01|True||1|1|3.74|0.0|2.88|I'm in a really good mood, actually. How about you?
+dt00587_05|True||0|0|3.6|0.0|5.9|That's too bad. I'm sure there's a logical explanation for it. Don't be too upset about it.
+dt00587_07|True||0|0|3.9|0.0|3.07|I see how that can get a bit annoying.
+dt00587_09|True||0|0|3.82|0.64|2.47|So what are you going to do about it?
+dt00587_11|True||0|0|4.17|0.0|1.84|What do you think would make you happier?
+dt00587_13|True||0|0|3.77|0.0|2.63|Relationships can be confusing sometimes.
+dt00587_15|True||0|0|3.67|0.0|3.99|I'd call her and dump her now! You deserve better than her!
+dt00589_00|True||0|0|3.78|0.0|3.2|Hello, Mr. Black, I'm calling to say goodbye.
+dt00589_02|True||0|0|3.81|0.0|4.95|I wish I could stay a little longer, but a lot of things to do back home.
+dt00589_04|True||0|0|4.16|0.0|0.87|Yes, I did.
+dt00589_06|True||0|0|4.1|0.0|1.21|At eleven o'clock.
+dt00589_08|False|natural 3.12|1|1|3.12|0.0|3.79|Umm... No, I'll go by myself, thanks.
+dt00591_00|False|natural 3.36|0|0|3.36|0.55|2.7|Mr. Martin, we're on arrival.
+dt00591_02|True||1|1|4.16|0.0|2.99|We'll miss you. I hope we'll keep in touch.
+dt00591_04|True||0|0|3.91|0.0|3.74|It's my pleasure. We hope you'll visit Beijing again.
+dt00591_06|True||0|0|4.35|0.0|1.95|It's almost time to get aboard.
+dt00591_08|False|natural 3.34|0|0|3.34|0.0|2.15|Bye bye! Have a pleasant journey!
+dt00602_01|True||1|1|4.17|0.0|1.95|Oh, about two years now.
+dt00602_03|True||0|0|3.85|0.0|2.88|They still live in Shanghai where I was born.
+dt00602_05|False|jumps 1.71%|0|0|3.98|1.71|2.36|Yes, I try to keep in touch with them.
+dt00606_01|True||0|0|3.66|0.0|2.88|Oh, that's George. He looks very drunk.
+dt00606_03|False|natural 3.12|0|0|3.12|0.0|6.07|Oh, he's really reserved, normally. But, from what I hear, he's got lots of problems.
+dt00606_05|True||0|0|3.79|0.52|9.89|Well, off the record, of course, but I hear that he's got terrible debts. He has his own company, and it's not going very well.
+dt00606_07|True||1|1|3.97|0.0|2.84|Really? Umm what makes you say that?
+dt00606_09|True||0|0|4.15|0.37|10.06|Yes, that's the problem. He can't find any customers. It's a pity, really, because his products are very good. Did I tell you about my new laptop?
+dt00606_13|True||0|0|4.23|0.0|1.98|Yes, I'll have another cocktail.
+dt00606_17|False|natural 3.50|1|1|3.5|0.0|2.06|OK. I'll wait here for you.
+dt00618_01|True||0|0|3.62|0.0|2.47|Sorry. I was too worried.
+dt00618_03|True||0|0|4.04|0.0|5.56|Absolutely. By the way, do you sell any traditional Chinese medicine?
+dt00618_05|True||0|0|3.68|0.0|4.19|I heard Chinese medicine has a better lasting effect in cure.
+dt00622_01|False|words 1>0|1|0|3.86|0.34|5.43|Certainly. There are several kinds of music. What do you like to listen to?
+dt00622_03|True||1|1|3.79|0.0|2.43|OK, here it is. Can you hear it?
+dt00622_05|True||0|0|4.14|0.0|2.04|The last one clockwise.
+dt00629_00|False|natural 3.43|0|0|3.43|0.5|3.52|What sort of salary did you get at your previous job?
+dt00629_02|False|jumps 1.27%|1|1|3.69|1.27|6.65|I see. I am sure we can offer you thirty five dollars at the beginning. Would that be satisfactory?
+dt00629_04|False|words 2>1|2|1|3.6|0.0|6.23|Good. We also have health insurance, bonus and paid vacation. When can you begin to work?
+dt00629_06|True||2|2|3.74|0.24|7.42|Good. Please come in on Monday. Working hours are from eight to four-thirty. Lunch is fifty-five minutes.
+dt00634_00|True||0|0|4.08|0.0|3.92|Excuse me, but can you tell me the way to the Today Mall?
+dt00634_02|True||0|0|3.58|0.0|2.1|How long will it take me to get there?
+dt00634_04|True||0|0|4.34|0.0|1.3|Thank you very much.
+dt00649_01|True||0|0|4.2|0.0|0.81|Yes, it is.
+dt00649_03|True||1|1|3.57|0.91|1.64|Please show me your parcel order.
+dt00649_05|True||9|9|3.63|0.0|11.51|Let me check your parcel number. Song Ping's parcel number should be CP zero six two three zero two two one five CN. Here is your parcel.
+dt00649_07|True||0|0|4.13|0.0|1.04|Not at all.
+dt00651_01|True||0|0|4.14|0.0|1.43|May I have your room number sir?
+dt00651_03|False|natural 3.48|1|1|3.48|0.0|3.93|Just a minute, sir. Umm are you Mr. Wang from China?
+dt00651_05|True||0|0|3.79|0.36|3.91|Mr. Wang, did you sign any bill in the last two hours in our hotel?
+dt00651_07|True||0|0|4.25|0.0|2.42|Have you used any hotel services this morning?
+dt00651_09|True||3|4|3.73|0.0|3.74|Here is your bill. It totals thirty two fifty dollars.
+dt00651_11|True||0|0|4.23|0.0|1.08|What kind of card?
+dt00651_13|True||1|1|4.38|0.0|2.34|Yes, we do. Here is your bill and receipt.
+dt00652_00|False|natural 3.30|0|0|3.3|0.0|4.97|Good afternoon, Lexington Software. Angelina Dawson, how can I help?
+dt00652_02|True||1|1|3.62|0.0|5.64|Ah, hello Quinn. Oh dear, you are calling to tell me there is a problem, aren't you?
+dt00652_04|False|natural 3.40|2|2|3.4|0.24|7.25|Hmm... well, it was my first attempt! Is it a very big mistake, or can we just alter it?
+dt00652_06|True||0|0|4.42|0.0|1.82|What do you recommend we do?
+dt00652_08|False|words 3>1|3|1|3.8|0.0|5.87|I trust your judgement. Thank you, Quinn. I'll be back tomorrow with a new set. Bye for now.
+dt00658_01|False|natural 3.25|0|0|3.25|0.0|4.03|Tired and stressed. This wedding is giving me a headache.
+dt00658_03|True||0|0|4.31|0.0|2.52|I'm worried that everything will be chaotic!
+dt00658_05|True||0|0|4.13|0.0|4.68|You're going to have to tell them what to do in church, what everything means...
+dt00663_01|True||0|0|4.32|0.0|1.83|Of course. What would you like?
+dt00663_03|False|words 5>4|5|4|3.82|0.0|6.19|I'm so sorry. We ran out of filet mignon. May I suggest the porterhouse instead?
+dt00663_05|True||4|4|3.55|0.0|5.22|May I be so bold as to suggest chocolate-covered strawberries with the champagne?
+dt00663_07|True||2|2|3.67|0.0|4.31|No strawberries. We'll charge your amenities account, if that's OK.
+dt00663_09|True||2|2|4.08|0.0|4.25|Your meal will be delivered as soon as it's all ready. Enjoy!
+dt00673_01|True||0|0|4.24|0.0|1.66|What's on tonight?
+dt00673_03|True||0|0|4.32|0.0|1.31|Who is in this movie?
+dt00683_01|True||0|0|3.9|0.0|2.02|You've done a lot, my darling!
+dt00683_03|True||0|0|4.08|0.0|1.78|You're too strict with yourself.
+dt00691_01|True||0|0|3.56|0.0|1.57|I have never tried it.
+dt00691_03|False|natural 3.32|0|0|3.32|0.76|1.96|Sorry, I don't think I can.
+dt00691_05|False|jumps 1.69%|0|0|4.05|1.69|1.2|Friday is great.
+dt00711_01|True||0|0|4.05|0.0|3.0|I want to have a look at the microwave ovens.
+dt00711_03|True||0|0|4.06|0.0|2.72|Not really. What are these toys over there?
+dt00711_05|False|natural 3.44|1|1|3.44|0.0|4.32|I don't like its color. A bit too bright. Do you have a grey one?
+dt00711_07|True||0|0|3.53|0.0|1.65|Really? How so?
+dt00711_11|True||0|0|3.96|0.0|1.26|How about its quality?
+dt00711_13|True||0|0|3.87|0.0|1.27|What about the price?
+dt00727_00|False|natural 2.91|0|0|2.91|0.0|1.55|Hello, thirty five..
+dt00727_04|True||1|1|3.9|0.0|4.42|Umm I am sorry. I am very tired. I'm going to bed early.
+dt00739_00|True||0|0|3.8|0.35|4.98|Why are there still so many people overweight despite the current fitness craze?
+dt00739_06|True||0|0|3.67|0.0|4.87|That makes sense. Probably less time to make dinner and the junk food is cheaper.
+dt00739_10|False|words 2>0; natural 3.48|2|0|3.48|0.0|6.83|Wow! No wonder people are so fat. Say, Carl, looks like you could be doing a bit more exercising.
+dt00739_12|True||0|0|4.03|0.0|3.83|You should consider eating healthier food and getting some more exercise.
+dt00739_14|True||0|0|4.18|0.0|1.22|So what happened?
+dt00739_16|True||0|0|3.94|0.0|1.49|You should have kept trying.
+dt00746_00|True||0|0|4.01|0.0|1.9|How are you doing, Christopher?
+dt00746_02|True||1|1|3.61|0.58|2.58|Umm are you doing anything this weekend?
+dt00746_04|True||0|0|3.78|0.0|1.48|Are you available on Sunday?
+dt00746_06|False|natural 3.37|1|1|3.37|0.0|5.98|OK, well, my friends and I are planning on going to the beach on Sunday. Do you want to come with us?
+dt00746_08|False|natural 3.48|0|0|3.48|0.0|3.55|It's a quiet beach just about an hour outside of the city.
+dt00746_10|True||0|0|3.99|0.24|7.66|We've got plenty of inflatables, but if you want to sit on a chair, you'll have to bring your own sunlounger.
+dt00746_12|True||0|0|3.98|0.0|1.0|Do you like surfing?
+dt00746_14|True||0|0|3.97|0.0|4.87|We've got a few. I can teach you how to surf on Sunday. It'll be fun!
+dt00746_16|False|words 4>1|4|1|4.12|0.33|8.95|You'll just need roughly ten dollars for food and gas money. My friend is driving, so we usually all chip in a few dollars for gas money.
+dt00746_18|True||0|0|3.83|0.42|3.81|We'll pick you up at your place at noon. Be there or be square!
+dt00756_01|True||3|4|3.59|0.35|4.58|Umm I'm very sorry, sir. I'll bring you a cloth immediately.
+dt00756_03|True||0|0|3.95|0.0|4.03|I'd like to apologize for my carelessness. May I clean it up for you?
+dt00756_05|True||1|1|3.68|0.32|5.45|Here is my card, sir. Could you send me the cleaning bill and I will refund the cost to you?
+dt00756_07|False|words 4>0|4|0|3.72|0.0|3.83|I'm very sorry to have caused you this trouble.
+dt00756_09|False|natural 3.22|1|1|3.22|0.32|4.25|I will, sir. I'm really very sorry.
+dt00758_01|False|natural 3.46|0|0|3.46|0.0|6.4|Thank you, Joe. What would you like to drink with your meal? I can offer you wine, mango juice, or water.
+dt00758_03|True||0|0|3.99|0.0|3.45|Excellent choice. Can I dish you up some chicken?
+dt00758_05|True||0|0|3.98|0.0|2.69|How about some salad to go with your chicken?
+dt00758_07|True||0|0|4.13|0.0|1.91|Would you like to have rice with your chicken?
+dt00758_09|True||0|0|3.81|0.0|5.61|Good! Julie, if you could pass this plate down to Joe, I think we are all set.
+dt00786_03|True||0|0|3.84|0.28|5.81|Actually, the language itself is not so funny, but you can imagine the scene, that's funny.
+dt00786_05|False|words 2>0|2|0|4.06|0.0|1.91|Have you ever read this book before?
+dt00786_07|False|natural 3.22|1|1|3.22|0.44|3.58|Umm it's really a good book. You will like it too.
+dt00786_09|True||0|0|3.8|0.0|4.89|Wow, that sounds like a scholar. By the way, who's your favorite writer?
+dt00786_11|True||1|1|3.94|0.48|3.65|Me too. Pride and Prejudice is my favorite.
+dt00789_01|True||0|0|3.59|0.67|3.05|Hi Steve. This is Kelly. What are you doing?
+dt00789_03|True||0|0|3.85|0.0|1.62|There's nothing to watch right now.
+dt00789_05|True||0|0|4.49|0.0|2.92|Me too. Let's get together and do something.
+dt00789_07|True||0|0|4.36|0.0|2.3|Yeah. Let's plan something tomorrow.
+dt00789_09|True||1|1|3.72|0.0|4.54|Umm I think it is going to be the same as today. Clear and sunny.
+dt00789_11|True||0|0|4.19|0.0|2.77|Are there any special events going on tomorrow?
+dt00789_13|True||0|0|3.67|0.0|3.68|Oh yeah. I heard about that too. Let's go check it out.
+dt00789_15|True||0|0|3.6|0.0|1.71|It starts at one p.m.
+dt00789_17|True||0|0|3.68|0.0|4.16|Perfect. I'll see you in front of the apartment at eleven thirty.
+dt00806_01|True||0|0|4.25|0.0|1.97|I really like the straight legs.
+dt00806_03|False|words 2>1; natural 3.32|2|1|3.32|0.0|4.88|I don't like the way they sag down. I feel like I have plumber butt in them.
+dt00806_05|True||0|0|3.62|0.0|3.9|What if someone got it in their head to give them a tug? What then?
+dt00806_07|True||0|0|4.01|0.0|2.59|If you ask me, it's a walking invitation!
+dt00827_01|False|natural 3.43|0|0|3.43|0.0|1.84|I like it very much.
+dt00828_00|False|words 1>0|1|0|3.53|0.0|3.0|Can you change American dollars into French francs.
+dt00828_02|True||1|1|3.99|0.0|2.89|Fifty dollars. What is the exchange rate today?
+dt00834_00|True||0|0|4.32|0.0|0.98|What's your name?
+dt00834_02|True||0|0|4.41|0.0|1.25|How are you, Sam?
+dt00834_04|True||0|0|4.24|0.0|1.16|Where are you from, Sam?
+dt00834_06|True||0|0|4.18|0.0|1.13|What is your job?
+dt00837_01|True||0|0|3.59|0.56|2.67|Well, I spend a lot of time watching movies.
+dt00837_03|True||0|0|4.26|0.0|3.62|Oh really, Frank? What kind of movies do you like?
+dt00837_05|True||3|3|4.26|0.0|3.71|Art films are my favorite, but thrillers are cool, too.
+dt00837_07|True||0|0|4.06|0.53|2.97|Sure. I enjoy both of them very much.
+dt00837_09|True||3|3|3.86|0.0|4.29|Once in a while, I suppose, I usually rent movies at Movie Salon.
+dt00837_11|True||0|0|4.34|0.0|4.13|It's a movie rental store in my neighborhood. I've got a membership there.
+dt00837_13|True||0|0|3.95|0.0|3.35|Yes, you can find almost all new releases there.
+dt00851_00|True||0|0|3.65|0.0|1.46|How is your new car?
+dt00851_02|True||0|0|4.35|0.0|2.6|Why do you say so? Can I see your new car?
+dt00851_04|True||0|0|3.62|0.0|5.34|Wow, this car is dynamite! It is a shiny, beautiful car.
+dt00851_06|True||0|0|3.91|0.0|3.32|The car has very sleek lines. I love it.
+dt00851_08|True||0|0|4.26|0.0|1.7|You made a good choice.
+dt00855_01|False|natural 3.39|0|0|3.39|0.0|1.16|I am worried.
+dt00855_05|True||0|0|3.65|0.0|2.09|I feel very nervous about it.
+dt00857_00|True||0|0|4.12|0.0|1.94|Can I have my money back on this skirt?
+dt00857_02|True||0|0|3.93|0.75|5.24|Yes, this is defective. See? I didn't notice this hole when I bought it.
+dt00857_04|False|words 1>0|1|0|4.09|0.0|5.32|If you have exactly the same one-same color, same design, and same size, of course.
+dt00858_00|True||0|0|3.51|0.0|1.39|Are you being served, sir?
+dt00858_02|False|natural 3.17|1|1|3.17|0.0|3.62|Umm will you sit here, please? How would you like it cut?
+dt00858_04|False|natural 3.28|0|0|3.28|0.0|1.76|But it's short already, sir.
+dt00858_06|False|words 1>0|1|0|3.9|0.0|1.37|Shall I just trim it?
+dt00858_08|True||0|0|4.07|0.0|3.72|Oh, I see. You like the Chinese style, don't you?
+dt00858_10|True||0|0|4.15|0.93|1.73|Would you like to have a shampoo, sir?
+dt00858_12|True||0|0|3.6|0.0|1.87|How about oil or spray?
+dt00858_14|True||2|2|3.85|0.0|1.3|There! How is that?
+dt00873_00|True||0|0|3.61|0.0|2.21|What fruits are in season right now?
+dt00873_02|True||0|0|3.77|0.0|1.45|Can I sample a grape?
+dt00873_04|True||0|0|4.13|0.0|3.43|It tastes good. How much are the grapes per kilo?
+dt00875_03|False|natural 3.37|1|1|3.37|0.81|1.95|Umm who will be there?
+dt00875_05|True||0|0|4.13|0.0|3.13|That is good. He can leave you alone this time.
+dt00885_00|True||0|0|4.26|0.0|3.95|Take care, Peter. Don't run so fast. Are you tired?
+dt00885_02|True||0|0|4.18|0.0|4.65|No, you mustn't sit on the grass. Don't you see the notes?
+dt00885_04|True||2|2|3.87|0.0|2.81|It says 'Keep off the grass!'
+dt00885_06|True||0|0|4.11|0.87|2.53|Be careful. You can't smoke here.
+dt00885_08|True||2|2|3.97|0.0|3.66|Can't you see the notes there? It says 'No smoking here'.
+dt00889_01|False|natural 3.48|0|0|3.48|0.0|4.31|No, I am on business. I will spend half a month for the business.
+dt00889_03|True||0|0|3.55|0.0|3.18|I am currently working in a foreign company as a salesman.
+dt00889_05|False|words 2>0|2|0|3.73|0.44|7.46|Maybe. But it provides much wider space for me to improve the skills and increase the experience. What about you?
+dt00889_07|False|words 3>1; natural 2.61|3|1|2.61|0.0|1.5|Umm do you like your job?
+dt00889_09|True||0|0|3.66|0.0|1.89|Which kind of news do you catch?
+dt00889_11|False|words 1>0|1|0|4.13|0.0|1.2|Are you feel tired?
+dt00889_13|True||0|0|3.99|0.35|4.26|You have to experience this if you want to be an extraordinary reporter.
+dt00897_01|True||0|0|3.93|0.0|2.81|Oh, it's really popular these days.
+dt00897_03|True||0|0|4.03|0.0|3.9|Honestly speaking, I think the one next to it suits you better.
+dt00897_05|True||0|0|3.68|0.0|6.04|That's not true. Look over there! That guy chose the same one and he is surely older than you.
+dt00897_07|True||0|0|4.3|0.0|1.27|Which color do you like?
+dt00897_11|True||0|0|3.54|0.49|3.65|I hope not but it will take at least three hours.
+dt00908_01|True||0|0|4.33|0.0|3.11|Did you watch NBA games before you came to the U.S.?
+dt00908_05|True||0|0|4.36|0.0|1.22|Yes, of course.
+dt00908_09|True||0|0|4.28|0.0|3.26|Let's go to watch an NBA game tonight, shall we?
+dt00934_02|False|natural 3.31|0|0|3.31|0.0|1.03|Are you there yet?
+dt00934_04|True||0|0|3.66|0.0|3.36|I just got off the subway. I'm almost there. Sorry I'm late.
+dt00934_06|False|natural 2.91|0|0|2.91|0.0|0.95|Where are you?
+dt00934_08|True||0|0|3.67|0.0|3.86|Should I come to the second floor or do you want to come to the first floor?
+dt00934_12|True||1|1|3.62|0.0|2.39|Oh, OK. What are you doing there?
+dt00934_14|True||0|0|3.53|0.0|2.1|Do you want to get something to eat later?
+dt00934_16|True||0|0|3.62|0.0|1.02|What do you want to do?
+dt00934_18|True||1|1|3.77|0.0|1.49|OK, see you soon.
+dt00935_00|True||0|0|3.86|0.0|4.46|I am sorry to trouble you, but there's a lot of noise in the next room.
+dt00935_02|True||1|1|3.75|0.0|2.85|It's I think, neighbours on the right.
+dt00935_04|True||0|0|3.64|0.0|5.03|I'm not sure, but I think so. I'm very exhausted, but I can't sleep.
+dt00935_06|True||0|0|4.39|0.77|4.69|If next room is still noisy, could you give me a different room, please?
+dt00941_00|False|natural 3.48|0|0|3.48|0.0|1.64|Do you shop online often?
+dt00941_02|True||0|0|3.56|0.0|2.18|Are there many things online?
+dt00941_04|True||0|0|3.79|0.0|5.27|Incredible. I really want to survey the on-line virtual supermarket.
+dt00941_06|False|natural 3.45|0|0|3.45|0.51|2.91|What are the disadvantages of on-line shopping?
+dt00967_00|True||0|0|4.41|0.0|2.96|How are you getting along with your paper?
+dt00967_02|True||0|0|4.0|0.0|2.25|You should hand it in before next Sunday.
+dt00967_04|True||0|0|3.64|0.0|2.28|I believe you can do a good job.
+dt00969_02|False|jumps 2.00%|0|0|4.14|2.0|1.12|This is the kitchen.
+dt00969_04|False|jumps 2.11%|0|0|4.47|2.11|2.81|Yes. We just renovated a few months ago.
+dt00969_08|True||1|1|4.02|0.0|1.75|Nine hundred dollars a month.
+dt00969_10|True||0|0|3.79|0.56|6.23|Yes. It includes electricity, water, gas and cable, but the telephone is extra.
+dt00969_12|False|natural 3.19|0|0|3.19|0.0|1.29|The end of this month.
+dt00986_01|False|words 2>1|2|1|3.84|0.0|3.13|It's OK. It seems we have a lot in common.
+dt00986_03|True||0|0|3.71|0.0|2.71|He is tall and slim, fair-haired.
+dt00986_05|True||0|0|3.6|0.0|7.16|He is a nice guy and very considerate. I was impressed with how smart he was and he has a great sense of humor.
+dt00986_07|True||0|0|4.33|0.0|2.8|he didn't say, but he said he would call me.
+dt00986_09|False|natural 3.39|0|0|3.39|0.34|4.93|Oh, Steve. Stop it! I am a bit nervous! What if he doesn't call?
+dt00986_11|False|natural 3.31|0|0|3.31|0.55|3.2|Thank you, Steve. You're always so encouraging.
+dt01042_00|True||0|0|3.78|0.0|2.38|Emergency road service. May I help you?
+dt01042_02|True||2|2|4.23|0.0|2.55|All right. What's your membership card, please?
+dt01042_04|False|natural 3.21|0|0|3.21|0.0|1.0|And your name?
+dt01042_06|True||0|0|3.75|0.68|2.75|What's the expiration date on your card?
+dt01042_08|False|words 5>0; natural 2.93|5|0|2.93|0.0|1.5|Where is your car now?
+dt01042_10|True||0|0|3.96|0.61|2.44|And which direction were you going?
+dt01042_12|True||0|0|3.91|0.58|2.35|What is the maker and model of your car?
+dt01042_14|True||0|0|3.83|0.0|1.18|What color is it?
+dt01042_16|True||1|1|4.31|0.96|1.81|What's your licence plate number?
+dt01042_18|True||1|3|3.97|0.0|3.92|All right, Sir. I'll have a tow truck there within thirty minutes.
+dt01051_00|True||0|0|3.72|0.0|1.99|Abby Park Hotel. Can I help you?
+dt01051_02|False|jumps 1.36%|0|0|4.38|1.36|3.61|Certainly sir. Could I have your arrival and departure dates?
+dt01051_04|False|natural 3.29|1|1|3.29|0.0|4.04|We have a double room for you with a nice view of the park. Would that be OK?
+dt01051_06|True||1|1|3.93|0.2|7.4|It is ninety-five pounds per night. It is a double room with a bathroom with a fridge, coffee maker and a television in the room.
+dt01051_08|False|words 1>0|1|0|3.52|0.0|3.9|All our bathrooms have full size baths with a shower attachment.
+dt01051_10|True||1|1|3.53|0.4|3.73|Yes, all our rooms have complimentary wireless Internet.
+dt01051_12|True||1|1|4.13|0.23|8.13|Yes, breakfast is included in the price. Our guests have the choice of a full English breakfast or a continental breakfast.
+dt01084_01|True||0|0|3.58|0.0|1.82|I'm from Canada, originally.
+dt01084_05|True||0|0|4.16|0.0|1.88|We moved here when I was fourteen.
+dt01084_07|True||0|0|4.4|0.0|3.97|Well, I went to high school here, but I went to college in Texas.
+dt01084_09|False|natural 3.29|0|0|3.29|0.27|5.72|No, I traveled for a while in Europe after college, and then I lived in France.
+dt01084_11|True||0|0|4.33|0.6|2.81|Let's see... That was about six years ago.
+dt01084_13|True||0|0|3.8|0.28|5.86|I studied French. Anyway... that's enough about me.How about you? Were you born in L. A.?
+dt01085_00|True||0|0|4.22|0.0|2.2|Are you ready for your first driving lesson?
+dt01085_02|False|natural 3.44|0|0|3.44|0.35|4.34|The pedal on your left is the brake and the one on your right is the gas.
+dt01085_04|True||0|0|4.25|0.0|5.37|Automatics are very simple to drive. The first thing you should do is put your seat belt on.
+dt01085_06|True||0|0|3.55|0.24|6.3|Very funny. Next you should check your side mirrors and your rear view mirror. Can you see out of them?
+dt01085_10|True||0|0|4.29|0.0|1.9|Check your petrol situation.
+dt01085_14|True||0|0|3.59|0.0|5.14|Remember, no honking this time. The horn is only for emergencies!
+dt01092_00|False|words 1>0; natural 3.37|1|0|3.37|0.0|2.79|Welcome, Ron, come on in!
+dt01092_02|False|natural 3.48|0|0|3.48|0.0|1.9|We enjoy it too!
+dt01092_06|True||0|0|3.56|0.77|3.96|Ron, have a seat and I'll get us something to drink.
+dt01092_08|True||0|0|3.97|0.0|3.37|I have lemonade, iced tea, and mango juice.
+dt01093_07|True||0|0|3.94|0.0|1.67|Something real Australian.
+dt01093_09|False|jumps 1.08%|0|0|3.76|1.08|1.74|Yes. That would be fine.
+dt01093_11|True||1|1|3.73|0.42|3.64|I'll have Chicken and Ginger Burger with Chilli Dressing.
+dt01097_00|True||0|0|4.42|0.53|3.43|But this place doesn't feel like a forty ping apartment.
+dt01097_02|True||0|0|3.71|0.0|4.67|Oh! The view is great! Mountains, fresh air! Stars?
+dt01097_04|True||0|0|3.64|0.0|1.78|And we could get a dog!
+dt01097_06|True||0|0|4.28|0.69|2.4|Well, fish it will be then.
+dt01113_00|True||0|0|3.97|0.71|2.82|You mustn't touch the wet paint, Bill.
+dt01113_02|True||0|0|4.27|0.0|2.42|Try to be more careful in the future.
+dt01113_04|True||3|3|3.92|0.49|2.97|The workmen oughtn't to leave it without a notice.
+dt01113_06|False|natural 3.22|0|0|3.22|0.63|2.38|Then why isn't there a notice?
+dt01113_08|True||0|0|3.6|0.0|7.5|But look at them! They've forgotten about the wet cement and they're walking across it to put up the notice!
+dt01115_00|True||0|0|3.63|0.0|1.56|What are you doing tomorrow?
+dt01115_02|True||0|0|4.43|0.85|1.67|Let's watch a movie or something.
+dt01115_04|False|natural 3.10|1|1|3.1|0.0|3.85|Umm I think they're playing Lord of the Rings.
+dt01115_06|False|natural 3.05|0|0|3.05|0.0|1.61|Where should we meet?
+dt01115_08|False|natural 3.41|0|0|3.41|0.0|2.67|Alright. I'll meet you there at one o'clock.
+dt01123_01|True||0|0|3.58|0.0|2.11|Excellent. How many would you like?
+dt01123_03|True||0|0|4.32|0.0|1.93|You need to fill out this form, please.
+dt01123_05|True||0|0|3.68|0.0|1.73|That will be no problem, sir.
+dt01123_07|False|natural 3.23|0|0|3.23|0.71|3.59|Very good, sir. Your order will be ready in one week.
+dt01123_09|False|natural 3.16|0|0|3.16|0.0|4.08|No problem, sir. But it will cost you extra.
+dt01153_01|True||0|0|4.04|0.0|1.93|I'm looking for a pair of shoes.
+dt01153_03|False|natural 3.33|1|1|3.33|0.0|6.18|I wear size thirty six. This pair looks nice. Umm can I try them on?
+dt01153_05|True||0|0|4.39|0.0|1.33|How much are they?
+dt01153_07|True||0|0|4.27|0.0|0.99|I'll take them.
+dt01155_01|False|natural 3.47|0|0|3.47|0.88|1.87|Yes, sir. Did you call the airline?
+dt01155_03|True||0|0|4.31|0.0|3.41|Certainly, sir. What is the flight number and when are you leaving?
+dt01155_05|True||0|0|3.54|0.57|8.47|Oh, I see, sir. We have the airline office inside the hotel. They have an English-speaking staff. Just dial thirty five, please.
+dt01169_01|True||0|0|3.9|0.28|6.59|Thank you. Nice to meet you too. I'm Sophie. Is this your first time to take a long-distance trip on plane?
+dt01169_03|False|natural 3.44|1|1|3.44|0.15|11.73|Oh, I am sorry to hear that. Take it easy. It will be OK soon. You see, I take this long-hour plane frequently, but the jet lag still makes me uneasy.
+dt01169_05|True||2|2|3.81|0.35|9.02|Yes, whenever I think about China, I'd see the Tian'an Men Square. And I've seen many landmarks in China but I like the Great Wall most.
+dt01169_07|True||0|0|3.88|0.3|5.06|Was it built before the In dynasty? I thought it was in the Ming dynasty.
+dt01169_09|True||0|0|3.51|0.0|6.28|Oh, yeah. Though I am an American, I know quite a lot about China and I like Chinese tea very well.
+dt01169_11|False|natural 3.34|1|1|3.34|0.0|7.69|Yeah, many of my friends like Chinese tea and whenever I go back to China, I'll take some Dragon-well green tea for them.
+dt01169_13|True||0|0|3.76|0.43|3.81|I heard about it, but I don't have any clothes made from silk.
+dt01169_15|True||0|0|4.12|0.6|2.55|Oh, I'm eager to have a try.
+dt01178_01|True||0|0|4.13|0.0|2.73|I would like to. but I'm not good at it.
+dt01178_03|False|natural 3.36|1|1|3.36|0.0|2.38|That's great! When will we go?
+dt01178_05|False|natural 2.91|2|2|2.91|0.0|2.38|All right. What should I take?
+dt01178_07|False|words 1>0|1|0|3.66|0.66|2.59|Thanks. I will wait you at my home.
+dt01182_00|False|natural 3.43|0|0|3.43|0.0|2.58|Good afternoon, can I help you?
+dt01182_02|True||0|0|4.11|0.0|1.64|How many and what kind?
+dt01182_06|False|words 5>1|5|1|3.89|0.0|1.84|Sixteen fifty dollars.
+dt01182_08|False|natural 3.22|0|0|3.22|0.0|1.25|You are welcome.
+dt01194_01|False|natural 3.39|2|2|3.39|0.0|1.71|All right. Where do you live, sir?
+dt01194_03|True||0|0|3.8|0.41|3.79|Very well. Why do you want to disconnect your phone, sir?
+dt01194_05|False|words 2>1|2|1|3.54|0.74|2.34|OK. May I have your name please?
+dt01194_09|False|words 1>0; natural 3.47|1|0|3.47|0.0|3.33|Thank you. Where should I send your final phone bill?
+dt01194_11|True||0|0|4.02|0.0|6.01|Thank you, Mr. Smith. Your phone will be disconnected after this phone call. Have a nice day.
+dt01197_00|True||0|0|3.79|0.0|3.33|What are you listening to? Is that Beethoven or Mozart?
+dt01197_02|True||0|0|4.27|0.22|7.02|I think Beethoven's music is incredible. I've heard that listening to it can make you more intelligent, too. Do you believe that?
+dt01197_04|False|words 1>0|1|0|3.73|0.0|2.49|What other kind of music do you listen to?
+dt01197_06|True||0|0|4.3|0.0|4.05|To be honest, I think classical music is too complicated for me.
+dt01197_08|False|natural 3.20|0|0|3.2|0.0|2.07|I like pop music. Do you?
+dt01197_10|True||0|0|3.77|0.0|4.28|I see what you mean. I think that's why I like it so much.
+dt01197_12|True||0|0|3.97|0.0|3.8|I've always been into it. Have you always liked classical music?
+dt01197_14|True||0|0|3.71|0.0|2.79|So, how did you become interested in it?
+dt01197_16|False|jumps 2.22%|0|0|3.85|2.22|1.63|Do you still play piano?
+dt01203_00|True||0|0|3.66|0.49|3.25|Hello. I have a room booked for tonight, the fifteenth.
+dt01203_02|False|jumps 1.30%|0|0|4.14|1.3|1.54|It's Marcia Gleason.
+dt01203_04|True||0|0|3.82|0.0|2.62|Yes, a single, thanks.
+dt01203_06|False|words 2>0|2|0|4.39|0.0|2.8|Actually, I'd prefer not to be.
+dt01235_01|True||0|0|3.77|0.0|1.67|We'd better go out for a walk.
+dt01235_05|False|natural 3.30|0|0|3.3|0.0|2.41|I dislike it most.
+dt01235_07|False|words 3>0|3|0|4.36|0.52|2.9|Because the hottest season is summer in a year.
+dt01241_01|True||0|0|3.77|0.0|1.82|They'll be ready by this afternoon.
+dt01241_03|True||0|0|3.54|0.0|2.53|Is that right? We're very sorry.
+dt01241_05|False|natural 3.39; jumps 1.21%|0|0|3.39|1.21|2.87|I'm afraid we can't return it by eleven o'clock.
+dt01241_07|True||0|0|4.26|0.0|1.27|Yes, we'll do so.
+dt01243_03|True||0|0|4.35|0.0|1.61|I just got back from London.
+dt01243_05|False|natural 3.24|1|1|3.24|0.0|2.87|It was OK. There was a lot of turbulence, though.
+dt01243_07|False|natural 3.46|0|0|3.46|0.0|1.32|It was ten hours.
+dt01243_09|True||0|0|4.35|0.0|2.04|Yes, in Paris, France.
+dt01243_13|True||0|0|3.7|0.0|1.04|It was nothing.
+dt01257_00|True||0|0|3.76|0.36|3.92|Excuse me. I've been waiting for my main dish for quite a time.
+dt01257_02|True||0|0|4.06|0.0|4.52|Thank you for waiting. It takes another ten to fifteen minutes, I'm afraid.
+dt01257_06|True||0|0|3.52|0.0|4.07|Well, yes. How about beef stew? We can serve you at once.
+dt01294_01|True||0|0|3.79|0.0|2.05|I am going to the Capital Hotel.
+dt01294_03|False|words 1>0; natural 3.27|1|0|3.27|0.0|1.94|About how much will it cost?
+dt01294_07|True||1|1|4.04|0.0|1.18|OK. Let's go.
+dt01297_00|True||0|0|3.88|0.0|4.39|My brother gave me a baby cat yesterday. I can keep it as my pet.
+dt01307_01|True||0|0|4.32|0.0|3.37|Yes, I'm excited to hear about your new product.
+dt01307_03|True||0|0|4.32|0.77|1.98|Yes. I've heard a lot about it.
+dt01307_05|True||0|0|3.8|0.2|8.98|I would have to agree with you. It seems to offer more options than the others. But new product sometimes has a few troubles. How about yours?
+dt01307_07|True||0|0|3.7|0.0|1.51|How do you ensure quality?
+dt01307_09|True||0|0|4.13|0.0|1.72|Are your prices negotiable?
+dt01307_11|False|words 1>0|1|0|4.25|0.0|3.17|What happens if I am not satisfied with my purchases?
+dt01307_13|True||0|0|3.89|0.59|5.35|I see. But I have to discuss it over with my boss before I make a decision.
+dt01316_00|True||0|0|3.8|0.0|1.84|Good evening, may I help you?
+dt01316_02|True||0|0|3.58|0.0|5.67|I am sorry, there are so many travelers that all our tables have been booked on that day.
+dt01316_04|True||1|1|3.78|0.78|4.78|Thank you, sir. We will phone you as soon as we have a vacant table.
+dt01317_00|True||0|0|4.26|0.0|1.64|Can I help you, sir?
+dt01317_02|True||0|0|4.34|0.0|2.99|Please take a seat. Do you need a shampoo?
+dt01317_06|True||1|1|4.06|0.0|2.38|The total charge is fifteen dollars.
+dt01317_08|True||0|0|4.25|0.0|2.43|Well, what shampoo do you prefer?
+dt01317_12|True||1|1|3.66|0.43|4.01|Umm I think a crew cut is the most suitable for you.
+dt01324_01|True||0|0|3.64|0.0|6.21|I'll have us ready for Stars.com by the end of next week. After that, I don't know.
+dt01324_03|True||0|0|4.31|0.0|3.51|Let's just say there could be some big changes around here.
+dt01324_05|True||0|0|3.63|0.0|3.03|You'll see. Oh, yeah, you'll see.
+dt01334_02|True||0|0|3.66|0.32|5.32|Your office looks different with a computer. By the way, is it difficult to use a computer?
+dt01334_04|True||0|0|4.12|0.0|1.48|A piece of cake?
+dt01341_00|True||0|0|4.06|0.0|2.04|Yes, sir. What'll it be for you?
+dt01341_02|True||0|0|3.77|0.0|1.56|Is there anything else?
+dt01341_04|True||0|0|3.73|0.0|2.19|Is this to go or to eat here?
+dt01341_06|True||0|0|3.57|0.0|3.17|Here you are. That's eight fifty.
+dt01341_08|True||0|0|4.33|0.0|2.35|It's on the service counter over there.
+dt01349_01|True||0|0|4.03|0.97|1.63|I want haircut and perm.
+dt01349_03|True||0|0|3.81|0.0|1.4|Just cut a little off.
+dt01349_05|True||1|1|4.31|0.0|1.44|I'd like to have medium.
+dt01349_07|True||0|0|4.37|0.0|1.67|Can you tell me my choices?
+dt01349_09|True||0|0|4.43|0.0|3.58|I want the chocolate one. I want to have it the big waves.
+dt01349_11|True||0|0|3.97|0.0|2.56|Turn the chair I can see myself in the mirror.
+dt01349_13|True||0|0|3.83|0.0|2.21|Beautifully done, many thanks.
+dt01358_00|True||0|0|3.63|0.0|1.51|Can you do push-ups?
+dt01358_02|False|words 1>0|1|0|4.41|0.0|2.31|Really? I think that's impossible!
+dt01362_03|True||0|0|3.89|0.0|3.74|Well it can be but Shanghai is much warmer than London.
+dt01362_05|True||0|0|3.93|0.0|4.03|Actually I think the buses and trains here are more modern.
+dt01362_07|False|natural 3.41|0|0|3.41|0.4|3.61|Oh, I think Shanghai is much more crowded than London.
+dt01369_00|True||0|0|4.11|0.0|2.35|Bring me some toast, please.
+dt01369_02|False|natural 3.14|1|1|3.14|0.0|2.31|Umm, spread some jam, please.
+dt01369_04|True||0|0|4.0|0.0|1.37|Black coffee is fine.
+dt01378_00|True||0|0|3.62|0.64|2.44|Gordon, you're ever so late.
+dt01378_02|True||0|0|3.56|0.64|4.32|But there's a bus every ten minutes, and you are over one hour late.
+dt01378_04|True||1|1|3.6|0.0|2.96|How on earth can you miss several buses?
+dt01378_06|False|natural 3.10|0|0|3.1|0.0|5.34|Oh, come on, Gordon, it's the afternoon now. Why were you really late?
+dt01378_08|True||0|0|3.88|0.0|1.35|Have you got it now?
+dt01378_12|True||0|0|3.96|0.0|2.64|I am not convinced by your explanation.
+dt01379_01|True||0|0|3.83|0.0|3.78|Sure, but I don't drink much. So I don't know what to order.
+dt01379_03|False|words 2>0|2|0|3.68|0.0|2.8|It sounds good. I'd like to start with a Compare.
+dt01379_05|True||0|0|4.24|0.0|1.35|Stirred will be fine.
+dt01379_07|True||0|0|3.66|0.0|2.75|Thanks. Does the bar have a signature drink?
+dt01379_09|True||0|0|3.52|0.0|1.26|Can you recommend one?
+dt01379_11|True||0|0|4.2|0.0|2.32|It sounds interesting. I'll take one.
+dt01379_13|True||0|0|4.01|0.0|1.14|It tastes great.
+dt01388_01|True||0|0|3.57|0.0|3.47|Yes, they have been concerned about me finding a job.
+dt01388_03|False|words 1>0|1|0|4.41|0.0|2.0|They want to recommend some jobs to me.
+dt01388_05|True||0|0|4.18|0.0|3.41|My father wants me to work as a trainee in his company.
+dt01388_07|True||0|0|4.12|0.25|5.77|My aunt says her company is in need of an assistant now, and she wants me to give it a try.
+dt01388_09|False|natural 3.31|0|0|3.31|0.0|6.49|One of my friends tells me that his company is hiring in a large scale and he wants me to go for an interview.
+dt01388_11|True||0|0|3.58|0.0|1.92|I know. Let me think it over.
+dt01395_00|True||0|0|4.11|0.0|1.6|What have you been up to, Johnny?
+dt01395_02|False|words 2>0; natural 3.03|2|0|3.03|0.0|3.45|Wow, your grandma's really having a field day with you, huh?
+dt01395_04|True||0|0|3.78|0.0|2.16|You have all the fun, don't you?
+dt01395_06|True||1|3|3.89|0.0|4.29|Sure thing, Johnny. Watch out for dishpan hands there, kid!
+dt01404_03|False|natural 2.71|3|3|2.71|0.0|2.7|Umm.. Do you know where Dawanglu is?
+dt01404_05|True||0|0|4.35|0.0|1.96|You can take me there?
+dt01419_01|False|natural 3.37|1|1|3.37|0.0|1.34|Why is that?
+dt01419_03|True||0|0|3.52|0.0|2.15|Yes, the snow is fun.
+dt01419_05|True||0|0|4.41|0.0|1.11|How big was it?
+dt01419_07|True||0|0|4.28|0.0|1.53|How long did it take?
+dt01419_11|True||0|0|4.33|0.0|1.97|Let me help you make one this year.
+dt01423_01|True||0|0|3.9|0.0|2.57|The one on the mannequin is in fashion now.
+dt01423_03|True||1|1|3.77|0.4|3.84|OK, here you are. You look really attractive in that gown.
+dt01426_00|False|natural 3.38|1|1|3.38|0.48|3.3|Hi, my name is Lean, and I'm from Russia.
+dt01426_02|False|natural 3.29|0|0|3.29|0.0|3.06|To me English is a difficult language.
+dt01426_04|True||1|1|4.41|0.0|3.63|True, but English is harder than most. It's a crazy language.
+dt01426_06|True||0|0|3.82|0.27|5.34|One letter can have several pronunciations and one word can have several meanings.
+dt01435_01|True||0|0|3.85|0.0|3.23|Not yet. I am looking for a black suitcase.
+dt01435_03|True||0|0|4.31|0.0|2.03|Yes. I would prefer Nike.
+dt01443_01|True||1|1|4.09|0.0|1.63|OK, Bob, What is it?
+dt01443_05|True||0|0|3.79|0.0|1.6|Yes, here you are.
+dt01443_07|False|words 2>1|2|1|3.78|0.0|3.25|Well, it's straight, but it's upside down I'm afraid.
+dt01447_01|True||0|0|3.61|0.0|1.11|Don't think about it!
+dt01447_03|True||0|0|4.29|0.39|4.23|You pay for the taxi and dinner, then to even things up.
+dt01458_00|False|natural 2.86|0|0|2.86|0.0|1.84|Welcome. Can I help you?
+dt01458_02|True||0|0|3.73|0.0|3.65|Yes, here are what we have exclusively for our guests.
+dt01458_04|False|words 1>0|1|0|4.3|0.0|4.68|Sure. Take as much as you want. They are free gifts from this shop.
+dt01458_06|True||0|0|4.33|0.0|2.88|Please try the shop there. They might have them.
+dt01458_08|True||1|1|3.61|0.67|2.13|No, their cards are for sale.
+dt01492_01|False|natural 3.41|0|0|3.41|0.0|3.74|Yes, the wine list is at the end of the menu.
+dt01492_03|True||0|0|4.22|0.0|5.61|Sorry, sir, but I recommend you Bacardi White. It's quite delicious.
+dt01495_01|True||4|4|3.58|0.0|4.83|Sure. Our special wine today is a nineteen-eighty nine Chardonnay.
+dt01495_03|True||1|1|3.6|0.0|4.43|It's four-twenty-five by the glass. The whole bottle is tweny two-fifty.
+dt01495_05|True||0|0|3.97|0.0|1.76|I'll need to see your ID please.
+dt01495_07|True||0|0|4.46|0.24|6.33|Sorry about the inconvenience, you look so young. I had to make sure you are over twenty-one years old.
+dt01496_01|False|natural 3.39|1|1|3.39|0.0|5.87|We don't have a swimming pool, sir, umm but we do have swim stations in the gym.
+dt01496_03|True||0|0|3.83|0.0|4.23|It's just a deep bathtub with a current of water that you swim against.
+dt01496_05|True||2|2|4.43|0.0|2.06|As a guest, sir, you pay nothing.
+dt01496_07|True||0|0|3.63|0.0|5.89|If you want to swim, you can visit the gym any day between seven a.m. and ten p.m.
+dt01496_09|True||2|2|3.99|0.0|5.3|I'm sure you'll enjoy your workout, sir. Everyone seems to like the swim stations.
+dt01499_07|True||0|0|3.54|0.0|2.02|I wanted to see the White House.
+dt01499_11|False|natural 3.12|0|0|3.12|0.0|2.64|Oh, well thank you very much.
+dt01505_00|True||0|0|3.86|0.53|2.88|Do you think what I did to Elvin was out of line?
+dt01505_02|True||1|1|3.57|0.0|5.17|Elvin doesn't want any programming help. He wants all the glory for himself.
+dt01505_04|True||0|0|3.56|0.0|2.61|Did you hear the names he was calling me?
+dt01517_02|True||0|0|3.92|0.61|2.55|It looks like there are a lot of people inside.
+dt01517_04|True||0|0|3.55|0.0|1.68|Should I take my shoes off?
+dt01517_06|False|words 2>0; natural 3.25|2|0|3.25|0.0|1.47|Where are your parents?
+dt01519_01|True||0|0|3.72|0.0|2.09|Well, I like playing the violin.
+dt01519_03|True||0|0|4.43|0.0|4.04|About ten years so far. I started learning when I was in middle school.
+dt01519_05|True||0|0|3.9|0.0|3.55|Sure. So what about you? Do you have any hobbies?
+dt01519_07|False|words 1>0|1|0|4.17|0.0|2.98|Of course it does. Everybody has his own hobby.
+dt01526_00|False|words 1>0|1|0|4.36|0.0|3.23|Hi, where can I find a cheap cashmere sweater?
+dt01526_04|True||0|0|3.81|0.0|1.65|Thank you so much.
+dt01528_03|True||1|1|3.63|0.0|1.51|Uh, you're kidding!
+dt01544_01|True||0|0|3.55|0.0|5.64|Nothing. Maybe it is just the weather. Rainy days often make me feel a little sad.
+dt01544_03|True||0|0|3.73|0.0|6.42|Sure. But it is too cold today. I have to put on warm clothes and look stupid.
+dt01566_00|False|natural 3.05|0|0|3.05|0.56|2.94|Hello, BCD Company, can I help you?
+dt01566_02|True||0|0|4.36|0.72|2.76|This is Mrs Smith, may I have your name?
+dt01566_04|False|natural 3.17|0|0|3.17|0.0|1.51|Hello, Mr. Sun.
+dt01566_06|True||0|0|3.82|0.0|1.68|You are welcome, Mr. Sun.
+dt01566_08|True||1|1|3.91|0.0|3.01|You certainly made a good impression on me, as well.
+dt01566_10|False|natural 3.42|0|0|3.42|0.0|5.8|We'll be making the decision by the end of this week and we'll contact you as soon as possible.
+dt01583_00|True||1|1|3.77|0.0|1.24|May I see a hat, please?
+dt01583_02|False|natural 3.37|1|1|3.37|0.63|2.53|Umm I'm sorry. I don't know.
+dt01583_06|True||0|0|4.36|0.38|4.46|Yes, I like this one. It goes very well with my coat. How much is it?
+dt01592_01|True||0|0|3.72|0.0|1.97|Sunny-side up, please.
+dt01592_03|True||0|0|4.06|0.0|2.41|What kind of bread do we have?
+dt01592_05|True||0|0|4.09|0.64|2.72|I think I'll have two slices of whole wheat.
+dt01598_01|False|natural 3.13|1|1|3.13|0.55|5.49|I'm ready now. I'd like the roast chicken and a side order of corn.
+dt01598_03|True||2|3|3.56|0.0|2.78|I'll pass on the soup, but I'd like a garden salad.
+dt01598_05|True||0|0|4.14|0.0|2.46|Yes, I'd like a glass of iced tea.
+dt01613_04|True||0|0|3.66|0.31|4.72|They are new models now, they are not very expensive. Maybe you should look for one.
+dt01614_01|True||0|0|4.09|0.76|2.58|Is this the right subway to the Wall Street?
+dt01614_03|True||2|2|3.77|0.0|2.86|Could you tell me shall I take the express or local train?
+dt01614_05|True||0|0|4.43|0.0|2.23|Which of them is the local train, please?
+dt01614_07|False|words 1>0|1|0|4.32|0.0|1.64|How much is the fare?
+dt01614_09|False|words 1>0|1|0|4.28|0.0|1.8|What should I do with the token?
+dt01637_00|False|natural 3.49|0|0|3.49|0.0|2.63|Hello, Sunshine Travel Agency.
+dt01637_02|True||0|0|4.14|0.28|6.52|Well, let me see. We have a nice one on which we still have several unfilled places.
+dt01637_06|True||1|1|3.55|0.0|2.22|Five hundred dollars altogether.
+dt01637_08|False|words 2>1; natural 3.48|2|1|3.48|0.0|3.46|Yes, I will introduce the Intierary in detail.
+dt01725_00|True||0|0|3.93|0.0|3.84|Could we borrow the company van for a fundraiser this weekend?
+dt01725_02|False|natural 3.34|0|0|3.34|0.0|3.2|It is in the hotel ballroom down the street.
+dt01725_04|False|natural 2.99|1|1|2.99|0.0|3.62|Umm... We will need it for both days.
+dt01725_06|True||0|0|3.57|0.0|2.34|The van will be driven by Mary and me.
+dt01725_08|False|natural 3.49|1|2|3.49|0.0|6.07|Oh yeah, no problem. Would you mind if we borrowed a few of the chairs from the lunchroom?
+dt01734_01|False|natural 3.15|1|1|3.15|0.0|2.84|I'd like to have this roll of film developed.
+dt01734_03|False|natural 3.46; jumps 1.15%|0|0|3.46|1.15|1.73|Four by six will do.
+dt01748_00|False|natural 3.47|0|0|3.47|0.74|2.56|Good afternoon, how may I help you?
+dt01748_02|False|words 4>0; natural 3.36|4|0|3.36|0.0|1.19|Who are they for?
+dt01748_04|True||0|0|3.62|0.0|2.13|What kind of flowers would you like?
+dt01748_06|True||2|2|4.25|0.0|3.73|OK. What's the reason you are sending her flowers?
+dt01748_08|True||0|0|3.56|0.0|2.54|Do you know what kind of flowers she likes?
+dt01748_10|True||0|0|3.59|0.0|4.23|Well, they're for your wife, so I think you should give her roses.
+dt01748_14|True||0|0|3.85|0.52|2.94|Do you want to pick them up or should we deliver them?
+dt01748_16|True||0|0|4.28|0.0|1.32|What's the address?
+dt01749_00|False|natural 3.41|0|0|3.41|0.0|2.86|Paul, a company called me for an interview.
+dt01749_06|True||1|1|3.83|0.0|1.62|Is a white blouse OK?
+dt01749_08|False|natural 3.45|0|0|3.45|0.0|1.33|How about make up?
+dt01775_00|False|words 1>0; natural 3.33|1|0|3.33|0.0|1.3|Boy, come here!
+dt01775_02|True||0|0|4.02|0.0|1.84|Bring me a cup of coffee, please.
+dt01775_04|False|natural 3.13|1|1|3.13|0.76|2.13|Umm, I prefer strong.
+dt01778_01|False|natural 2.95|0|0|2.95|0.0|3.41|Sorry. I didn't know.
+dt01778_03|True||0|0|4.14|0.66|2.08|I'm going to use my ATM card.
+dt01786_01|False|natural 3.44|2|2|3.44|0.0|3.05|Really? That's a straws in the wind.
+dt01786_03|False|words 3>2|3|2|3.94|0.34|4.83|Yeah. They suit each other. A perfect match between a man and a girl.
+dt01788_00|True||1|1|4.0|0.0|3.28|Hello, China Southern Airlines. Can I help you?
+dt01788_02|True||2|2|3.76|0.0|3.71|Sorry, there is no flight available on July twenty first.
+dt01788_04|True||4|4|3.8|0.0|6.77|I can give you a reservation on flight Number CZ three eight seven on July twenty second.
+dt01788_06|False|natural 3.41|0|0|3.41|0.39|5.05|It departs at twelve:ten and arrives at fifteen:ten next day.
+dt01788_10|True||0|0|3.65|0.0|3.03|Would you prefer first class or economy class?
+dt01788_12|True||0|0|3.97|0.0|1.18|And your name, please?
+dt01788_14|True||0|0|3.93|0.49|7.22|Mr. Smith, you can get things fixed through our agencies in Guangzhou. Do you remember to bring your passport with you?
+dt01791_01|False|words 5>0; natural 3.22|5|0|3.22|0.42|4.0|One second, sir, while I print out your receipt. Here you are.
+dt01791_03|True||0|0|3.76|0.0|2.99|May I ask, sir, if you enjoyed your stay?
+dt01791_05|True||0|0|3.83|0.0|5.1|Thank you for your honesty. I assure you there will be no cockroaches next time.
+dt01794_01|True||0|0|3.87|0.0|3.41|Yes. I'd like to send this parcel to Changchun.
+dt01794_03|True||0|0|4.11|0.0|2.39|I guess I'll send it by airmail.
+dt01794_05|True||1|1|4.39|0.0|2.41|No, there are only some vases.
+dt01794_07|True||1|1|3.63|0.0|2.86|Umm have you got boxes for sale?
+dt01794_09|True||2|2|3.61|0.0|1.49|Is it all right this time?
+dt01794_13|False|natural 3.44|0|0|3.44|0.0|1.19|Yes, I have.
+dt01831_00|True||0|0|4.12|0.0|2.45|Fastback Travel. How can I help you?
+dt01831_02|False|words 1>0|1|0|3.91|0.0|2.99|He's on holiday for the week, I'm afraid. Can I help?
+dt01831_06|False|natural 3.41|0|0|3.41|0.0|1.17|You'd better spell that!
+dt01831_08|True||1|1|4.18|0.55|3.9|Right, I think I've got that. OK, what's the message?
+dt01831_10|False|natural 3.29|1|1|3.29|0.0|2.01|OK, will do. Bye.
+dt01838_01|False|natural 3.44|0|0|3.44|0.0|6.14|Well, there's this clock I was... My vintage clock! How do you have my clock?
+dt01838_03|True||0|0|4.02|0.0|8.53|Sixty-five? What the? How did you bargain him down, Jim? You've never even been to a flea market before!
+dt01838_05|True||0|0|3.79|0.0|3.86|Never underestimate a man when it comes to bargaining!
+dt01852_01|True||1|1|3.78|0.42|4.16|Umm, the work is rather hard, but it's interesting.
+dt01852_03|True||0|0|3.66|0.0|3.31|I work in a publishing house. How about you?
+dt01852_05|True||0|0|4.0|0.0|1.68|What do you do then?
+dt01854_01|True||0|0|3.56|0.0|1.39|Where was it from?
+dt01854_03|False|natural 3.44|3|3|3.44|0.0|4.61|Jingdezhen? Isn't it called 'the capital of porcelain'?
+dt01854_05|True||0|0|3.65|0.0|2.95|This is the very thing I've been dreaming of.
+dt01854_07|True||1|1|4.38|0.0|1.79|It must be most precious.
+dt01869_01|True||1|1|4.25|0.0|2.65|This is Soft, may I speak to Lamely?
+dt01869_03|True||1|1|3.66|0.0|1.97|Hello, Lamley. Are you free tomorrow?
+dt01869_05|False|natural 3.04|1|1|3.04|0.48|3.52|Umm would you like to go to an activation with me?
+dt01871_01|True||0|0|3.79|0.0|2.74|That's fine. You must try this dish.
+dt01871_03|True||0|0|4.0|0.0|4.12|It's fish steamed and served with our special sauce.
+dt01871_05|True||1|1|3.98|0.0|2.58|Sure. It's a most popular dish.
+dt01871_07|True||0|0|4.03|0.52|3.63|We have two dressings for salad. Which one would you like?
+dt01871_09|True||0|0|4.17|0.0|2.08|We have French and Thousand Island.
+dt01876_01|True||0|0|4.27|0.0|2.61|I think I have a piece of apple pie.
+dt01876_03|True||0|0|4.06|0.0|1.24|Coffee would be fine.
+dt01887_00|True||0|0|3.69|0.0|3.04|I always think everybody looks down on me.
+dt01887_02|True||0|0|4.21|0.44|3.94|How can you be optimistic? You can see it in their eyes.
+dt01887_04|False|words 1>0; natural 3.26|1|0|3.26|1.0|1.8|Don't be that negative.
+dt01908_01|True||1|1|4.17|0.24|7.92|I'm just trying to complete today's crossword puzzle. Whenever I get the time, I like to do the crossword puzzles in the paper.
+dt01908_03|True||0|0|4.33|0.0|3.15|I guess you could say that. What kind of games do you like?
+dt01908_05|True||0|0|4.32|0.0|2.91|Doesn't everyone? Which games are those?
+dt01908_07|False|natural 3.39|0|0|3.39|0.0|2.98|Did you play a lot of games when you were little?
+dt01908_09|True||0|0|4.3|0.0|2.04|Do you still like playing those games?
+dt01908_11|True||0|0|4.24|0.0|3.49|Everyone in my family really enjoys playing card games.
+dt01908_13|True||0|0|3.53|0.51|3.17|No, I prefer to play with people I know.
+dt01908_15|True||0|0|4.31|0.0|4.44|It's a popular game with some people, but I've never played it.
+dt01908_17|True||0|0|3.58|0.25|6.46|I hate to disappoint you, but unlike what most people think, we aren't all exactly the same!
+dt01921_01|True||0|0|3.62|0.38|3.83|Yes, there must be about a hundred. Do you have a favorite?
+dt01921_03|False|natural 3.49|0|0|3.49|0.0|4.04|I know, fresh fruit flavored is the best ever.
+dt01921_05|False|natural 3.17|1|1|3.17|0.61|2.8|Umm I don't like peppermint ice cream.
+dt01921_07|True||0|0|3.87|0.0|2.17|One time, I tried garlic ice cream.
+dt01921_09|True||0|0|3.94|0.0|3.68|That doesn't sound like a good choice for today though. Let's order!
+dt01925_00|True||0|0|3.63|0.0|1.89|Does your girl friend like swimming?
+dt01925_02|False|words 2>1|2|1|3.97|0.0|3.66|Then you can help her with the breaststroke and sidestroke.
+dt01925_04|False|natural 3.44|0|0|3.44|0.0|3.44|Really? Then just ask her to follow me.
+dt01925_06|False|natural 3.41|1|1|3.41|0.0|4.39|Umm... Yes. But I still have some difficulties in breathing.
+dt01925_08|True||0|0|3.87|0.0|6.04|To tell you the truth, I have never thought of being a swimmer. I swim just for fun.
+dt01926_01|True||0|0|4.34|0.0|1.74|I listen to music and read.
+dt01926_03|True||0|0|3.8|0.0|2.29|I think I like classical music better.
+dt01927_01|False|words 2>1|2|1|3.73|0.0|3.23|Please, where do I catch the plane for New York?
+dt01927_03|True||0|0|3.94|0.0|1.1|That one there?
+dt01927_05|False|natural 3.43|0|0|3.43|0.0|3.25|Thank you. You've been very helpful.
+dt01936_00|True||0|0|3.95|0.57|3.19|This is tough to say, John, but I think we should break up.
+dt01936_02|True||0|0|4.23|0.0|1.38|Yes, I mean it.
+dt01936_04|True||0|0|4.41|0.35|4.83|No, we are just too different. This relationship isn't going anywhere.
+dt01936_06|True||0|0|3.65|0.29|5.19|I have thought about it for a long time. I think it's time to move on for both of us.
+dt01936_10|True||0|0|4.44|0.0|2.09|Then why didn't you talk to me?
+dt01936_12|True||0|0|3.83|0.25|6.15|I don't want to argue with you anymore. This is going to be tough, but let's try to forget that and be friends.
+dt01936_14|False|natural 3.04|1|1|3.04|0.46|3.39|Umm I think we'll be better off if we are apart.
+dt01936_16|True||0|0|3.89|0.0|1.81|Sure, let's just be friends.
+dt01939_00|True||0|0|3.55|0.63|4.87|And lightweight, too. It'll play for twenty hours on two AA batteries!
+dt01939_02|True||0|0|3.93|0.0|4.7|And they're really safe. They'll protect your ear from sound damage.
+dt01939_04|True||0|0|4.3|0.0|5.21|I know. And you can also hear outside noises while you listen to music.
+dt01945_01|False|words 2>1|2|1|3.83|0.0|6.26|Please dissolve the powder in hot water. Soak your hand or foot in it for twenty minutes twice a day.
+dt01945_03|True||0|0|3.84|0.0|6.65|Put the eye-drop into your right eye four to six times a day, one to two drops each time.
+dt01957_00|True||0|0|4.24|0.0|3.66|Of course! Of course! Here you are. Thank you so much.
+dt01957_02|False|natural 3.40|1|2|3.4|0.0|5.55|Um, let me see. Hmm. This antique tea set here is gorgeous.
+dt01957_04|True||0|0|3.62|0.0|4.33|Really? No, no, I couldn't! You're too nice!
+dt01957_06|True||0|0|3.57|0.0|3.86|Gee! I don't know what to say! Thanks so much.
+dt01971_00|True||0|0|3.54|0.0|1.47|Do you like flowers?
+dt01971_02|False|natural 3.28|0|0|3.28|0.0|2.25|What's your favorite flower?
+dt01971_04|True||0|0|3.55|0.0|2.89|Peach blossom is really beautiful.
+dt01971_06|False|natural 3.43|1|1|3.43|0.0|1.73|I like lotus.
+dt01971_08|False|natural 3.11|0|0|3.11|0.56|2.47|But there aren't any lotus now.
+dt01971_10|False|natural 2.84|0|0|2.84|0.0|2.45|That's not bad. Let's go.
+dt01972_01|False|jumps 1.32%|0|0|3.68|1.32|2.9|Yeah. Look, other kids are coming this way.
+dt01972_03|True||0|0|4.29|0.0|2.67|That's because regular buses don't stop here.
+dt01972_05|False|jumps 1.18%|0|0|4.0|1.18|1.49|Nothing. It's free.
+dt01972_07|False|words 1>0|1|0|4.37|0.57|3.17|Let's go sit in the back. All the cool kids do.
+dt01976_01|True||0|0|3.53|0.0|3.2|Thanks. It's a lot better than mine, and it's new.
+dt01976_03|True||0|0|4.37|0.69|2.06|We're going to visit my sister in the city.
+dt01976_05|True||0|0|3.91|0.28|5.36|About a year ago. She lives in an apartment on third street, across from the public library.
+dt01976_07|True||0|0|3.91|0.0|5.72|Oh, we're not driving. We're going to take the subway. The subway only takes about twenty minutes.
+dt01976_09|True||0|0|4.28|0.0|3.72|I take the subway to work everyday, so I'm used to it now.
+dt01976_11|False|words 2>1|2|1|4.24|0.0|2.86|Yes, she's lived there for about ten years.
+dt01976_13|True||0|0|4.11|0.0|4.09|I know what you mean. It's hard to find anything that's reasonable now.
+dt01976_15|True||0|0|3.79|0.0|1.03|See you later.
+dt01981_01|True||0|0|3.73|0.0|1.76|Where are we going?
+dt01981_03|True||0|0|3.73|0.0|1.75|Do you have a washer down there?
+dt01981_05|True||1|2|3.93|0.0|3.72|That's so convenient. Where are the dirty clothes?
+dt01981_07|True||0|0|3.69|0.6|2.54|But I didn't see you carry them down.
+dt01986_00|True||0|0|4.24|0.66|3.0|My sister was taken to the hospital yesterday.
+dt01986_02|True||0|0|3.79|0.0|4.43|She was hit by a car. Luckily, she wasn't seriously hurt.
+dt01986_04|True||0|0|3.91|0.0|3.46|We'll have to hurry; visiting hours will be over soon.
+dt01989_02|True||0|0|4.27|0.0|1.44|To buy or to rent?
+dt01989_04|True||0|0|4.41|0.0|1.69|How much do you want to pay?
+dt01989_06|True||0|0|4.15|0.0|3.32|Well, I've got one here. It's two sixty a month.
+dt01989_08|False|words 4>0|4|0|3.93|0.0|2.84|It's got a kitchen, a bathroom, and one bedroom.
+dt01989_10|True||0|0|4.41|0.0|5.25|Yes, I think so. There is also an interesting one. It's opposite the park.
+dt01989_12|True||0|0|4.36|0.0|4.36|It's three twenty five a month. It's the biggest we've got in this area.
+dt01989_14|False|words 4>3|4|3|3.58|0.0|4.72|Well, there're two bedrooms, a sitting room, a kitchen and a bathroom.
+dt01989_16|True||0|0|3.82|0.0|1.05|Of course, Sir.
+dt02004_00|True||0|0|3.72|0.0|5.03|Lodge, You must come around sometime, You have to check out my new stereo.
+dt02004_02|True||0|0|3.82|0.0|1.59|Can you make it on Tuesday?
+dt02004_04|True||0|0|4.36|0.0|2.13|Anytime after six will be fine.
+dt02035_00|True||0|0|3.59|0.0|1.79|Do you believe in UFOs?
+dt02035_02|True||0|0|3.79|0.97|1.57|But I never saw them.
+dt02035_04|True||0|0|4.26|0.73|2.02|You mean that you can see them.
+dt02035_06|False|jumps 2.44%|0|0|3.59|2.44|1.62|They come to the earth?
+dt02035_08|True||0|0|4.18|0.0|4.85|Aliens from the outer space? Do you talk to them? What do they look like?
+dt02035_10|True||0|0|3.79|0.0|3.21|That means that you talk to them? In which language?
+dt02035_12|True||0|0|3.61|0.0|2.73|Wow. Sounds fantastic!
+dt02041_02|True||0|0|3.82|0.4|3.55|Well there is an important meeting with a new client.
+dt02051_00|True||1|1|3.82|0.0|3.4|Umm how do you think I should handle this problem?
+dt02051_02|False|natural 3.40|0|0|3.4|0.0|3.41|But I'm already in a lot of trouble with my boss.
+dt02051_04|True||2|2|4.35|0.0|4.18|She's always bothering me. What should I do?
+dt02051_06|True||0|0|4.0|0.0|2.21|But she always harps on me.
+dt02061_01|True||0|0|4.4|0.0|1.83|I'm asking for a pizza, please.
+dt02061_03|False|natural 3.29|0|0|3.29|0.0|1.98|You're right, that is great.
+dt02061_05|True||0|0|3.82|0.59|2.53|Medium one will be perfect, thank you.
+dt02061_07|True||0|0|4.21|0.0|1.84|I like seafood on my pizza.
+dt02061_09|True||0|0|3.52|0.0|1.74|Tuna sounds good today.
+dt02061_11|True||0|0|4.28|0.0|1.3|That would be to go.
+dt02062_00|True||0|0|3.64|0.0|1.38|What are you going to have?
+dt02062_02|True||0|0|3.97|0.0|1.65|Can I get you anything to drink?
+dt02062_04|True||0|0|4.34|0.71|2.55|That sounds good. I think I'll have the same.
+dt02063_00|True||0|0|3.84|0.0|1.68|Would you honor us with a visit?
+dt02063_02|True||0|0|3.56|0.0|1.68|When will you be convenient?
+dt02063_04|True||0|0|3.9|0.81|1.66|Are you doing anything tomorrow?
+dt02063_06|False|natural 3.23|1|1|3.23|0.0|3.37|Umm I'll pick you up at about nine o'clock, will it do?
+dt02065_03|False|natural 3.41|0|0|3.41|0.0|1.96|Hi. My name is Jessica.
+dt02065_05|True||0|0|3.57|0.0|3.82|Pleased to meet you too. And where are you from, Robin?
+dt02065_07|True||0|0|3.87|0.0|4.05|I'm from New York. Oh, this is my stop. Bye, Robin.
+dt02089_00|True||0|0|4.15|0.0|0.81|Excuse me, sir?
+dt02089_02|True||1|1|4.05|0.83|1.87|Umm I'm afraid you can't smoke here.
+dt02089_04|True||0|0|4.28|0.0|1.66|Can't you see the notice here?
+dt02089_06|False|jumps 1.09%|2|2|4.3|1.09|1.72|It says ' No smoking '.
+dt02091_00|True||0|0|4.0|0.0|1.44|Can you make the tea, Sam?
+dt02091_02|False|natural 2.99|0|0|2.99|0.0|1.12|Yes, there is.
+dt02109_01|True||0|0|3.97|0.0|3.73|Hello. I'm having a problem with my air conditioner.
+dt02109_03|True||0|0|4.27|0.0|1.62|The one in the bedroom.
+dt02109_05|True||0|0|3.89|0.0|1.97|There's no cold air coming out.
+dt02144_01|True||2|2|4.35|0.0|2.39|Here, sir, sit down in this wheelchair.
+dt02144_03|True||0|0|4.41|0.36|5.24|The doctor will be with you in a moment. I just need to ask you a few questions.
+dt02144_05|True||0|0|4.26|0.0|3.39|Name, age and date of birth, please.
+dt02144_07|True||0|0|4.12|0.0|2.74|Health insurance company and policy number?
+dt02144_11|True||0|0|3.63|0.0|4.65|Well, this is going to be a very expensive broken leg, Mr. Taylor.
+dt02152_01|True||0|0|4.24|0.0|3.67|I am sorry, sir. All the tickets have been sold out.
+dt02152_03|True||3|3|3.69|0.0|5.37|Sorry, sir. The only tickets of the same performance available are on twenry-first.
+dt02155_01|True||0|0|4.24|0.0|2.05|Go ahead. Waste your money.
+dt02155_03|True||0|0|3.53|0.0|2.02|Well, I don't... anymore.
+dt02155_05|True||0|0|3.79|0.0|2.8|I didn't say I was going to deprive myself.
+dt02167_01|True||0|0|4.06|0.0|1.8|I'd like reading books best.
+dt02167_03|True||0|0|3.53|0.0|1.97|Literature and economy.
+dt02167_07|False|words 1>0|1|0|3.55|0.53|4.33|I like to play golf, play badminton or crack jokes.
+dt02167_09|False|natural 2.92|1|1|2.92|0.0|1.7|Umm... That's a bad habit.
+dt02169_01|False|words 1>0|1|0|4.15|0.0|4.93|That's not a problem. Just give me your name, phone number, and date of visit.
+dt02169_03|False|words 2>0|2|0|3.87|0.0|6.48|I see your info here on the screen. I'll hit just one button, sir, and you're cancelled.
+dt02169_05|True||0|0|4.33|0.0|1.02|It's a pleasure.
+dt02187_01|True||0|0|3.91|0.29|5.29|No, there's no such section. The dairy section is where you'll find milk and cheese.
+dt02187_03|True||0|0|3.84|0.0|2.66|That's where you'll find things like salt and pepper.
+dt02187_05|True||1|1|3.65|0.0|4.87|Umm... Let's go to aisle four to pick up some pasta for tonight.
+dt02187_07|True||0|0|3.92|0.4|3.93|And let's get a loaf of bread at the bakery for breakfast.
+dt02187_09|True||0|0|4.21|0.0|2.4|I'll put the shopping basket back.
+dt02197_01|True||0|0|4.01|0.0|5.1|It's hard to believe that we're really leaving. The past two weeks was like a dream.
+dt02197_03|True||1|1|4.45|0.0|2.53|And the people were so friendly!
+dt02197_05|True||0|0|3.73|0.0|3.52|Do you still remember the small restaurant at the corner of the street?
+dt02197_07|True||0|0|3.98|0.0|3.94|I ate so much that I wasn't hungry until afternoon the next day.
+dt02197_09|True||0|0|4.43|0.0|2.26|Maybe we can come here again next summer.
+dt02197_11|True||0|0|3.75|0.0|1.69|Hey, what's the time?
+dt02197_13|False|natural 3.38; jumps 1.33%|0|0|3.38|1.33|3.22|Don't worry. We can call a cab. It'll be alright.
+dt02205_05|True||0|0|3.94|0.0|1.59|When do you have lunch?
+dt02205_07|False|natural 3.45; jumps 1.90%|0|0|3.45|1.9|1.97|What do you normally eat?
+dt02211_03|True||0|0|4.35|0.0|3.49|Of course not. There are so many people here today.
+dt02213_00|True||0|0|4.04|0.0|2.01|Excuse me, may I help you?
+dt02213_02|True||1|1|4.05|0.0|3.01|Uh, sure. Which kind of gas do you want?
+dt02225_01|True||0|0|4.34|0.0|1.15|When do you leave?
+dt02225_03|True||0|0|4.0|0.0|2.77|Take care of yourself and don't forget to keep in touch.
+dt02227_01|False|natural 3.47|3|3|3.47|0.0|4.02|OK. Here is my application form and all the documents.
+dt02227_03|True||1|1|3.58|0.0|6.35|Because I want to have a view of the exotic landscapes to extend my views and understanding of the world.
+dt02227_07|True||0|0|4.37|0.0|1.7|Yes. Everything is ready.
+dt02231_01|True||0|0|3.91|0.0|4.63|The crab soup is quite delicious. It's always a favorite with our customers.
+dt02231_03|True||0|0|4.31|0.0|3.0|Well, why not try Spaghetti Bolognese?
+dt02233_00|True||0|0|4.14|0.67|2.99|Mr. Ben, What do you think of the book?
+dt02233_04|False|natural 3.15|0|0|3.15|0.0|1.75|Uh, I agree with you.
+dt02239_00|False|natural 3.27|0|0|3.27|0.0|2.72|Excuse me. How much for one of these?
+dt02239_02|False|words 1>0|1|0|3.52|0.0|3.9|OK. Say I was to buy four, could I get a discount?
+dt02239_04|True||1|1|3.74|0.0|4.89|Oh, I was hoping to get one free. Like four for seventy five dollars.
+dt02244_00|False|natural 3.40|0|0|3.4|0.0|4.6|Hello! Where can I buy an inexpensive cashmere sweater?
+dt02244_02|False|words 1>0|1|0|3.97|0.0|2.36|That is a wonderful idea.
+dt02244_04|True||0|0|4.04|0.0|1.38|Thank you for your help.
+dt02247_00|True||0|0|4.11|0.0|1.74|Have you made a reservation?
+dt02247_02|False|natural 3.44|0|0|3.44|0.4|3.79|We have had a window table reserved for you. This way, please.
+dt02247_06|False|natural 2.92|1|1|2.92|0.0|1.8|Umm.. I'll bring it over.
+dt02247_08|True||2|2|4.18|0.0|4.56|We have squirrel shaped mandarin fish, seeds prawn, et cetera.
+dt02254_01|True||0|0|3.91|0.0|3.53|Hi there Mr. Anderson! How are you on this fine morning?
+dt02254_05|True||0|0|3.67|0.3|5.31|Did you catch the news this morning? I heard that there was a fire on Byron Street.
+dt02254_07|True||0|0|4.22|0.0|5.72|Did you happen to watch the football game last night? The Patriots scored in the last minute!
+dt02254_09|True||0|0|4.07|0.0|6.72|Oh... By the way, I saw you with your daughter at the office Christmas party. She is really beautiful!
+dt02254_11|True||2|2|3.8|0.0|4.3|Sir this is the fifty sixth floor! We are on the seventieth!
+dt02273_01|True||1|1|4.38|0.46|3.55|I'm OK. I wish I could say the same for my friend.
+dt02273_03|False|natural 3.50|0|0|3.5|0.0|3.03|He was arrested by the police for drinking and driving.
+dt02273_05|True||0|0|4.24|0.3|4.83|Unfortunately not. He was charged with a DUI when he was in university.
+dt02273_07|True||2|2|3.68|0.25|6.24|Not much; it was a minor offence back then. He got away with a fine of five hundred dollars.
+dt02273_09|True||0|0|3.96|0.0|8.16|No, they were really easy on him. The problem is that that was a long time ago. They are much tougher on crime now.
+dt02273_11|True||0|0|3.53|0.23|6.15|Well, he'll definitely lose his license, pay a fine, and maybe even spend some time in jail.
+dt02273_13|False|words 3>1|3|1|3.57|0.5|6.32|Not yet. If we can't find a lawyer for him, then the state will appoint him with one.
+dt02273_15|True||0|0|3.84|0.0|3.11|That'd be great! I know he'd appreciate your help.
+dt02276_00|True||0|0|4.21|0.93|1.48|What are you calling about today?
+dt02276_02|True||0|0|4.17|0.0|1.15|Is there a problem?
+dt02276_04|True||0|0|4.16|0.0|1.56|That shouldn't be a problem.
+dt02276_06|False|words 1>0|1|0|3.82|0.86|3.08|So, you want it delivered the day after tomorrow?
+dt02276_10|True||0|0|4.34|0.0|2.01|Your delivery has been confirmed.
+dt02282_01|True||2|2|3.72|0.0|4.39|Yes, that's right, around five nine five ten.
+dt02282_03|True||0|0|3.76|0.0|4.25|I'm not sure. Medium I suppose. Maybe a little on the heavy side.
+dt02282_05|False|jumps 1.02%|0|0|3.5|1.02|1.61|No, I don't think so.
+dt02282_09|False|natural 3.09|0|0|3.09|0.0|1.61|Black or dark brown.
+dt02282_11|True||0|0|4.16|0.61|3.0|Straight, I think, and about average length
+dt02286_00|True||0|0|4.45|0.43|4.02|Tom, hi, this is Mary with Gold Star Mortgage.
+dt02286_02|True||0|0|3.8|0.0|3.49|We'd like you to come to work for us.
+dt02286_06|False|natural 3.41|0|0|3.41|0.0|2.16|Please call us if you change your mind.
+dt02292_00|True||0|0|4.16|0.0|1.7|Is there anything I can do for you?
+dt02292_02|True||0|0|4.35|0.0|2.02|Certainly. Here you are.
+dt02292_04|False|natural 3.17|1|1|3.17|0.0|1.22|Four hundred yuan.
+dt02292_06|False|natural 3.38|0|0|3.38|0.0|7.45|I'm sorry. Ours is a fixed price shop and I can assure you this is the best price you can get for a mural like this.
+dt02292_08|False|words 1>0; natural 3.49|1|0|3.49|0.0|2.31|Well, I'll have it wrapped for you.
+dt02292_10|False|natural 3.48|0|0|3.48|0.0|2.49|Thank you. Please come again.
+dt02299_00|False|words 3>1|3|1|4.01|0.0|2.42|How many ports do we call at on our passage?
+dt02299_02|True||0|0|4.36|0.0|2.29|The ship is going very fast.
+dt02299_04|True||0|0|3.76|0.75|2.8|You look pale. Are you seasick?
+dt02299_06|True||0|0|4.4|0.0|2.16|I have some tablets for seasickness.
+dt02299_08|True||0|0|3.6|0.0|2.49|Then we'd better go back to our cabin.
+dt02307_01|False|words 1>0|1|0|3.8|0.0|8.94|It was fantastic! We had such a good time. The only problem was that because it was their high season, we spent hours queuing.
+dt02307_03|False|words 3>2|3|2|3.76|0.0|6.33|Yes, Florida had great weather while we were there. You look tan, too. Did you go somewhere?
+dt02307_05|True||0|0|3.64|0.0|5.04|Wow! Bali Islands have some of the best beaches in the world, don't they?
+dt02307_07|True||0|0|4.27|0.0|1.86|Did you go diving while you were there?
+dt02307_09|True||0|0|3.9|0.0|1.99|Did you take any pictures in the ocean?
+dt02307_11|True||0|0|3.89|0.0|3.07|Have you started planning your christmas vacation yet?
+dt02307_13|False|natural 3.19|2|2|3.19|0.0|3.12|Umm no, but I do like snowboarding.
+dt02307_15|True||2|2|4.28|0.0|5.61|I'll talk to my husband about it ; I'm sure he'll say yes! He loves Switzerland!
+dt02324_03|True||0|0|3.87|0.0|1.27|You big scrooge!
+dt02324_05|True||1|1|3.8|0.0|3.51|Umm but you may have some trouble convincing the kids.
+dt02324_07|True||0|0|4.17|0.0|3.91|Now we know that they realize the real meaning of Christmas.
+dt02326_01|True||0|0|3.9|0.0|5.37|I see, sir. Those two ladies in front of your room did the same thing twenty minutes ago.
+dt02326_03|False|natural 3.37|1|1|3.37|0.3|5.41|Umm I'm afraid we have no extra key. So I'll send somebody to your room.
+dt02326_05|True||1|1|4.05|0.44|4.06|Please drop it at the front desk when you leave tie hotel.
+dt02342_01|True||0|0|4.24|0.0|3.08|Let's go to the lake and camp on the south side.
+dt02342_03|True||0|0|4.44|0.0|5.12|Let's just rent one this time. The AC is broken in the truck, remember?
+dt02342_05|False|words 2>1|2|1|3.84|0.0|4.11|Should we call the Olsen's and ask them if they want to join us?
+dt02342_07|False|natural 3.38|0|0|3.38|0.91|3.3|Then you go out to the garage and check out the camping gear.
+dt02348_00|True||0|0|4.23|0.0|2.53|Excuse me, do you speak English?
+dt02348_02|True||0|0|3.75|0.47|4.26|Actually, yes. Could you show me how to use my key card?
+dt02348_04|True||1|1|4.2|0.0|1.51|OK, like this?
+dt02378_00|False|natural 3.40|0|0|3.4|0.68|3.19|Good afternoon, sir. May I help you?
+dt02378_02|True||0|0|4.34|0.0|1.75|Would you like anything to drink with that?
+dt02378_04|False|natural 2.53; length 0.7s|0|0|2.53|0.0|0.7|Will that be all?
+dt02378_06|False|natural 3.25; jumps 1.27%|0|0|3.25|1.27|1.35|For here or to go?
+dt02379_00|True||0|0|3.98|0.0|1.68|I'm so glad to meet you.
+dt02379_04|True||0|0|3.65|0.0|1.36|Really? Thank you.
+dt02388_03|True||0|0|4.21|0.83|1.97|No, I forgot to buy some.
+dt02388_07|True||0|0|3.88|0.0|2.16|Run! They are thirsty for more!
+dt02403_01|True||0|0|3.92|0.0|2.21|With pleasure. What color do you like?
+dt02403_03|True||2|3|4.39|0.0|2.32|It costs two-seventy-five yuan, Mr.
+dt02403_05|False|jumps 1.53%|0|0|3.54|1.53|2.39|Sorry, we don't give discounts.
+dt02409_01|True||0|0|4.15|0.5|3.34|Did you think it wasn't real? That's my pet lizard.
+dt02409_03|False|natural 3.44|1|1|3.44|0.84|4.38|His name is Grunt. Come closer and I'll properly introduce you.
+dt02409_05|True||0|0|3.71|0.0|6.35|No, he's perfectly harmless. And he's not afraid of strangers either. Here, hold him.
+dt02409_07|False|natural 3.08|0|0|3.08|0.0|4.77|Stick around and you'll get to know him better. He has a very unusual personality.
+dt02431_01|True||0|0|3.75|0.88|1.56|I'm running out of gas.
+dt02431_03|True||0|0|3.7|0.0|5.39|Premium, please. By the way, please don't fill it up. Two gallons will be fine.
+dt02432_00|True||0|0|3.78|0.0|2.97|May I exchange this DVD player?
+dt02432_02|True||0|0|4.17|0.0|1.06|Here you are.
+dt02432_04|False|natural 3.25|1|1|3.25|0.0|1.72|It won't play a DVD.
+dt02432_06|True||0|0|3.57|0.0|2.8|At first, I thought it was me.
+dt02478_01|False|natural 3.50|0|0|3.5|0.0|1.43|So do I!
+dt02478_03|True||1|1|3.69|0.0|5.84|No, it's too expensive for me. I've decided to take some exercises on my own.
+dt02478_05|True||0|0|3.63|0.46|5.97|Run around the track. In the morning I run for an hour, and in the afternoon I run around the building.
+dt02478_07|True||0|0|4.27|0.0|2.49|I hope so. Would you like to join me?
+dt02496_00|True||0|0|4.08|0.0|1.41|Can I help you find something?
+dt02496_02|False|jumps 1.27%|0|0|3.61|1.27|2.35|Is there one in particular that you like?
+dt02496_04|True||0|0|3.51|0.53|2.71|Ah yes, that is a great refrigerator.
+dt02496_06|True||0|0|4.17|0.0|3.61|It's both affordable and it comes with all the appliances.
+dt02496_08|True||0|0|3.69|0.0|4.99|It comes with an ice maker, water dispenser, and there is a lot of room inside.
+dt02496_10|True||0|0|4.11|0.0|1.11|Be my guest.
+dt02503_00|True||0|0|3.59|0.0|4.95|Hello. Hot water overflowed from the bathtub. Will you help me?
+dt02503_02|False|natural 3.46|0|0|3.46|0.0|0.97|I did it.
+dt02503_04|False|natural 3.14|1|1|3.14|0.0|1.51|OK. I will.
+dt02503_06|True||0|0|3.93|0.0|2.98|I'm sorry I was too tired to fall asleep.
+dt02503_08|True||2|2|3.95|0.0|4.71|Right. Can I compensate for the damage with the travel accident insurance?
+dt02506_00|True||0|0|4.15|0.24|6.33|I'm here to conduct the annual census of foreigners living in Beijing. This is my service ID card.
+dt02506_02|True||1|1|3.61|0.0|5.05|Umm we only need to verify your information against our records.
+dt02506_04|True||0|0|4.24|0.0|3.19|Please show me your passport and Residence Permit.
+dt02506_06|False|natural 3.33|0|0|3.33|0.0|1.76|How long have you been living here?
+dt02506_08|False|natural 3.32|0|0|3.32|0.93|1.71|May I know your occupation?
+dt02506_10|True||0|0|3.99|0.0|3.77|Is that right? Which university, if you don't mind my asking?
+dt02506_12|True||0|0|4.0|0.0|3.6|Everything appears to be in order. Thank you for your time.
+dt02512_01|True||0|0|4.0|0.0|1.24|I don't know. Who?
+dt02512_03|True||0|0|4.02|0.0|5.39|The Canadian rock singer? But I heard you had a part-time job yesterday. How did you see her?
+dt02512_05|True||1|1|3.6|0.81|1.95|So you're a big fan, eh?
+dt02512_07|True||2|2|4.41|0.0|2.54|And she was in a movie once again, right?
+dt02512_09|True||0|0|3.69|0.0|3.02|What was your impression of her when you saw her in person?
+dt02512_11|True||0|0|4.16|0.0|1.68|Did you take a photo with her?
+dt02522_01|True||0|0|4.4|0.0|1.43|I went to Croydon.
+dt02522_03|True||0|0|4.19|0.0|1.95|No, I went for an interview.
+dt02522_05|True||0|0|4.31|0.47|3.21|Yes, I got a job as a Management Trainee.
+dt02524_00|True||2|2|4.29|0.0|1.63|Where's Mrs. Johnson?
+dt02524_02|False|words 2>0|2|0|3.55|0.0|2.06|I see. Can I sit down?
+dt02524_04|True||0|0|4.18|0.0|1.33|Thank you, Mr. Johnson.
+dt02524_08|False|natural 3.43|0|0|3.43|0.0|1.75|She's upstairs in my room.
+dt02535_01|True||0|0|4.2|0.0|2.15|My name is Jessica. What's yours?
+dt02535_03|True||0|0|3.58|0.0|1.96|You speak English very well.
+dt02535_05|False|natural 3.36|0|0|3.36|0.0|1.91|Do you know what time it is?
+dt02535_07|True||0|0|3.65|0.0|0.82|What did you say?

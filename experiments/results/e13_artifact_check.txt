@@ -1,0 +1,8 @@
+﻿# e13_artifact_check
+# run: 2026-09-25 21:56 on this laptop
+# command: .venv\Scripts\python experiments\e13_artifact_check.py 20260925-2151
+condition       pitch jumps %  range 10-90 st  energy >7kHz %
+kokoro_source            0.25            7.75           1.777
+amy_direct               0.31            4.98           1.049
+knnvc                    0.31            7.07           0.213
+openvoice                0.34            6.21           2.752

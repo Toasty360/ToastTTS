@@ -1,0 +1,31 @@
+﻿# e08_kokoro_vs_amy
+# run: 2026-09-25 20:30 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e08_kokoro_vs_amy.py
+# 1. Naturalness and pacing (reference: Soniox Grace 195 wpm talking, commas ~440 ms, periods ~800 ms, natural 4.47; see E06)
+== kokoro:af_heart, whole paragraph, Kokoro's own pacing   natural (first 20 s): 4.36   -> out\listen\20_kokoro_af_heart_own_pacing.wav
+  102 words, 38.4s, 161 wpm overall, 212 wpm while talking
+    pause after ','    n=14  median  360 ms  (range 180-660)
+    pause after '.'    n=6   median  570 ms  (range 0-800)
+    pause after '?'    n=2   median  540 ms  (range 300-780)
+== kokoro:af_heart x1.0 through ToastTTS   natural (first 20 s): 4.33   -> out\listen\21_kokoro_af_heart_toast_1.0x.wav
+  101 words, 42.0s, 147 wpm overall, 194 wpm while talking
+    pause after ','    n=15  median  440 ms  (range 300-860)
+    pause after '.'    n=4   median  810 ms  (range 0-840)
+    pause after '?'    n=2   median  160 ms  (range 0-320)
+== kokoro:af_heart x1.1 through ToastTTS   natural (first 20 s): 4.30   -> out\listen\21_kokoro_af_heart_toast_1.1x.wav
+  101 words, 40.0s, 155 wpm overall, 202 wpm while talking
+    pause after ','    n=14  median  400 ms  (range 0-700)
+    pause after '.'    n=5   median  760 ms  (range 0-820)
+    pause after '?'    n=1   median  920 ms  (range 920-920)
+    pause after 'none' n=1   median  330 ms  (range 330-330)
+== amy x1.2 through ToastTTS (current default)   natural (first 20 s): 4.43   -> out\listen\16_amy_1.2x.wav
+  100 words, 43.3s, 141 wpm overall, 178 wpm while talking
+    pause after ','    n=11  median  500 ms  (range 180-820)
+    pause after '.'    n=4   median  800 ms  (range 480-880)
+    pause after '?'    n=2   median  180 ms  (range 0-360)
+
+# 2. Streaming from a fake LLM (TTFA from first token, median of 3; stalls = worst run)
+  kokoro:af_heart                  x1.0  30 tokens/s: TTFA   344 ms, stalls 0 (0 ms), made 3.9x real time
+  kokoro:af_heart                  x1.0  10 tokens/s: TTFA   468 ms, stalls 1 (171 ms), made 2.4x real time
+  piper:en_US-amy-medium           x1.2  30 tokens/s: TTFA    97 ms, stalls 0 (0 ms), made 8.0x real time
+  piper:en_US-amy-medium           x1.2  10 tokens/s: TTFA   223 ms, stalls 0 (0 ms), made 2.8x real time

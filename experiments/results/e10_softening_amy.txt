@@ -1,0 +1,11 @@
+﻿# e10_softening_amy
+# run: 2026-09-25 20:53 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e10_softening_amy.py
+Targets (E09): Kokoro drop -0.7 / fade -3.8; Soniox drop -0.3 / fade -3.2
+ tail ms depth dB   drop   fade   n   listening file
+       0      0.0    1.2   -3.9  29   30_amy_1.2x_no_softening
+     300     -4.0    0.8   -2.8  27   
+     400     -4.0    0.7   -3.4  27   31_amy_1.2x_soft_400ms_-4dB
+     400     -6.0    0.9   -3.2  28   
+     500     -6.0    0.7   -4.8  26   32_amy_1.2x_soft_500ms_-6dB_default
+     500     -9.0    0.4   -4.9  31   33_amy_1.2x_soft_500ms_-9dB

@@ -1,0 +1,61 @@
+speaker,word_error_rate,mistakes
+5054,0.038,semicolon->sima
+7594,0.038,semicolon->sima
+7995,0.038,semicolon->sema
+8887,0.038,semicolon->sema
+7134,0.038,semicolon->sima
+6828,0.038,semicolon->sema
+272,0.038,semicolon->sema
+920,0.038,semicolon->sema
+3513,0.038,semicolon->semis
+6215,0.038,semicolon->sima
+5984,0.038,semicolon->sema
+7383,0.038,semicolon->sema
+1535,0.038,semicolon->sema
+1028,0.038,semicolon->sema
+7569,0.038,semicolon->sema
+6235,0.038,semicolon->sema
+303,0.038,semicolon->sema
+6288,0.038,semicolon->sema
+3357,0.038,semicolon->sema
+2741,0.038,semicolon->sema
+1222,0.038,semicolon->sima
+1448,0.038,semicolon->summer
+2652,0.038,semicolon->sema
+4846,0.038,semicolon->sema
+2085,0.038,semicolon->sema
+3922,0.077,subtle->civil; semicolon->sema
+1382,0.077,subtle->several; semicolon->sema
+64,0.077,subtle->sole; semicolon->sema
+6371,0.077,semicolon->semi; it's->is
+8080,0.077,subtle->civil; semicolon->sema
+6696,0.077,subtle->civil; semicolon->sema
+3923,0.077,semicolon->sim; cadence->caden's
+126,0.077,subtle->civil; semicolon->sema
+2971,0.077,subtle->several; semicolon->sema
+7754,0.077,subtle->civil; semicolon->sema
+2638,0.077,subtle->several; semicolon->sema
+7868,0.077,subtle->several; semicolon->sema
+4278,0.077,subtle->civil; semicolon->sema
+4848,0.077,subtle->sole; semicolon->sema
+112,0.077,semicolon->sima; it's->with
+345,0.077,semicolon->sema; it's->(missing)
+5723,0.077,semicolon->sema; listener->lacer
+8575,0.077,subtle->civil; semicolon->sema
+7837,0.077,subtle->soul; semicolon->sima
+7558,0.077,subtle->several; semicolon->sema
+81,0.077,subtle->civil; semicolon->sema
+3340,0.077,subtle->civil; semicolon->sema
+7339,0.077,subtle->several; semicolon->sema
+1607,0.077,semicolon->sema; clause->cause
+7342,0.077,subtle->civil; semicolon->sema
+7783,0.115,micro->(missing); breaks->microbreaks; semicolon->sema
+8119,0.115,(extra)->af; after->or; semicolon->sema
+4854,0.115,semicolon->sema; it's->(missing); about->develop
+7398,0.115,subtle->several; semicolon->sema; it's->(missing)
+7051,0.115,subtle->several; a->(missing); semicolon->ocema
+3866,0.115,subtle->civil; semicolon->sim; it's->they're
+1668,0.115,micro->(missing); breaks->microbreaks; semicolon->sema
+7090,0.115,handle->handles; semicolon->sema; listener->lisser
+8222,0.231,subtle->(missing); micro->several; breaks->microbreaks; semicolon->simmer; it's->to; about->help
+7294,0.269,does->(missing); it->visit; handle->handles; subtle->several; semicolon->summer; it's->(missing); about->without

@@ -1,0 +1,12 @@
+﻿# e09_phrase_final_softening
+# run: 2026-09-25 20:52 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e09_phrase_final_softening.py
+recording                                        pauses  drop dB  fade dB
+soniox-tts-grace.wav                                 16     -0.3     -3.2
+deepgram-aura-2-thalia-en.wav                        17      1.2     -1.0
+20_kokoro_af_heart_own_pacing.wav                    19     -1.0     -3.6
+21_kokoro_af_heart_toast_1.0x.wav                    17     -0.7     -3.8
+16_amy_1.2x.wav                                      14      1.1     -2.7
+
+ drop = last word before a pause vs the 1.5 s before it (negative = softer)
+ fade = last 30% of that word vs its first 70% (negative = decays into the pause)

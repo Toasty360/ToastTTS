@@ -1,0 +1,14 @@
+﻿# e15_voice_stability
+# run: 2026-09-26 02:36 on this laptop
+# command: .venv\Scripts\python experiments\e15_voice_stability.py 20260925-2232-dailytalk piper:en_US-amy_distill_20260926-0121-mid_last-medium
+10 held-out DailyTalk sentences; median over clips
+
+condition                                    jitter % shimmer %   HNR dB
+amy_direct                                       1.66      6.20     13.2
+dailytalk_source                                 1.46      7.23     13.7
+knnvc                                            1.86      6.99     14.0
+seedvc                                           1.63      7.10     11.2
+seedvc_f0                                        1.78      7.81     11.9
+20260926-0121-mid_last                           1.76      6.80     13.5
+
+reference (healthy natural voice, MDVP): jitter < ~1.0 %, shimmer < ~3.8 %, HNR > ~20 dB

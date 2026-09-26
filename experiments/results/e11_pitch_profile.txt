@@ -1,0 +1,18 @@
+﻿# e11_pitch_profile
+# run: 2026-09-25 20:59 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e11_pitch_profile.py
+  recording                                  Hz  spread   range  movement
+                                         median      st      st      st/s
+  Soniox Grace                              164    3.96   13.02      35.8  
+  Deepgram Thalia                           210    3.71   10.56      33.0  
+  Kokoro af_heart (ToastTTS 1.0x)           200    3.87   10.47      45.8  
+  amy 1.2x (current default)                197    2.71    6.84      28.1  
+
+Scaling amy's pitch movement to match each reference's spread:
+  amy, pitch x1.43 (like af_heart)          197    2.88    9.22      26.2  -> 40_amy_pitch_like_af_heart_x1.43.wav
+  amy, pitch x1.46 (like grace)             198    2.87    9.44      27.0  -> 40_amy_pitch_like_grace_x1.46.wav
+
+Did the edit damage the audio? (naturalness on first 20 s; wrong words of 95)
+  amy as is            x1.00: natural 4.46, wrong words 0
+  amy like af_heart    x1.43: natural 4.41, wrong words 0
+  amy like grace       x1.46: natural 4.43, wrong words 0

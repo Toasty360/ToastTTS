@@ -1,0 +1,5 @@
+time,voice,speed,scenario,ttfa_ms,stalls,stall_ms,x_realtime,note,memory_mb,load_s
+2026-09-26T01:47:23,piper:en_US-amy-medium,1.2,"full text, 95-word paragraph",30.8,0,0,28.6,,166,1.59
+2026-09-26T01:48:01,piper:en_US-amy-medium,1.2,"streaming from LLM, 30 tokens/s (TTFA from first token)",98.5,0,0,,,166,1.59
+2026-09-26T01:49:52,piper:en_US-amy-medium,1.2,"streaming from LLM, 10 tokens/s (TTFA from first token)",229.4,0,0,,,166,1.59
+2026-09-26T01:49:56,piper:en_US-amy-medium,1.2,short single sentences (median of 5 sentences),32.7,,,,range 30-164 ms,166,1.59

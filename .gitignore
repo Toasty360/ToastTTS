@@ -1,0 +1,39 @@
+# Environment
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.env
+.env.*
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Downloaded and trained voice models (~4.4 GB; voices re-download with piper.download_voices,
+# trained students re-export from the Modal volume with distill/train_modal.py --fetch RUN_ID)
+models/
+*.onnx
+*.onnx.json
+*.ckpt
+*.pt
+
+# Generated audio: listening files, experiment runs, blind tests (re-create with scripts/, experiments/)
+out/
+
+# Training data audio (~700 MB of DailyTalk-derived wavs; rebuild with distill/build_sources.py,
+# convert_modal.py, make_dataset.py, make_raw_dataset.py). The small CSVs (sources.csv,
+# metadata.csv, gate.csv) stay tracked: they record exactly which clips each run used.
+distill/data/**/*.wav
+
+# Cloud TTS outputs: listening references only. Provider terms (Soniox) forbid redistribution
+# and use for training (D35), so keep them local. cloud_voices/README.md stays tracked.
+cloud_voices/**/*.wav
+cloud_voices/**/*.mp3
+
+# Office lock files (Excel keeps benchmark CSVs open)
+~$*
+.~lock.*

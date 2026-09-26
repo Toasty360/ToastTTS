@@ -1,0 +1,15 @@
+﻿clips checked 1023, kept 757 (74%), 39.6 of 53.8 min kept
+
+breakage alarm (UTMOS) over all converted clips: p10 3.38, median 3.84, p90 4.33; below 3.5: 178
+pitch jumps: median 0.00%, above 1%: 27
+word check: 80 clips worse than the original human clip (dropped); 198 mismatches forgiven (the human clip had the same count)
+   e.g. dt00052_09: "Umm not me. I'm too hot and I'm too tired." (wrong 1 vs human 0)
+   e.g. dt00052_13: "Get out of it! It wasn't as good as you think." (wrong 1 vs human 0)
+   e.g. dt00096_03: 'He has the flu.' (wrong 2 vs human 1)
+   e.g. dt00163_06: "I don't believe so. He's going out of town on business. May I take a m" (wrong 2 vs human 0)
+   e.g. dt00175_02: 'How much do I need to pay for it?' (wrong 1 vs human 0)
+
+drop reasons (a clip can have several): {'words': 80, 'natural': 181, 'jumps': 27, 'length': 1}
+dropped for that reason alone: {'words': 63, 'natural': 159, 'jumps': 21, 'length': 0}
+
+kept set: 36% questions, 11% start with an opener, mean 3.1 s

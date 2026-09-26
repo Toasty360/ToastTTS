@@ -1,0 +1,8 @@
+﻿# e03_randomness_breathiness
+# run: 2026-09-25 19:54 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e03_randomness_breathiness.py
+Breathy frames per paragraph (sum over 5 sentences, mean of 3 runs; speed 0.9)
+  file defaults 0.333/0.333     329.3  (runs: [332, 328, 328])
+  rhythm only 0.333/0.8 (4b)    356.0  (runs: [353, 371, 344])
+  halfway 0.5/0.8 (4c)          359.7  (runs: [360, 366, 353])
+  lively 0.667/0.8              353.7  (runs: [355, 360, 346])

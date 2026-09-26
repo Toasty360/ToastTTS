@@ -1,0 +1,24 @@
+﻿# e02_model_pause_gaps
+# run: 2026-09-25 19:54 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e02_model_pause_gaps.py
+== piper:en_US-libritts_r-medium:3922
+   6.0s, 5 commas/;/:,  5 gaps  (at ms, length ms): [(2160, 30), (2960, 30), (3510, 40), (3930, 50), (3990, 50)]
+     Well, to be honest, building an ultra-low latency voice pipe
+   3.1s, 3 commas/;/:,  3 gaps  (at ms, length ms): [(20, 30), (460, 40), (1220, 60)]
+     Take a look at these numbers: 12, 45, and 108.
+   3.4s, 1 commas/;/:,  2 gaps  (at ms, length ms): [(680, 40), (1020, 40)]
+     If the engine speaks at 3:15 PM without any dynamic pauses
+== kitten:kitten-tts-micro-0.8:Jasper
+   9.7s, 5 commas/;/:, 16 gaps  (at ms, length ms): [(830, 60), (1640, 40), (1710, 90), (1880, 30), (2410, 80), (3280, 40), (3980, 60), (4240, 80), (5010, 50), (5220, 30), (5950, 70), (6340, 90), (6500, 80), (7010, 70), (7610, 40), (8180, 60)]
+     Well, to be honest, building an ultra-low latency voice pipe
+   3.9s, 3 commas/;/:,  6 gaps  (at ms, length ms): [(570, 40), (890, 40), (1030, 50), (1770, 260), (2290, 90), (2640, 70)]
+     Take a look at these numbers: 12, 45, and 108.
+   5.9s, 1 commas/;/:, 13 gaps  (at ms, length ms): [(530, 110), (760, 90), (1380, 60), (1590, 40), (1750, 40), (1890, 150), (2320, 90), (2520, 150), (2960, 30), (3580, 90), (3770, 30), (4010, 100), (4880, 120)]
+     If the engine speaks at 3:15 PM without any dynamic pauses
+== piper:en_US-amy-medium
+   9.5s, 5 commas/;/:, 17 gaps  (at ms, length ms): [(390, 140), (1320, 30), (1390, 130), (2880, 30), (3510, 50), (3730, 50), (4490, 50), (5120, 30), (5160, 60), (5560, 60), (5890, 40), (5950, 340), (6510, 40), (6830, 30), (6880, 70), (7440, 100), (7950, 160)]
+     Well, to be honest, building an ultra-low latency voice pipe
+   4.7s, 3 commas/;/:,  9 gaps  (at ms, length ms): [(170, 30), (480, 60), (670, 80), (950, 40), (1510, 190), (1770, 50), (2210, 260), (3330, 140), (4410, 110)]
+     Take a look at these numbers: 12, 45, and 108.
+   4.9s, 1 commas/;/:, 14 gaps  (at ms, length ms): [(200, 30), (910, 50), (1090, 40), (1260, 30), (1370, 90), (1970, 40), (2290, 50), (2800, 50), (2940, 30), (3200, 30), (3240, 70), (3580, 30), (4040, 40), (4090, 100)]
+     If the engine speaks at 3:15 PM without any dynamic pauses

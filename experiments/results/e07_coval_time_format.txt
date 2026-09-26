@@ -1,0 +1,47 @@
+﻿# e07_coval_time_format
+# run: 2026-09-25 19:58 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e07_coval_time_format.py
+== scored by whisper-1 (Coval's method)
+  lessac-high  WER  6.3%   without time-format errors  3.0%   (1036 reference words)
+  ryan         WER  5.1%   without time-format errors  1.4%   (1036 reference words)
+  amy          WER  5.9%   without time-format errors  2.3%   (1036 reference words)
+  lessac       WER  6.0%   without time-format errors  2.9%   (1036 reference words)
+== scored by local large-v2
+  lessac-high  WER  5.5%   without time-format errors  1.7%   (1036 reference words)
+  ryan         WER  5.6%   without time-format errors  2.0%   (1036 reference words)
+  amy          WER  6.1%   without time-format errors  2.4%   (1036 reference words)
+  lessac       WER  5.4%   without time-format errors  2.1%   (1036 reference words)
+
+== remaining real mistakes, amy (whisper-1), after removing time formatting
+  A1/take0: ref: your order ord 24589 shipped via ups tracking one z 999 aa 1234567890 and will arrive between 2 30 pm and 4 45 pm tomorrow
+               heard: your order hash ord 24589 shipped via upds tracking one z 999 aa 1234567890 and will arrive between 2 30 pm and 4 45 pm tomorrow
+  A7/take0: ref: let us fix your wi fi unplug your router for exactly 30 seconds then wait for the green light
+               heard: let us fix your wi fi and plug your router for exactly 30 seconds then wait for the green light
+  A11/take0: ref: i need to verify your account what is the zip code we have on file please take your time
+               heard: i need to verify your account what is the cip code we have on file please take your time
+  A12/take0: ref: we detected 2 unusual login attempts from chicago illinois yesterday around 11 30 pm
+               heard: we detected 2 unusual log in attempts from chicago illinois yesterday around 11 30 pm
+  A15/take0: ref: i noticed you have not logged in since january 15th is there anything we can help you with
+               heard: i noticed you have not lobbed in since january 15th is there anything we can help you with
+  A20/take0: ref: for a 50 person team i would recommend our business plan at $149 per month rather than basic
+               heard: for a 50 person team i would recommend our business plan at one.149 per month rather than basic
+  A24/take0: ref: your symptoms sound manageable but i would recommend seeing doctor martinez within 48 hours to be safe
+               heard: your symptoms sound manageable but i would recommend seeing doctor martine is within 48 hours to be safe
+  A25/take0: ref: your pto request for december 20th through 24th has been approved that is 3 business days
+               heard: your ptho request for december 20th through 24th has been approved that is 3 business days
+  A1/take1: ref: your order ord 24589 shipped via ups tracking one z 999 aa 1234567890 and will arrive between 2 30 pm and 4 45 pm tomorrow
+               heard: your order hash ord 24589 shipped by ups tracking one z 999 aa 1234567890 and will arrive between 2 30 pm and 4 45 pm tomorrow
+  A7/take1: ref: let us fix your wi fi unplug your router for exactly 30 seconds then wait for the green light
+               heard: let us fix your wi fi and plug your router for exactly 30 seconds then wait for the green light
+  A11/take1: ref: i need to verify your account what is the zip code we have on file please take your time
+               heard: i need to verify your account what is the cip code we have on file please take your time
+  A12/take1: ref: we detected 2 unusual login attempts from chicago illinois yesterday around 11 30 pm
+               heard: we detected 2 unusual log in attempts from chicago illinois yesterday around 11 30 pm
+  A15/take1: ref: i noticed you have not logged in since january 15th is there anything we can help you with
+               heard: i noticed you have not lobbed in since january 15th is there anything we can help you with
+  A20/take1: ref: for a 50 person team i would recommend our business plan at $149 per month rather than basic
+               heard: for a 50 person team i would recommend our business plan at one.149 per month rather than basic
+  A24/take1: ref: your symptoms sound manageable but i would recommend seeing doctor martinez within 48 hours to be safe
+               heard: your symptoms sound manageable but i would recommend seeing doctor martine is within 48 hours to be safe
+  A28/take1: ref: your wire transfer of $1247.50 to account ending in 5691 was processed at 2 15 pm
+               heard: your wire transfer of $1247.50 to account ending in $5691 was processed at 2 15 pm

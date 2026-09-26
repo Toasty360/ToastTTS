@@ -1,0 +1,24 @@
+﻿# e13_vc_feasibility (evaluation of Modal run 20260925-2151)
+# run: 2026-09-25 21:52 on this laptop; conversion ran on Modal T4 (knnvc 42 s, openvoice 41 s GPU)
+# commands: .venv\Scripts\python -m modal run experiments\e13_vc_feasibility.py ; .venv\Scripts\python experiments\e13_evaluate.py 20260925-2151
+Run 20260925-2151: 10 sentence(s)
+
+condition       range st  spread   move  sim amy sim kokoro  wrong  natural
+kokoro_source       9.80    3.85   37.6     0.48       0.92      0     4.31
+amy_direct          6.21    2.45   26.0     0.92       0.48      0     4.47
+knnvc              18.73    4.46   35.1     0.75       0.51      0     4.39
+openvoice           7.86    3.39   34.5     0.63       0.78      1     4.20
+
+"Well," (first word of sentence 1):
+  kokoro_source  'Well,'   220 ms | loudness by quarter (dB, rel. to 1st): +0.0 +4.6 +3.9 +2.2 | pitch start -1.2 / mid +0.0 / end +2.2 st, range 4.4 st
+  amy_direct     'Well,'   240 ms | loudness by quarter (dB, rel. to 1st): +0.0 +7.4 +7.1 +5.5 | pitch start +0.4 / mid +0.0 / end -1.5 st, range 2.7 st
+  knnvc          'Well,'   220 ms | loudness by quarter (dB, rel. to 1st): +0.0 +8.9 +10.2 +8.0 | pitch start -0.5 / mid +0.1 / end +1.8 st, range 2.9 st
+  openvoice      'Well,'   220 ms | loudness by quarter (dB, rel. to 1st): +0.0 +5.8 +5.0 +4.3 | pitch start -0.9 / mid -0.1 / end +1.4 st, range 4.2 st
+
+amy's own consistency (similarity between her own clips): 0.84
+
+Step 0 verdict per converter (plan criteria):
+  knnvc: PASS on metrics   melody kept (range >= 9 st): yes   sounds like amy (closer to amy than Kokoro): yes   identity strength (>= 80% of amy's own): yes   words intact (0 wrong): yes
+  openvoice: FAIL on metrics   melody kept (range >= 9 st): NO   sounds like amy (closer to amy than Kokoro): NO   identity strength (>= 80% of amy's own): NO   words intact (0 wrong): NO
+
+Listen: out/listen/60_vc_*.wav (same sentences in each; the "Well," contour above is the other check)

@@ -1,0 +1,7 @@
+﻿# e04_piece_end_punctuation
+# run: 2026-09-25 19:55 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e04_piece_end_punctuation.py
+  ending ';'   length 2.94s (+/- 0.23)   loudest point in last 250 ms:  -24.3 dB
+  ending ','   length 2.98s (+/- 0.21)   loudest point in last 250 ms:  -22.6 dB
+  ending '.'   length 2.99s (+/- 0.17)   loudest point in last 250 ms:  -22.3 dB
+  ending ''    length 2.77s (+/- 0.15)   loudest point in last 250 ms:  -17.5 dB

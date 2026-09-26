@@ -1,0 +1,37 @@
+﻿# e06_cloud_pacing
+# run: 2026-09-25 19:56 on this laptop (Windows 11, performance power mode)
+# command: .venv\Scripts\python experiments\e06_cloud_pacing.py
+== cloud: deepgram-aura-2-thalia-en.wav   natural (first 20 s): 4.46
+  100 words, 41.8s, 144 wpm overall, 188 wpm while talking
+    pause after ','    n=13  median  380 ms  (range 40-860)
+    pause after '.'    n=4   median  800 ms  (range 540-900)
+    pause after '?'    n=2   median  550 ms  (range 400-700)
+== cloud: deepgram-flux-hannah-en-1.1x-speed.wav   natural (first 20 s): 3.75
+  101 words, 42.3s, 145 wpm overall, 183 wpm while talking
+    pause after ','    n=13  median  500 ms  (range 80-800)
+    pause after '.'    n=4   median  910 ms  (range 0-1040)
+    pause after '?'    n=1   median    0 ms  (range 0-0)
+== cloud: soniox-tts-grace.wav   natural (first 20 s): 4.47
+  100 words, 39.3s, 154 wpm overall, 195 wpm while talking
+    pause after ','    n=13  median  440 ms  (range 200-580)
+    pause after '.'    n=3   median  800 ms  (range 780-840)
+    pause after '?'    n=2   median  220 ms  (range 0-440)
+== ToastTTS amy x0.9   natural (first 20 s): 4.34
+  100 words, 50.0s, 122 wpm overall, 152 wpm while talking
+    pause after ','    n=11  median  520 ms  (range 280-1000)
+    pause after '.'    n=3   median  820 ms  (range 780-820)
+    pause after '?'    n=2   median  560 ms  (range 0-1120)
+== ToastTTS amy x1.0   natural (first 20 s): 4.39
+  100 words, 47.6s, 128 wpm overall, 162 wpm while talking
+    pause after ','    n=11  median  580 ms  (range 320-1000)
+    pause after '.'    n=4   median  800 ms  (range 480-940)
+== ToastTTS amy x1.1   natural (first 20 s): 4.47
+  100 words, 45.7s, 134 wpm overall, 166 wpm while talking
+    pause after ','    n=11  median  440 ms  (range 260-780)
+    pause after '.'    n=4   median  830 ms  (range 540-860)
+    pause after '?'    n=2   median  190 ms  (range 0-380)
+== ToastTTS amy x1.2   natural (first 20 s): 4.25
+  100 words, 43.4s, 141 wpm overall, 179 wpm while talking
+    pause after ','    n=13  median  460 ms  (range 160-800)
+    pause after '.'    n=3   median  840 ms  (range 840-840)
+    pause after '?'    n=2   median  190 ms  (range 0-380)

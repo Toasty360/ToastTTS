@@ -1,0 +1,27 @@
+﻿# e14_vc_dailytalk (evaluation of Modal run 20260925-2232-dailytalk)
+# run: 2026-09-25 22:42 on this laptop; conversion on Modal T4 (knnvc 30 s, seedvc 272 s, seedvc_f0 332 s GPU)
+# commands: .venv\Scripts\python -m modal run experiments\e13_vc_feasibility.py --source dailytalk --converters knnvc,seedvc,seedvc_f0 ; .venv\Scripts\python experiments\e13_evaluate.py 20260925-2232-dailytalk 61_dt
+Run 20260925-2232-dailytalk: 10 sentence(s), source = dailytalk_source
+
+condition        core st jumps%  >7kHz% bright Hz sim amy sim src wrong natural
+dailytalk_source   10.03   0.08   0.943       981    0.18    0.79     1    4.19
+amy_direct          4.63   0.21   1.097       803    0.87    0.20     2    4.39
+knnvc               7.41   0.35   0.129       626    0.64    0.30     3    4.21
+seedvc              7.06   0.30   0.700       783    0.69    0.25     2    3.99
+seedvc_f0           9.34   0.04   0.595       767    0.62    0.28     2    3.78
+
+First sentence: 'Well, both have advantages and disadvantages.'
+  dailytalk_source'Well,'   340 ms | loudness by quarter (dB, rel. to 1st): +0.0 +3.9 +2.8 +1.0 | pitch start -0.2 / mid -0.1 / end +0.0 st, range 2.4 st
+  amy_direct      'Well,'   280 ms | loudness by quarter (dB, rel. to 1st): +0.0 +11.8 +11.7 +8.6 | pitch start +1.1 / mid -0.2 / end -0.3 st, range 2.5 st
+  knnvc           'Well,'   300 ms | loudness by quarter (dB, rel. to 1st): +0.0 +5.2 +4.0 +3.4 | pitch start +1.6 / mid +0.2 / end -0.6 st, range 2.7 st
+  seedvc          'As'     could not analyse (PraatError; word boundary 0.00-0.00 s)
+  seedvc_f0       'As'     could not analyse (PraatError; word boundary 0.00-0.00 s)
+
+amy's own consistency: 0.73
+
+Verdict per converter:
+  knnvc: FAIL   melody >= 85% of source (8.5 st): NO   closer to amy than source: yes   identity >= 80% of amy's (0.59): yes   wrong words <= amy's (2): NO   clean (jumps <= 2x amy): yes   bright (>7kHz >= 50% of amy): NO
+  seedvc: FAIL   melody >= 85% of source (8.5 st): NO   closer to amy than source: yes   identity >= 80% of amy's (0.59): yes   wrong words <= amy's (2): yes   clean (jumps <= 2x amy): yes   bright (>7kHz >= 50% of amy): yes
+  seedvc_f0: PASS   melody >= 85% of source (8.5 st): yes   closer to amy than source: yes   identity >= 80% of amy's (0.59): yes   wrong words <= amy's (2): yes   clean (jumps <= 2x amy): yes   bright (>7kHz >= 50% of amy): yes
+
+Listen: out/listen/61_dt_*.wav
