@@ -8,8 +8,10 @@ PY=~/workspace/.pause-venv/bin/python
 cd "$E18"
 
 echo "=== downloading word JSONs from e18-words volume ==="
-rm -rf data/words_modal
-$M volume get e18-words / data/words_modal
+rm -rf data/words_modal && mkdir -p data/words_modal
+for f in $($M volume ls e18-words / 2>/dev/null); do
+  $M volume get --force e18-words "/$f" "data/words_modal/$f" >/dev/null 2>&1 || echo "FAIL $f"
+done
 echo "downloaded: $(ls data/words_modal/*.json 2>/dev/null | wc -l) json files"
 
 echo "=== sorting into train/val ==="

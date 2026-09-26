@@ -33,3 +33,32 @@ Validation (~1.5 h, held-out narrator):
   didn't fix the problem — say so honestly).
 - Validation F1 on non-punctuation pauses reported separately.
 - A/B/C listening: pause table vs e16 vs e18 on unpunctuated phrase breaks.
+
+## Results (2026-09-26) — the run failed, documented honestly
+
+**Transcription** worked: 11 chapters via Whisper `small.en` on a Modal T4,
+~22 min wall clock at 0.06x real-time (vs 1.04x on local CPU).
+
+**Gap analysis** (the key diagnostic): only **1.4%** of pauses ≥150 ms are
+non-punctuation (89 of 6,430; train 1.9%, val 0.2%), vs 0.8% in e16.
+Audiobook narrators still pause overwhelmingly at punctuation — the long-form
+data did not provide the phrase-break signal this run was designed to capture.
+
+**Training**: val P=0.23 / R=0.76 / **F1=0.354** (e16: 0.934). The model did
+not learn placement: pause probabilities sit at 0.40–0.63 for nearly every
+word, i.e. maximum uncertainty around the 0.5 decision threshold. At
+inference it predicts a 740 ms pause after almost every word, which is
+unusable. Learned duration medians: comma 360 ms, sentence stop 640 ms.
+
+**A/B/C**: rendered (abc.py, 18 wavs) but the C samples are audibly broken
+(pause after every word); no listening verdict requested.
+
+**Interpretation**: with 98.6% of pauses following punctuation and five
+varied narrators, the text→pause mapping in this data is near-ambiguous for
+a word-identity model — it hedged toward "pause often" under the recall-heavy
+class weight instead of learning placement. Conversational speech
+(disfluencies, unpunctuated phrase breaks) would be the data to try next,
+not more audiobooks.
+
+**Status**: e18 checkpoint kept for reproducibility only. e16 remains the
+better learned model; the hand-written table remains the default.
