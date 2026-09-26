@@ -1,0 +1,9 @@
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/mobydick/ch3.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/mobydick/ch4-7.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/sherlock/ch1.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/frankenstein/ch0.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/frankenstein/ch3.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/janeeyre/ch2.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/janeeyre/ch3.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/prideprejudice/ch1-3.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/prideprejudice/ch4-5.mp3

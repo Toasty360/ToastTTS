@@ -1,0 +1,2 @@
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/heartdarkness/ch1a.mp3
+/home/hatch/workspace/toasttts/experiments/e18_pause_longform/data/audio/heartdarkness/ch1b.mp3

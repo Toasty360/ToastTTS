@@ -1,0 +1,11 @@
+# Bulky / generated: LibriVox chapter mp3s live on the e18-audio Modal
+# volume; words/labels/model are pipeline outputs (the trained checkpoint
+# gets force-added when training finishes). The *.txt manifests stay tracked.
+data/audio/
+data/words_*/
+data/labels/
+data/model/
+data/smoke/
+data/smoke_words/
+logs/
+__pycache__/

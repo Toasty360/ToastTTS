@@ -1,0 +1,5 @@
+# Re-downloadable source audio (dev-clean tarball + extracted LibriSpeech).
+# Everything needed to rebuild it: select_files.py + README.
+data/LibriSpeech/
+data/*.tar.gz
+__pycache__/

@@ -1,0 +1,475 @@
+loading whisper small.en on CPU...
+111 files
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/3214 [00:00<?, ?frames/s] 84%|████████▍ | 2702/3214 [01:10<00:13, 38.38frames/s] 84%|████████▍ | 2702/3214 [01:30<00:13, 38.38frames/s]100%|██████████| 3214/3214 [01:49<00:00, 27.12frames/s]100%|██████████| 3214/3214 [01:49<00:00, 29.29frames/s]
+[1/111] 5338-24615-0002.flac words=91 audio=31.5s wall=111.6s rtf=3.54x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/3170 [00:00<?, ?frames/s] 84%|████████▍ | 2662/3170 [00:53<00:10, 49.87frames/s] 84%|████████▍ | 2662/3170 [01:10<00:10, 49.87frames/s]100%|██████████| 3170/3170 [01:29<00:00, 32.38frames/s]100%|██████████| 3170/3170 [01:29<00:00, 35.52frames/s]
+[2/111] 8842-304647-0002.flac words=87 audio=31.1s wall=89.5s rtf=2.88x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2940 [00:00<?, ?frames/s] 94%|█████████▍| 2762/2940 [00:55<00:03, 49.64frames/s] 94%|█████████▍| 2762/2940 [01:10<00:03, 49.64frames/s]100%|██████████| 2940/2940 [01:42<00:00, 24.54frames/s]100%|██████████| 2940/2940 [01:42<00:00, 28.61frames/s]
+[3/111] 1272-128104-0004.flac words=67 audio=28.8s wall=103.0s rtf=3.57x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2894 [00:00<?, ?frames/s]100%|██████████| 2894/2894 [00:48<00:00, 59.56frames/s]100%|██████████| 2894/2894 [00:48<00:00, 59.56frames/s]
+[4/111] 7850-73752-0003.flac words=77 audio=28.0s wall=49.2s rtf=1.75x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2840 [00:00<?, ?frames/s] 89%|████████▊ | 2514/2840 [00:48<00:06, 52.17frames/s] 89%|████████▊ | 2514/2840 [00:58<00:06, 52.17frames/s]100%|██████████| 2840/2840 [01:20<00:00, 31.61frames/s]100%|██████████| 2840/2840 [01:20<00:00, 35.31frames/s]
+[5/111] 7850-73752-0018.flac words=68 audio=27.7s wall=80.9s rtf=2.91x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2788 [00:00<?, ?frames/s]100%|██████████| 2788/2788 [00:58<00:00, 47.78frames/s]100%|██████████| 2788/2788 [00:58<00:00, 47.78frames/s]
+[6/111] 1993-147149-0006.flac words=81 audio=27.2s wall=58.7s rtf=2.16x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2711 [00:00<?, ?frames/s] 77%|███████▋  | 2096/2711 [00:43<00:12, 47.82frames/s] 77%|███████▋  | 2096/2711 [00:58<00:12, 47.82frames/s]100%|██████████| 2711/2711 [01:18<00:00, 31.94frames/s]100%|██████████| 2711/2711 [01:18<00:00, 34.60frames/s]
+[7/111] 174-168635-0018.flac words=51 audio=26.4s wall=78.6s rtf=2.97x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2662 [00:00<?, ?frames/s] 89%|████████▉ | 2378/2662 [00:54<00:06, 43.52frames/s] 89%|████████▉ | 2378/2662 [01:10<00:06, 43.52frames/s]100%|██████████| 2662/2662 [01:28<00:00, 26.90frames/s]100%|██████████| 2662/2662 [01:28<00:00, 29.96frames/s]
+[8/111] 1919-142785-0007.flac words=77 audio=26.1s wall=89.1s rtf=3.41x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2480 [00:00<?, ?frames/s] 97%|█████████▋| 2410/2480 [00:48<00:01, 50.04frames/s] 97%|█████████▋| 2410/2480 [01:00<00:01, 50.04frames/s] 97%|█████████▋| 2410/2480 [01:04<00:01, 37.53frames/s]
+[9/111] 251-136532-0004.flac words=67 audio=24.1s wall=64.6s rtf=2.68x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2469 [00:00<?, ?frames/s] 89%|████████▉ | 2204/2469 [00:42<00:05, 51.71frames/s] 89%|████████▉ | 2204/2469 [00:56<00:05, 51.71frames/s]100%|██████████| 2469/2469 [01:15<00:00, 28.74frames/s]100%|██████████| 2469/2469 [01:15<00:00, 32.62frames/s]
+[10/111] 2803-161169-0009.flac words=52 audio=24.0s wall=76.1s rtf=3.17x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2412 [00:00<?, ?frames/s]100%|██████████| 2412/2412 [00:51<00:00, 47.00frames/s]100%|██████████| 2412/2412 [00:51<00:00, 46.99frames/s]
+[11/111] 3853-163249-0036.flac words=71 audio=23.6s wall=51.8s rtf=2.19x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2403 [00:00<?, ?frames/s] 86%|████████▌ | 2064/2403 [00:46<00:07, 44.37frames/s] 86%|████████▌ | 2064/2403 [00:58<00:07, 44.37frames/s]100%|██████████| 2403/2403 [01:19<00:00, 27.05frames/s]100%|██████████| 2403/2403 [01:19<00:00, 30.08frames/s]
+[12/111] 2035-152373-0005.flac words=72 audio=23.3s wall=80.3s rtf=3.44x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2351 [00:00<?, ?frames/s] 87%|████████▋ | 2040/2351 [00:45<00:06, 45.24frames/s] 87%|████████▋ | 2040/2351 [00:58<00:06, 45.24frames/s]100%|██████████| 2351/2351 [01:18<00:00, 26.65frames/s]100%|██████████| 2351/2351 [01:18<00:00, 29.84frames/s]
+[13/111] 5338-24615-0004.flac words=55 audio=23.0s wall=79.0s rtf=3.43x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2344 [00:00<?, ?frames/s]100%|██████████| 2344/2344 [00:47<00:00, 49.61frames/s]100%|██████████| 2344/2344 [00:47<00:00, 49.61frames/s]
+[14/111] 8842-302196-0005.flac words=72 audio=23.0s wall=47.5s rtf=2.06x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2296 [00:00<?, ?frames/s]100%|██████████| 2296/2296 [00:48<00:00, 47.52frames/s]100%|██████████| 2296/2296 [00:48<00:00, 47.52frames/s]
+[15/111] 8842-304647-0006.flac words=66 audio=22.3s wall=48.5s rtf=2.18x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2286 [00:00<?, ?frames/s]100%|██████████| 2286/2286 [00:47<00:00, 47.87frames/s]100%|██████████| 2286/2286 [00:47<00:00, 47.87frames/s]
+[16/111] 1988-148538-0006.flac words=63 audio=22.2s wall=48.2s rtf=2.17x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2281 [00:00<?, ?frames/s]100%|██████████| 2281/2281 [00:47<00:00, 47.91frames/s]100%|██████████| 2281/2281 [00:47<00:00, 47.88frames/s]
+[17/111] 2086-149220-0003.flac words=64 audio=22.0s wall=47.9s rtf=2.17x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2268 [00:00<?, ?frames/s]100%|██████████| 2268/2268 [00:50<00:00, 44.75frames/s]100%|██████████| 2268/2268 [00:50<00:00, 44.74frames/s]
+[18/111] 2412-153948-0004.flac words=72 audio=22.0s wall=51.0s rtf=2.32x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2193 [00:00<?, ?frames/s] 75%|███████▌  | 1650/2193 [00:45<00:15, 35.99frames/s] 75%|███████▌  | 1650/2193 [00:56<00:15, 35.99frames/s]100%|██████████| 2193/2193 [01:22<00:00, 24.54frames/s]100%|██████████| 2193/2193 [01:22<00:00, 26.44frames/s]
+[19/111] 6345-64257-0001.flac words=69 audio=21.2s wall=83.4s rtf=3.93x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2162 [00:00<?, ?frames/s] 83%|████████▎ | 1804/2162 [00:46<00:09, 38.59frames/s] 83%|████████▎ | 1804/2162 [01:02<00:09, 38.59frames/s]100%|██████████| 2162/2162 [01:20<00:00, 24.48frames/s]100%|██████████| 2162/2162 [01:20<00:00, 26.95frames/s]
+[20/111] 5694-64025-0010.flac words=55 audio=20.9s wall=80.5s rtf=3.85x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2099 [00:00<?, ?frames/s]100%|██████████| 2099/2099 [00:48<00:00, 43.36frames/s]100%|██████████| 2099/2099 [00:48<00:00, 43.35frames/s]
+[21/111] 6345-93306-0000.flac words=69 audio=20.4s wall=48.7s rtf=2.39x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2088 [00:00<?, ?frames/s]100%|██████████| 2088/2088 [00:45<00:00, 46.10frames/s]100%|██████████| 2088/2088 [00:45<00:00, 46.10frames/s]
+[22/111] 5536-43363-0009.flac words=63 audio=20.2s wall=45.6s rtf=2.26x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2082 [00:00<?, ?frames/s]100%|██████████| 2082/2082 [00:43<00:00, 47.46frames/s]100%|██████████| 2082/2082 [00:43<00:00, 47.45frames/s]
+[23/111] 6295-64301-0023.flac words=52 audio=20.3s wall=44.2s rtf=2.18x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2064 [00:00<?, ?frames/s]100%|██████████| 2064/2064 [00:44<00:00, 45.93frames/s]100%|██████████| 2064/2064 [00:44<00:00, 45.93frames/s]
+[24/111] 3853-163249-0053.flac words=60 audio=20.0s wall=45.2s rtf=2.26x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2056 [00:00<?, ?frames/s] 89%|████████▉ | 1830/2056 [00:43<00:05, 41.70frames/s] 89%|████████▉ | 1830/2056 [00:58<00:05, 41.70frames/s]100%|██████████| 2056/2056 [01:15<00:00, 24.15frames/s]100%|██████████| 2056/2056 [01:15<00:00, 27.20frames/s]
+[25/111] 1993-147964-0010.flac words=51 audio=19.9s wall=75.8s rtf=3.81x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2054 [00:00<?, ?frames/s] 94%|█████████▍| 1934/2054 [00:41<00:02, 46.75frames/s] 94%|█████████▍| 1934/2054 [00:52<00:02, 46.75frames/s]100%|██████████| 2054/2054 [01:12<00:00, 24.36frames/s]100%|██████████| 2054/2054 [01:12<00:00, 28.17frames/s]
+[26/111] 2803-154328-0015.flac words=46 audio=19.9s wall=73.2s rtf=3.68x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2053 [00:00<?, ?frames/s]100%|██████████| 2053/2053 [00:42<00:00, 48.34frames/s]100%|██████████| 2053/2053 [00:42<00:00, 48.33frames/s]
+[27/111] 174-84280-0004.flac words=48 audio=20.0s wall=42.8s rtf=2.14x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2047 [00:00<?, ?frames/s]100%|██████████| 2047/2047 [00:48<00:00, 42.12frames/s]100%|██████████| 2047/2047 [00:48<00:00, 42.12frames/s]
+[28/111] 2035-152373-0013.flac words=63 audio=19.8s wall=48.8s rtf=2.47x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2039 [00:00<?, ?frames/s]100%|██████████| 2039/2039 [00:44<00:00, 45.54frames/s]100%|██████████| 2039/2039 [00:44<00:00, 45.54frames/s]
+[29/111] 5536-43358-0008.flac words=55 audio=19.9s wall=45.1s rtf=2.26x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/2028 [00:00<?, ?frames/s]100%|██████████| 2028/2028 [00:43<00:00, 46.94frames/s]100%|██████████| 2028/2028 [00:43<00:00, 46.94frames/s]
+[30/111] 1919-142785-0008.flac words=55 audio=19.8s wall=43.5s rtf=2.19x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1989 [00:00<?, ?frames/s]loading whisper small.en on CPU...
+111 files
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1989 [00:00<?, ?frames/s]100%|██████████| 1989/1989 [00:51<00:00, 38.46frames/s]100%|██████████| 1989/1989 [00:51<00:00, 38.46frames/s]
+[31/111] 3536-23268-0000.flac words=56 audio=19.4s wall=52.4s rtf=2.71x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1978 [00:00<?, ?frames/s]100%|██████████| 1978/1978 [00:44<00:00, 44.67frames/s]100%|██████████| 1978/1978 [00:44<00:00, 44.67frames/s]
+[32/111] 2086-149220-0001.flac words=52 audio=19.0s wall=44.5s rtf=2.34x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1943 [00:00<?, ?frames/s]100%|██████████| 1943/1943 [00:43<00:00, 44.66frames/s]100%|██████████| 1943/1943 [00:43<00:00, 44.63frames/s]
+[33/111] 2086-149220-0011.flac words=52 audio=18.8s wall=43.8s rtf=2.33x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1927 [00:00<?, ?frames/s]100%|██████████| 1927/1927 [00:50<00:00, 38.52frames/s]100%|██████████| 1927/1927 [00:50<00:00, 38.52frames/s]
+[34/111] 5536-43359-0011.flac words=62 audio=18.9s wall=50.4s rtf=2.67x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1911 [00:00<?, ?frames/s]100%|██████████| 1911/1911 [00:44<00:00, 43.23frames/s]100%|██████████| 1911/1911 [00:44<00:00, 43.23frames/s]
+[35/111] 84-121550-0013.flac words=45 audio=18.7s wall=44.6s rtf=2.39x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1910 [00:00<?, ?frames/s]100%|██████████| 1910/1910 [00:43<00:00, 43.65frames/s]100%|██████████| 1910/1910 [00:43<00:00, 43.65frames/s]
+[36/111] 6319-64726-0004.flac words=57 audio=18.6s wall=44.2s rtf=2.38x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1892 [00:00<?, ?frames/s]100%|██████████| 1892/1892 [00:46<00:00, 40.76frames/s]100%|██████████| 1892/1892 [00:46<00:00, 40.76frames/s]
+[37/111] 652-130726-0011.flac words=52 audio=18.6s wall=46.9s rtf=2.52x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1886 [00:00<?, ?frames/s]100%|██████████| 1886/1886 [00:43<00:00, 43.04frames/s]100%|██████████| 1886/1886 [00:43<00:00, 43.01frames/s]
+[38/111] 1919-142785-0005.flac words=49 audio=18.5s wall=44.2s rtf=2.39x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1854 [00:00<?, ?frames/s]100%|██████████| 1854/1854 [00:43<00:00, 42.72frames/s]100%|██████████| 1854/1854 [00:43<00:00, 42.72frames/s]
+[39/111] 3853-163249-0054.flac words=56 audio=17.9s wall=43.8s rtf=2.45x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1844 [00:00<?, ?frames/s]100%|██████████| 1844/1844 [00:40<00:00, 45.58frames/s]100%|██████████| 1844/1844 [00:40<00:00, 45.58frames/s]
+[40/111] 6319-275224-0008.flac words=49 audio=17.7s wall=40.8s rtf=2.30x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1833 [00:00<?, ?frames/s]100%|██████████| 1833/1833 [00:41<00:00, 44.52frames/s]100%|██████████| 1833/1833 [00:41<00:00, 44.52frames/s]
+[41/111] 174-84280-0001.flac words=45 audio=17.7s wall=41.6s rtf=2.35x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1831 [00:00<?, ?frames/s]100%|██████████| 1831/1831 [00:45<00:00, 40.64frames/s]100%|██████████| 1831/1831 [00:45<00:00, 40.64frames/s]
+[42/111] 6319-275224-0011.flac words=48 audio=17.7s wall=45.3s rtf=2.56x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1829 [00:00<?, ?frames/s]100%|██████████| 1829/1829 [00:42<00:00, 42.72frames/s]100%|██████████| 1829/1829 [00:42<00:00, 42.72frames/s]
+[43/111] 1272-128104-0009.flac words=42 audio=17.7s wall=43.2s rtf=2.44x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1817 [00:00<?, ?frames/s]100%|██████████| 1817/1817 [00:42<00:00, 42.56frames/s]100%|██████████| 1817/1817 [00:42<00:00, 42.56frames/s]
+[44/111] 777-126732-0063.flac words=57 audio=17.6s wall=43.0s rtf=2.44x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1808 [00:00<?, ?frames/s]100%|██████████| 1808/1808 [00:38<00:00, 47.18frames/s]100%|██████████| 1808/1808 [00:38<00:00, 47.18frames/s]
+[45/111] 8297-275154-0014.flac words=45 audio=17.4s wall=38.7s rtf=2.22x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1787 [00:00<?, ?frames/s]100%|██████████| 1787/1787 [00:44<00:00, 40.01frames/s]100%|██████████| 1787/1787 [00:44<00:00, 40.01frames/s]
+[46/111] 6241-61943-0027.flac words=49 audio=17.3s wall=44.9s rtf=2.60x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1780 [00:00<?, ?frames/s]100%|██████████| 1780/1780 [00:49<00:00, 36.02frames/s]100%|██████████| 1780/1780 [00:49<00:00, 36.02frames/s]
+[47/111] 6241-66616-0008.flac words=59 audio=17.3s wall=49.8s rtf=2.88x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1777 [00:00<?, ?frames/s]100%|██████████| 1777/1777 [00:45<00:00, 39.05frames/s]100%|██████████| 1777/1777 [00:45<00:00, 39.02frames/s]
+[48/111] 5338-24615-0005.flac words=41 audio=17.2s wall=45.9s rtf=2.68x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1766 [00:00<?, ?frames/s]100%|██████████| 1766/1766 [00:42<00:00, 41.30frames/s]100%|██████████| 1766/1766 [00:42<00:00, 41.28frames/s]
+[49/111] 1919-142785-0047.flac words=45 audio=17.1s wall=43.1s rtf=2.51x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1765 [00:00<?, ?frames/s]100%|██████████| 1765/1765 [00:45<00:00, 39.02frames/s]100%|██████████| 1765/1765 [00:45<00:00, 38.98frames/s]
+[50/111] 6295-64301-0000.flac words=42 audio=16.9s wall=45.6s rtf=2.70x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1761 [00:00<?, ?frames/s]loading whisper small.en on CPU...
+111 files
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1761 [00:00<?, ?frames/s]100%|██████████| 1761/1761 [01:16<00:00, 23.03frames/s]100%|██████████| 1761/1761 [01:16<00:00, 23.03frames/s]
+[51/111] 2412-153954-0014.flac words=54 audio=17.0s wall=77.1s rtf=4.54x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1757 [00:00<?, ?frames/s]100%|██████████| 1761/1761 [01:27<00:00, 20.15frames/s]100%|██████████| 1761/1761 [01:27<00:00, 20.14frames/s]
+[51/111] 2412-153954-0014.flac words=54 audio=17.0s wall=90.9s rtf=5.36x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1757 [00:00<?, ?frames/s]100%|██████████| 1757/1757 [01:10<00:00, 24.82frames/s]100%|██████████| 1757/1757 [01:10<00:00, 24.82frames/s]
+[52/111] 2086-149220-0013.flac words=55 audio=16.9s wall=71.3s rtf=4.21x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1755 [00:00<?, ?frames/s]100%|██████████| 1757/1757 [01:14<00:00, 23.71frames/s]100%|██████████| 1757/1757 [01:14<00:00, 23.71frames/s]
+[52/111] 2086-149220-0013.flac words=55 audio=16.9s wall=74.9s rtf=4.43x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1755 [00:00<?, ?frames/s]100%|██████████| 1755/1755 [01:15<00:00, 23.25frames/s]100%|██████████| 1755/1755 [01:15<00:00, 23.25frames/s]
+[53/111] 5338-24640-0007.flac words=45 audio=17.1s wall=75.9s rtf=4.44x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1743 [00:00<?, ?frames/s]100%|██████████| 1755/1755 [01:19<00:00, 22.08frames/s]100%|██████████| 1755/1755 [01:19<00:00, 22.07frames/s]
+[53/111] 5338-24640-0007.flac words=45 audio=17.1s wall=80.1s rtf=4.68x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1743 [00:00<?, ?frames/s]100%|██████████| 1743/1743 [01:12<00:00, 24.07frames/s]100%|██████████| 1743/1743 [01:12<00:00, 24.06frames/s]
+[54/111] 1919-142785-0061.flac words=45 audio=16.9s wall=72.9s rtf=4.30x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1742 [00:00<?, ?frames/s]100%|██████████| 1743/1743 [01:11<00:00, 24.51frames/s]100%|██████████| 1743/1743 [01:11<00:00, 24.51frames/s]
+[54/111] 1919-142785-0061.flac words=45 audio=16.9s wall=71.6s rtf=4.23x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1742 [00:00<?, ?frames/s]100%|██████████| 1742/1742 [01:18<00:00, 22.28frames/s]100%|██████████| 1742/1742 [01:18<00:00, 22.28frames/s]
+[55/111] 3853-163249-0046.flac words=58 audio=17.1s wall=78.6s rtf=4.61x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1733 [00:00<?, ?frames/s]100%|██████████| 1742/1742 [01:20<00:00, 21.64frames/s]100%|██████████| 1742/1742 [01:20<00:00, 21.64frames/s]
+[55/111] 3853-163249-0046.flac words=58 audio=17.1s wall=80.8s rtf=4.73x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1733 [00:00<?, ?frames/s]100%|██████████| 1733/1733 [01:11<00:00, 24.11frames/s]100%|██████████| 1733/1733 [01:11<00:00, 24.11frames/s]
+[56/111] 1988-148538-0015.flac words=44 audio=16.8s wall=72.3s rtf=4.29x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1732 [00:00<?, ?frames/s]100%|██████████| 1732/1732 [00:44<00:00, 38.57frames/s]100%|██████████| 1732/1732 [00:44<00:00, 38.56frames/s]
+[57/111] 2035-152373-0009.flac words=43 audio=16.6s wall=45.2s rtf=2.72x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1728 [00:00<?, ?frames/s]100%|██████████| 1728/1728 [00:41<00:00, 41.31frames/s]100%|██████████| 1728/1728 [00:41<00:00, 41.30frames/s]
+[58/111] 1993-147149-0009.flac words=51 audio=16.7s wall=42.2s rtf=2.52x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1719 [00:00<?, ?frames/s]100%|██████████| 1719/1719 [00:44<00:00, 38.37frames/s]100%|██████████| 1719/1719 [00:44<00:00, 38.35frames/s]
+[59/111] 2412-153947-0010.flac words=54 audio=16.6s wall=45.3s rtf=2.73x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1717 [00:00<?, ?frames/s]100%|██████████| 1717/1717 [00:44<00:00, 38.88frames/s]100%|██████████| 1717/1717 [00:44<00:00, 38.87frames/s]
+[60/111] 5536-43359-0007.flac words=52 audio=16.5s wall=44.5s rtf=2.69x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1709 [00:00<?, ?frames/s]100%|██████████| 1709/1709 [00:41<00:00, 41.36frames/s]100%|██████████| 1709/1709 [00:41<00:00, 41.35frames/s]
+[61/111] 6319-275224-0006.flac words=45 audio=16.5s wall=41.7s rtf=2.52x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1698 [00:00<?, ?frames/s]100%|██████████| 1698/1698 [00:42<00:00, 40.00frames/s]100%|██████████| 1698/1698 [00:42<00:00, 40.00frames/s]
+[62/111] 1993-147149-0020.flac words=53 audio=16.2s wall=42.7s rtf=2.63x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1698 [00:00<?, ?frames/s]100%|██████████| 1698/1698 [00:41<00:00, 41.08frames/s]100%|██████████| 1698/1698 [00:41<00:00, 41.08frames/s]
+[63/111] 3536-23268-0017.flac words=57 audio=16.6s wall=41.7s rtf=2.51x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1690 [00:00<?, ?frames/s] 98%|█████████▊| 1648/1690 [00:41<00:01, 39.94frames/s] 98%|█████████▊| 1648/1690 [00:52<00:01, 39.94frames/s]100%|██████████| 1690/1690 [01:13<00:00, 19.63frames/s]100%|██████████| 1690/1690 [01:13<00:00, 23.06frames/s]
+[64/111] 1993-147149-0027.flac words=42 audio=16.7s wall=73.6s rtf=4.41x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1686 [00:00<?, ?frames/s]100%|██████████| 1686/1686 [00:40<00:00, 41.85frames/s]100%|██████████| 1686/1686 [00:40<00:00, 41.85frames/s]
+[65/111] 174-84280-0013.flac words=38 audio=16.1s wall=40.7s rtf=2.52x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1682 [00:00<?, ?frames/s]100%|██████████| 1682/1682 [00:42<00:00, 39.17frames/s]100%|██████████| 1682/1682 [00:42<00:00, 39.17frames/s]
+[66/111] 1988-148538-0000.flac words=51 audio=16.3s wall=43.2s rtf=2.66x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1679 [00:00<?, ?frames/s]100%|██████████| 1679/1679 [00:43<00:00, 38.73frames/s]100%|██████████| 1679/1679 [00:43<00:00, 38.73frames/s]
+[67/111] 2803-161169-0005.flac words=47 audio=16.0s wall=43.7s rtf=2.74x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1676 [00:00<?, ?frames/s]100%|██████████| 1676/1676 [00:42<00:00, 39.40frames/s]100%|██████████| 1676/1676 [00:42<00:00, 39.40frames/s]
+[68/111] 174-50561-0015.flac words=44 audio=16.1s wall=42.8s rtf=2.66x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1674 [00:00<?, ?frames/s]100%|██████████| 1674/1674 [00:43<00:00, 38.62frames/s]100%|██████████| 1674/1674 [00:43<00:00, 38.62frames/s]
+[69/111] 2086-149214-0002.flac words=51 audio=16.1s wall=43.7s rtf=2.71x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1672 [00:00<?, ?frames/s]100%|██████████| 1672/1672 [00:42<00:00, 38.92frames/s]100%|██████████| 1672/1672 [00:42<00:00, 38.92frames/s]
+[70/111] 6319-64726-0007.flac words=49 audio=16.1s wall=43.2s rtf=2.68x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1667 [00:00<?, ?frames/s]100%|██████████| 1667/1667 [00:42<00:00, 39.25frames/s]100%|██████████| 1667/1667 [00:42<00:00, 39.25frames/s]
+[71/111] 2035-152373-0001.flac words=39 audio=15.9s wall=42.8s rtf=2.69x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1661 [00:00<?, ?frames/s]100%|██████████| 1661/1661 [00:50<00:00, 32.65frames/s]100%|██████████| 1661/1661 [00:50<00:00, 32.63frames/s]
+[72/111] 2412-153948-0006.flac words=59 audio=15.9s wall=51.2s rtf=3.23x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1656 [00:00<?, ?frames/s]100%|██████████| 1656/1656 [00:43<00:00, 38.29frames/s]100%|██████████| 1656/1656 [00:43<00:00, 38.29frames/s]
+[73/111] 5536-43363-0005.flac words=60 audio=16.0s wall=43.5s rtf=2.72x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1654 [00:00<?, ?frames/s]100%|██████████| 1654/1654 [00:34<00:00, 47.81frames/s]100%|██████████| 1654/1654 [00:34<00:00, 47.81frames/s]
+[74/111] 1993-147149-0022.flac words=50 audio=16.0s wall=34.8s rtf=2.18x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1645 [00:00<?, ?frames/s]100%|██████████| 1645/1645 [00:17<00:00, 93.13frames/s]100%|██████████| 1645/1645 [00:17<00:00, 93.12frames/s]
+[75/111] 2428-83705-0002.flac words=51 audio=15.8s wall=17.9s rtf=1.13x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1644 [00:00<?, ?frames/s]100%|██████████| 1644/1644 [00:18<00:00, 90.64frames/s]100%|██████████| 1644/1644 [00:18<00:00, 90.64frames/s]
+[76/111] 3853-163249-0030.flac words=50 audio=15.8s wall=18.3s rtf=1.16x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1640 [00:00<?, ?frames/s]100%|██████████| 1640/1640 [00:17<00:00, 93.92frames/s]100%|██████████| 1640/1640 [00:17<00:00, 93.92frames/s]
+[77/111] 3752-4944-0022.flac words=46 audio=16.1s wall=17.6s rtf=1.09x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1636 [00:00<?, ?frames/s]100%|██████████| 1636/1636 [00:17<00:00, 94.23frames/s]100%|██████████| 1636/1636 [00:17<00:00, 94.22frames/s]
+[78/111] 251-136532-0003.flac words=44 audio=15.7s wall=17.5s rtf=1.12x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1635 [00:00<?, ?frames/s]100%|██████████| 1635/1635 [00:18<00:00, 90.68frames/s]100%|██████████| 1635/1635 [00:18<00:00, 90.68frames/s]
+[79/111] 1988-148538-0005.flac words=54 audio=15.9s wall=18.2s rtf=1.14x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1635 [00:00<?, ?frames/s]100%|██████████| 1635/1635 [00:17<00:00, 93.58frames/s]100%|██████████| 1635/1635 [00:17<00:00, 93.58frames/s]
+[80/111] 1462-170138-0024.flac words=43 audio=15.6s wall=17.6s rtf=1.13x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1631 [00:00<?, ?frames/s]100%|██████████| 1631/1631 [00:17<00:00, 92.49frames/s]100%|██████████| 1631/1631 [00:17<00:00, 92.48frames/s]
+[81/111] 174-50561-0008.flac words=42 audio=15.7s wall=17.8s rtf=1.13x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1628 [00:00<?, ?frames/s]100%|██████████| 1628/1628 [00:18<00:00, 89.56frames/s]100%|██████████| 1628/1628 [00:18<00:00, 89.55frames/s]
+[82/111] 7976-110523-0012.flac words=56 audio=15.7s wall=18.3s rtf=1.17x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1601 [00:00<?, ?frames/s]100%|██████████| 1601/1601 [00:17<00:00, 91.53frames/s]100%|██████████| 1601/1601 [00:17<00:00, 91.52frames/s]
+[83/111] 2086-149220-0002.flac words=44 audio=15.4s wall=17.6s rtf=1.15x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1599 [00:00<?, ?frames/s]100%|██████████| 1599/1599 [00:17<00:00, 93.94frames/s]100%|██████████| 1599/1599 [00:17<00:00, 93.94frames/s]
+[84/111] 652-129742-0016.flac words=26 audio=15.4s wall=17.2s rtf=1.12x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1596 [00:00<?, ?frames/s]100%|██████████| 1596/1596 [00:17<00:00, 91.34frames/s]100%|██████████| 1596/1596 [00:17<00:00, 91.34frames/s]
+[85/111] 6319-64726-0001.flac words=48 audio=15.4s wall=17.6s rtf=1.14x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1596 [00:00<?, ?frames/s]100%|██████████| 1596/1596 [00:18<00:00, 87.47frames/s]100%|██████████| 1596/1596 [00:18<00:00, 87.47frames/s]
+[86/111] 84-121123-0005.flac words=48 audio=15.4s wall=18.4s rtf=1.19x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1595 [00:00<?, ?frames/s]100%|██████████| 1595/1595 [00:16<00:00, 94.33frames/s]100%|██████████| 1595/1595 [00:16<00:00, 94.32frames/s]
+[87/111] 5895-34615-0004.flac words=35 audio=15.3s wall=17.1s rtf=1.12x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1592 [00:00<?, ?frames/s]100%|██████████| 1592/1592 [00:18<00:00, 85.80frames/s]100%|██████████| 1592/1592 [00:18<00:00, 85.80frames/s]
+[88/111] 5338-284437-0026.flac words=55 audio=15.5s wall=18.7s rtf=1.20x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1590 [00:00<?, ?frames/s]100%|██████████| 1590/1590 [00:17<00:00, 90.21frames/s]100%|██████████| 1590/1590 [00:17<00:00, 90.21frames/s]
+[89/111] 3536-23268-0001.flac words=44 audio=15.4s wall=17.8s rtf=1.16x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1587 [00:00<?, ?frames/s]100%|██████████| 1587/1587 [00:17<00:00, 89.67frames/s]100%|██████████| 1587/1587 [00:17<00:00, 89.67frames/s]
+[90/111] 5694-64025-0014.flac words=51 audio=15.4s wall=17.8s rtf=1.16x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1586 [00:00<?, ?frames/s]100%|██████████| 1586/1586 [00:17<00:00, 89.59frames/s]100%|██████████| 1586/1586 [00:17<00:00, 89.58frames/s]
+[91/111] 174-50561-0001.flac words=51 audio=15.2s wall=17.8s rtf=1.17x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1586 [00:00<?, ?frames/s]100%|██████████| 1586/1586 [00:17<00:00, 92.32frames/s]100%|██████████| 1586/1586 [00:17<00:00, 92.32frames/s]
+[92/111] 174-168635-0002.flac words=42 audio=15.4s wall=17.3s rtf=1.13x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1583 [00:00<?, ?frames/s]100%|██████████| 1583/1583 [00:17<00:00, 90.88frames/s]100%|██████████| 1583/1583 [00:17<00:00, 90.88frames/s]
+[93/111] 1919-142785-0049.flac words=36 audio=15.2s wall=17.6s rtf=1.15x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1578 [00:00<?, ?frames/s]100%|██████████| 1578/1578 [00:16<00:00, 96.56frames/s]100%|██████████| 1578/1578 [00:16<00:00, 96.56frames/s]
+[94/111] 2803-161169-0012.flac words=34 audio=14.9s wall=16.5s rtf=1.10x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1577 [00:00<?, ?frames/s]100%|██████████| 1577/1577 [00:17<00:00, 89.59frames/s]100%|██████████| 1577/1577 [00:17<00:00, 89.59frames/s]
+[95/111] 5694-64038-0022.flac words=48 audio=15.1s wall=17.7s rtf=1.17x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1577 [00:00<?, ?frames/s]100%|██████████| 1577/1577 [00:18<00:00, 85.46frames/s]100%|██████████| 1577/1577 [00:18<00:00, 85.46frames/s]
+[96/111] 8842-302203-0002.flac words=56 audio=15.4s wall=18.6s rtf=1.20x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1562 [00:00<?, ?frames/s]100%|██████████| 1562/1562 [00:18<00:00, 82.86frames/s]100%|██████████| 1562/1562 [00:18<00:00, 82.86frames/s]
+[97/111] 8842-302201-0014.flac words=55 audio=15.2s wall=19.0s rtf=1.25x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1556 [00:00<?, ?frames/s] 82%|████████▏ | 1280/1556 [00:16<00:03, 79.79frames/s] 82%|████████▏ | 1280/1556 [00:29<00:03, 79.79frames/s]100%|██████████| 1556/1556 [00:30<00:00, 46.27frames/s]100%|██████████| 1556/1556 [00:30<00:00, 51.63frames/s]
+[98/111] 2803-154320-0001.flac words=34 audio=14.9s wall=30.2s rtf=2.04x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1554 [00:00<?, ?frames/s]100%|██████████| 1554/1554 [00:17<00:00, 89.75frames/s]100%|██████████| 1554/1554 [00:17<00:00, 89.75frames/s]
+[99/111] 5895-34622-0011.flac words=39 audio=15.1s wall=17.5s rtf=1.16x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1552 [00:00<?, ?frames/s] 70%|██████▉   | 1080/1552 [00:15<00:06, 68.26frames/s]100%|██████████| 1552/1552 [00:30<00:00, 47.70frames/s]100%|██████████| 1552/1552 [00:30<00:00, 50.90frames/s]
+[100/111] 1993-147149-0030.flac words=38 audio=15.1s wall=30.6s rtf=2.02x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1550 [00:00<?, ?frames/s]100%|██████████| 1550/1550 [00:18<00:00, 85.90frames/s]100%|██████████| 1550/1550 [00:18<00:00, 85.89frames/s]
+[101/111] 2277-149874-0000.flac words=51 audio=14.9s wall=18.2s rtf=1.22x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1547 [00:00<?, ?frames/s]100%|██████████| 1547/1547 [00:18<00:00, 83.37frames/s]100%|██████████| 1547/1547 [00:18<00:00, 83.36frames/s]
+[102/111] 3853-163249-0016.flac words=48 audio=15.1s wall=18.7s rtf=1.24x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1543 [00:00<?, ?frames/s]100%|██████████| 1543/1543 [00:16<00:00, 93.26frames/s]100%|██████████| 1543/1543 [00:16<00:00, 93.25frames/s]
+[103/111] 6319-57405-0009.flac words=36 audio=14.8s wall=16.7s rtf=1.13x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1540 [00:00<?, ?frames/s]100%|██████████| 1540/1540 [00:17<00:00, 88.69frames/s]100%|██████████| 1540/1540 [00:17<00:00, 88.68frames/s]
+[104/111] 1462-170145-0000.flac words=41 audio=14.7s wall=17.5s rtf=1.19x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1538 [00:00<?, ?frames/s]100%|██████████| 1538/1538 [00:16<00:00, 91.50frames/s]100%|██████████| 1538/1538 [00:16<00:00, 91.49frames/s]
+[105/111] 2803-154328-0018.flac words=38 audio=14.6s wall=17.0s rtf=1.16x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1536 [00:00<?, ?frames/s]100%|██████████| 1536/1536 [00:16<00:00, 90.36frames/s]100%|██████████| 1536/1536 [00:16<00:00, 90.36frames/s]
+[106/111] 251-136532-0017.flac words=39 audio=14.8s wall=17.1s rtf=1.15x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1533 [00:00<?, ?frames/s]100%|██████████| 1533/1533 [00:16<00:00, 90.60frames/s]100%|██████████| 1533/1533 [00:16<00:00, 90.59frames/s]
+[107/111] 5694-64038-0017.flac words=43 audio=14.8s wall=17.0s rtf=1.15x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1522 [00:00<?, ?frames/s]100%|██████████| 1522/1522 [00:17<00:00, 88.30frames/s]100%|██████████| 1522/1522 [00:17<00:00, 88.30frames/s]
+[108/111] 2086-149214-0004.flac words=46 audio=14.6s wall=17.4s rtf=1.19x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1522 [00:00<?, ?frames/s] 84%|████████▍ | 1282/1522 [00:17<00:03, 75.31frames/s]100%|██████████| 1522/1522 [00:31<00:00, 43.65frames/s]100%|██████████| 1522/1522 [00:31<00:00, 48.83frames/s]
+[109/111] 7976-110523-0000.flac words=49 audio=14.8s wall=31.3s rtf=2.12x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1521 [00:00<?, ?frames/s]100%|██████████| 1521/1521 [00:16<00:00, 90.30frames/s]100%|██████████| 1521/1521 [00:16<00:00, 90.29frames/s]
+[110/111] 5338-24640-0005.flac words=39 audio=14.3s wall=17.0s rtf=1.19x
+/home/hatch/workspace/.pause-venv/lib/python3.12/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+  0%|          | 0/1518 [00:00<?, ?frames/s]100%|██████████| 1518/1518 [00:16<00:00, 94.87frames/s]100%|██████████| 1518/1518 [00:16<00:00, 94.86frames/s]
+[111/111] 8297-275156-0005.flac words=30 audio=14.5s wall=16.2s rtf=1.12x
+DONE: 22.0 min audio in 0.79h (avg rtf=2.16x)
