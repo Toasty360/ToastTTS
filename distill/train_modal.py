@@ -101,18 +101,24 @@ def train(run_id, dataset, hours, smoke, resume_from="", freeze=""):
     return _train(run, data, str(ckpt), run_id, dataset, hours, smoke, AMY_CKPT, freeze)
 
 
-def _train(run, data, ckpt, run_id, dataset, hours, smoke, start_label, freeze=""):
+def _train(run, data, ckpt, run_id, dataset, hours, smoke, start_label, freeze="",
+           clock_offset=0.0):
     import subprocess
     import threading
 
     commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd="/opt/piper", capture_output=True, text=True).stdout.strip()
     manifest = {"run_id": run_id, "dataset": dataset, "hours": hours, "smoke": smoke, "piper_commit": commit,
                 "start_checkpoint": start_label, "freeze": freeze or "nothing",
+                "clock_offset_h": clock_offset,
                 "started": time.strftime("%Y-%m-%d %H:%M:%S")}
     (run / "manifest.json").write_text(json.dumps(manifest, indent=2))
     volume.commit()
 
-    limit = "00:00:10:00" if smoke else f"00:{int(hours):02d}:{int(hours % 1 * 60):02d}:00"
+    # Lightning's max_time counts CUMULATIVE time stored in the checkpoint, so a
+    # resumed run needs offset + new hours or it stops immediately (the clock is
+    # already past a naive cap). clock_offset = hours already on the checkpoint.
+    total = hours + clock_offset
+    limit = "00:00:10:00" if smoke else f"00:{int(total):02d}:{int(total % 1 * 60):02d}:00"
     # amy's 2023 checkpoint (official rhasspy/piper-checkpoints, trusted) stores Python objects
     # that torch's strict weights_only loader refuses; load it in full mode for this trainer only.
     launcher = Path("/tmp/launch_piper_train.py")
@@ -260,7 +266,7 @@ def _save_exports(run_id, exported, tag=""):
 @app.local_entrypoint()
 def main(dataset: str = "", smoke: bool = False, hours: float = 2.0, export_only: str = "", fetch: str = "",
          resume: str = "", freeze: str = "", verify_freeze: str = "", which: str = "last,val_mos,val_mel",
-         tag: str = "", upload_only: bool = False):
+         tag: str = "", upload_only: bool = False, clock_offset: float = 0.0):
     if upload_only:
         if not dataset:
             raise SystemExit("--dataset is required with --upload-only")
@@ -283,7 +289,7 @@ def main(dataset: str = "", smoke: bool = False, hours: float = 2.0, export_only
     if not resume:
         _upload(dataset)
     print(f"[{run_id}] training on Modal ({'smoke' if smoke else f'{hours} h cap'})...")
-    result = train.remote(run_id, dataset, hours, smoke, resume, freeze)
+    result = train.remote(run_id, dataset, hours, smoke, resume, freeze, clock_offset)
     print(f"[{run_id}] training {result['status']} after {result['training_seconds']} s; "
           f"{len(result['checkpoints'])} checkpoints on the Volume")
     _save_exports(run_id, export.remote(run_id, ("last",) if smoke else ("last", "val_mos", "val_mel")))
