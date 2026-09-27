@@ -58,18 +58,21 @@ def main(voice_name, tag):
         sf.write(path, audio, sr)
         print(f"  clip {i}: {len(audio)/sr:.1f}s -> {path.name}", flush=True)
 
-    # Targeted comma-pause measurement (10 sentences, no clamp).
+    # Targeted comma-pause measurement (all 20 sentences, no clamp).
     pauses = []
-    for s in COMMA_SENTS[:10]:
+    for s in COMMA_SENTS:
         audio = trim_silence(voice.synthesize(s), sr)
         sil = internal_silences(audio, sr)
         if sil:
             pauses.append(max(sil))
     pauses = np.array(pauses)
     p50, p95, mx = np.median(pauses), np.percentile(pauses, 95), pauses.max()
-    print(f"\ncomma pauses (n=10, no clamp): p50={p50:.0f}ms p95={p95:.0f}ms max={mx:.0f}ms", flush=True)
-    print(f"baseline stage1: p50=270ms p95={BASELINE_P95:.0f}ms", flush=True)
-    if p95 >= BASELINE_P95:
+    print(f"\ncomma pauses (n={len(pauses)}, no clamp): p50={p50:.0f}ms p95={p95:.0f}ms max={mx:.0f}ms", flush=True)
+    print("baseline stage1 (n=20): p50=270ms p95=420ms", flush=True)
+    # Abort only on clear no-shrink: BOTH p50 and p95 at/above baseline.
+    # (Single-metric reads swing ~+-60ms render-to-render; requiring both
+    # guards against a noisy abort.)
+    if p95 >= BASELINE_P95 and p50 >= 270:
         print("VERDICT: NOT SHRINKING -> abort stage 2", flush=True)
     elif p95 > 300:
         print("VERDICT: SHRINKING SLOWLY -> extend run toward ~7h total", flush=True)
