@@ -293,4 +293,4 @@ def main(dataset: str = "", smoke: bool = False, hours: float = 2.0, export_only
     result = train.remote(run_id, dataset, hours, smoke, resume, freeze, clock_offset)
     print(f"[{run_id}] training {result['status']} after {result['training_seconds']} s; "
           f"{len(result['checkpoints'])} checkpoints on the Volume")
-    _save_exports(run_id, export.remote(run_id, ("last",) if smoke else ("last", "val_mos", "val_mel")))
+    _save_exports(run_id, export.remote(run_id, tuple(which.split(","))), tag)
