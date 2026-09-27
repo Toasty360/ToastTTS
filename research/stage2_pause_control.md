@@ -42,11 +42,15 @@ semicolon / 10 colon) plus 40 general sentences, all at `noise_scale=0.3`,
 |---|---|---|---|---|---|
 | amy (teacher) | 180 | 260 | 260 | 199 | 360 |
 | ex02 stage 1 | 270 | 420 | 420 | 442 | 500 |
+| ex02 stage 2, leg 1 (~0.65 h) | 140 | 226 | 340 | — | — |
 | libritts_r-medium spk 3922 | 40 | 85 | 100 | 309 | 320 |
 
 Reading: stage 1 learned comma pauses ~1.5x longer than the teacher
-(p50 270 vs 180 ms; max 420 vs 260 ms). The stock Piper voice barely pauses
-at commas at all (p50 40 ms). *[Stage-2 row pending.]*
+(p50 270 vs 180 ms; max 420 vs 260 ms). After ~0.65 h of stage-2 training on
+the pause-normalized set, comma pauses collapsed to p50 140 / p95 226 ms —
+below the teacher's p50, suggesting the normalization may even be
+over-correcting the median. The stock Piper voice barely pauses
+at commas at all (p50 40 ms). *[Stage-2 final row pending.]*
 
 ## Experiment 3: synthesis-time pause clamp (opt-in)
 
