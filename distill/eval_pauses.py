@@ -111,6 +111,12 @@ def synth(voice, text, clamp):
     return audio, sr
 
 
+# Piper's duration predictor is stochastic even at controlled noise settings;
+# render each sentence REPEATS times and use the median so a single unlucky
+# sample doesn't dominate the tail statistics.
+REPEATS = 3
+
+
 def main(voice_names):
     ref = (ROOT / "samples" / "reference.txt").read_text(encoding="utf-8-sig")
     word = (ROOT / "samples" / "word_test.txt").read_text(encoding="utf-8-sig")
@@ -118,7 +124,7 @@ def main(voice_names):
     print(f"{len(general)} general sentences", flush=True)
 
     results = {"clamp_ms": CLAMP_MS, "noise": "@0.3/0.5 (stochasticity controlled)",
-               "voices": {}}
+               "repeats": REPEATS, "voices": {}}
     for name in voice_names:
         print(f"\n== {name}", flush=True)
         voice = load_voice(name)
@@ -131,15 +137,20 @@ def main(voice_names):
                                  (":", COLON_SENTS)):
                 pauses = []
                 for s in sents:
-                    audio, sr = synth(voice, s, clamp)
-                    sil = internal_silences(audio, sr)
-                    if sil:
-                        pauses.append(max(sil))  # the single mark's pause
+                    reps = []
+                    for _ in range(REPEATS):
+                        audio, sr = synth(voice, s, clamp)
+                        sil = internal_silences(audio, sr)
+                        if sil:
+                            reps.append(max(sil))  # the single mark's pause
+                    if reps:
+                        pauses.append(float(np.median(reps)))
                 targeted[punct] = describe(pauses)
             all_sil = []
             for s in general:
-                audio, sr = synth(voice, s, clamp)
-                all_sil.extend(internal_silences(audio, sr, floor_ms=MIN_SIL_MS))
+                for _ in range(REPEATS):
+                    audio, sr = synth(voice, s, clamp)
+                    all_sil.extend(internal_silences(audio, sr, floor_ms=MIN_SIL_MS))
             vres["targeted"][tag] = targeted
             vres["general"][tag] = describe(all_sil)
             g = vres["general"][tag]
