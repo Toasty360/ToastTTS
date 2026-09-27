@@ -118,6 +118,7 @@ def main(student_name, speaker):
         _, timing = measure(lambda: stream_speech(voice, sentences[0]), voice.sample_rate, repeats=7)
         stats["ttfa_ms"], stats["x_realtime"] = timing["ttfa_ms"], timing["x_realtime"]
         tag = "amy" if name == "amy" else student_name.split("amy_")[-1].removesuffix("-medium")
+        tag = "".join(c if c.isalnum() or c in "-_." else "_" for c in tag)  # safe filename
         gap = np.zeros(int(0.4 * voice.sample_rate), dtype=np.float32)
         LISTEN.mkdir(parents=True, exist_ok=True)
         sf.write(LISTEN / f"81_{tag}_40sent.wav",

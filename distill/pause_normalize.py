@@ -94,7 +94,7 @@ def main():
                                            and max(c["pauses_before_ms"]) > CAP_MS),
               "pauses_shrunk": n_shrunk,
               "before": describe(before), "after": describe(after),
-              "clips": per_clip}
+              "per_clip": per_clip}
     (DST / "pause_report.json").write_text(json.dumps(report, indent=1))
     print(f"\ninternal pauses BEFORE: {describe(before)}")
     print(f"internal pauses AFTER:  {describe(after)}")
