@@ -260,7 +260,12 @@ def _save_exports(run_id, exported, tag=""):
 @app.local_entrypoint()
 def main(dataset: str = "", smoke: bool = False, hours: float = 2.0, export_only: str = "", fetch: str = "",
          resume: str = "", freeze: str = "", verify_freeze: str = "", which: str = "last,val_mos,val_mel",
-         tag: str = ""):
+         tag: str = "", upload_only: bool = False):
+    if upload_only:
+        if not dataset:
+            raise SystemExit("--dataset is required with --upload-only")
+        _upload(dataset)
+        return
     if verify_freeze:
         for part, info in compare_decoder.remote(verify_freeze).items():
             print(f"{part:<16} {info['tensors']:>4} tensors, max change vs amy: {info['max_abs_change']}")

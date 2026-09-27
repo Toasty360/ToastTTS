@@ -90,6 +90,89 @@ def fade_edges(audio, sample_rate, fade_ms=FADE_MS):
     return audio
 
 
+def find_silences(audio, sample_rate, threshold_db=-40, min_silence_ms=40):
+    """Return [(start, end)] sample ranges of near-silent regions.
+
+    Threshold is relative to the clip's peak, so it works on quiet and loud
+    clips alike. Regions touching the very start or end are included; callers
+    decide whether to keep them.
+    """
+    if len(audio) == 0:
+        return []
+    frame = int(sample_rate * 0.02)
+    usable = len(audio) // frame * frame
+    if usable == 0:
+        return []
+    peak = np.abs(audio).max() + 1e-12
+    rms = np.sqrt(np.mean(audio[:usable].reshape(-1, frame) ** 2, axis=1) + 1e-12)
+    quiet = 20 * np.log10(rms / peak) < threshold_db
+    min_frames = max(1, int(min_silence_ms / 20))
+    regions, start = [], None
+    for i, q in enumerate(quiet):
+        if q and start is None:
+            start = i
+        elif not q and start is not None:
+            if i - start >= min_frames:
+                regions.append((start * frame, min(i * frame, len(audio))))
+            start = None
+    if start is not None and len(quiet) - start >= min_frames:
+        regions.append((start * frame, len(audio)))
+    return regions
+
+
+def clamp_pauses(audio, sample_rate, max_pause_ms=250, threshold_db=-40,
+                 min_pause_ms=0):
+    """Cap over-long mid-phrase pauses: a synthesis-time guardrail (opt-in).
+
+    Fine-tuned VITS voices can learn stretched pauses from dramatic training
+    clips (e.g. 440 ms at an ordinary comma). This shrinks every *internal*
+    silence longer than max_pause_ms down to max_pause_ms by cutting middle
+    frames out of the silence, with a tiny crossfade at the join so nothing
+    clicks. Leading/trailing silence is left alone (trim_silence owns that).
+
+    Because it only ever removes silence, it cannot change words, pitch, or
+    timing of the speech itself -- it just guarantees no pause exceeds the
+    cap, for every word, not just tested ones.
+
+    `min_pause_ms`: only shrink silences longer than this (they are still cut
+    down to max_pause_ms). Lets training-data normalization say "leave normal
+    pauses alone, only tame the dramatic ones".
+    """
+    if len(audio) == 0 or max_pause_ms is None or max_pause_ms <= 0:
+        return audio
+    max_silence = int(sample_rate * max_pause_ms / 1000)
+    min_silence = int(sample_rate * min_pause_ms / 1000)
+    regions = find_silences(audio, sample_rate, threshold_db=threshold_db)
+    # Never touch the edges: only true mid-phrase pauses get clamped.
+    regions = [(s, e) for s, e in regions if s > 0 and e < len(audio)
+               and e - s > min_silence]
+    if not any(e - s > max_silence for s, e in regions):
+        return audio
+    audio = np.asarray(audio, dtype=np.float32)
+    out, pos = [], 0
+    fade = min(int(sample_rate * 0.003), max_silence // 4)  # 3 ms join crossfade
+    for s, e in regions:
+        if e - s <= max_silence:
+            continue
+        out.append(audio[pos:s])
+        excess = (e - s) - max_silence
+        cut = s + (e - s) // 2  # remove from the middle of the silence
+        left = audio[s:cut - excess // 2]
+        right = audio[cut + (excess - excess // 2):e]
+        if fade and len(left) >= fade and len(right) >= fade:
+            ramp = np.linspace(0, 1, fade)
+            join = left[-fade:] * (1 - ramp) + right[:fade] * ramp
+            out.append(left[:-fade])
+            out.append(join)
+            out.append(right[fade:])
+        else:
+            out.append(left)
+            out.append(right)
+        pos = e
+    out.append(audio[pos:])
+    return np.concatenate(out)
+
+
 def soften_ending(audio, sample_rate, tail_ms=None, depth_db=None):
     """Ease the volume down over the end of a piece (roughly its last word),
     so speech settles into the pause like a person's does."""
@@ -156,7 +239,8 @@ def plan_pieces(text, split="smart"):
     return plan
 
 
-def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms=None):
+def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms=None,
+                 max_pause_ms=None):
     """Yield audio chunks: a spoken piece, then its pause, for each piece.
 
     `pieces` can arrive over time (from a live LLM), which is why every piece
@@ -167,6 +251,11 @@ def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms
     to the PAUSES_MS table. Returning 0 inserts no pause at all. The learned
     pause model (toast/learned_pauses.py) plugs in here; the live-LLM path
     keeps the table because the full text isn't known yet.
+
+    `max_pause_ms` is an optional guardrail: the model's *own* mid-piece
+    pauses longer than this are shrunk to it (see clamp_pauses). None (the
+    default) leaves the model's audio untouched. The pauses *between* pieces
+    always come from pause_ms / the table and are never clamped.
     """
     rng = np.random.default_rng(seed)
     sr = voice.sample_rate
@@ -177,7 +266,10 @@ def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms
         # Slow the last piece of a sentence that was split into several pieces.
         slow_down = final_slowdown and ends_sentence and not starts_sentence
         audio = voice.synthesize(_text_for_model(piece), speed=speed * (FINAL_PHRASE_SPEED if slow_down else 1.0))
-        speech = fade_edges(soften_ending(trim_silence(audio, sr), sr), sr)
+        audio = trim_silence(audio, sr)
+        if max_pause_ms is not None:
+            audio = clamp_pauses(audio, sr, max_pause_ms=max_pause_ms)
+        speech = fade_edges(soften_ending(audio, sr), sr)
         yield np.clip(speech + room.next(len(speech)), -1.0, 1.0)
 
         ms = pause_ms(piece, ends_sentence) if pause_ms is not None else None
@@ -189,13 +281,16 @@ def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms
         starts_sentence = ends_sentence
 
 
-def stream_speech(voice, text, split="smart", speed=1.0, seed=0, pause_ms=None):
+def stream_speech(voice, text, split="smart", speed=1.0, seed=0, pause_ms=None,
+                  max_pause_ms=None):
     """Speech for text that is already complete."""
     return speak_pieces(voice, plan_pieces(text, split), speed, seed,
-                        final_slowdown=split != "sentence", pause_ms=pause_ms)
+                        final_slowdown=split != "sentence", pause_ms=pause_ms,
+                        max_pause_ms=max_pause_ms)
 
 
-def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=None):
+def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=None,
+                    max_pause_ms=None):
     """Speech for text that arrives bit by bit, e.g. an LLM reply.
 
     Playback starts with the first chunk, so at any moment we know how much
@@ -204,6 +299,8 @@ def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=Non
 
     `pause_ms`: optional callable (piece, ends_sentence) -> ms, as in
     speak_pieces. None (default) uses the hand-written PAUSES_MS table.
+    `max_pause_ms`: optional guardrail on the model's own mid-piece pauses,
+    as in speak_pieces. None (default) leaves the model's audio untouched.
     """
     chunker = chunker or StreamChunker()
     first_audio_at = None
@@ -222,13 +319,16 @@ def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=Non
             yield from chunker.feed(token)
         yield from chunker.finish()
 
-    for chunk in speak_pieces(voice, pieces(), speed, seed, pause_ms=pause_ms):
+    for chunk in speak_pieces(voice, pieces(), speed, seed, pause_ms=pause_ms,
+                             max_pause_ms=max_pause_ms):
         if first_audio_at is None:
             first_audio_at = time.perf_counter()
         audio_made += len(chunk) / voice.sample_rate
         yield chunk
 
 
-def speak_naturally(voice, text, split="smart", speed=1.0, seed=0, pause_ms=None):
+def speak_naturally(voice, text, split="smart", speed=1.0, seed=0, pause_ms=None,
+                    max_pause_ms=None):
     """The whole text as one audio array."""
-    return np.concatenate(list(stream_speech(voice, text, split, speed, seed, pause_ms=pause_ms)))
+    return np.concatenate(list(stream_speech(voice, text, split, speed, seed, pause_ms=pause_ms,
+                                             max_pause_ms=max_pause_ms)))
