@@ -67,7 +67,7 @@ def _commit_every(seconds, stop):
 
 
 @app.function(image=image, gpu="L4", timeout=8 * 3600, volumes={VOL: volume})
-def train(run_id, dataset, hours, smoke, resume_from="", freeze=""):
+def train(run_id, dataset, hours, smoke, resume_from="", freeze="", clock_offset=0.0):
     import subprocess
     import threading
 
@@ -82,7 +82,8 @@ def train(run_id, dataset, hours, smoke, resume_from="", freeze=""):
         if not previous:
             raise SystemExit(f"no last.ckpt in run {resume_from}")
         return _train(run, data, str(previous[-1]), run_id, dataset, hours, smoke,
-                      f"runs/{resume_from}/{previous[-1].relative_to(Path(VOL) / 'runs' / resume_from)}", freeze)
+                      f"runs/{resume_from}/{previous[-1].relative_to(Path(VOL) / 'runs' / resume_from)}", freeze,
+                      clock_offset)
     original = hf_hub_download("rhasspy/piper-checkpoints", AMY_CKPT, repo_type="dataset",
                                cache_dir=f"{VOL}/hf")
     # Newer Lightning CLIs read the hyper-parameters stored in a --ckpt_path checkpoint and
