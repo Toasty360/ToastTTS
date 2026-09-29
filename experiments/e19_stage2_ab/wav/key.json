@@ -1,0 +1,71 @@
+{
+  "voices": {
+    "leg1": "piper:en_US-amy_distill_ex02_stage2-leg1-best-medium@0.3/0.5",
+    "leg2": "piper:en_US-amy_distill_ex02_stage2-best-medium@0.3/0.5"
+  },
+  "speed": 1.0,
+  "noise": "0.3/0.5",
+  "rendered_at": "2026-09-29T18:07:47",
+  "items": [
+    {
+      "n": 1,
+      "A": "leg1",
+      "B": "leg2",
+      "sentence": "Well, to be honest, building an ultra-low latency voice pipeline isn't just about raw speed; it's about cadence, rhythm, and natural breathing."
+    },
+    {
+      "n": 2,
+      "A": "leg2",
+      "B": "leg1",
+      "sentence": "If the engine speaks at 3:15 PM without any dynamic pauses\u2014rushing through every single clause\u2014the listener will notice immediately."
+    },
+    {
+      "n": 3,
+      "A": "leg1",
+      "B": "leg2",
+      "sentence": "Does it handle subtle micro-breaks, like after a semicolon; or does it simply drop off into dead, digital silence?"
+    },
+    {
+      "n": 4,
+      "A": "leg2",
+      "B": "leg1",
+      "sentence": "Take a look at these numbers: 12, 45, and 108."
+    },
+    {
+      "n": 5,
+      "A": "leg2",
+      "B": "leg1",
+      "sentence": "When you listen closely... you can easily tell whether a model is reciting data like a machine, or actually conversing like a thoughtful human being."
+    },
+    {
+      "n": 6,
+      "A": "leg2",
+      "B": "leg1",
+      "sentence": "Honestly, the new schedule surprised everyone."
+    },
+    {
+      "n": 7,
+      "A": "leg1",
+      "B": "leg2",
+      "sentence": "The committee approved a thorough, practical budget, although several engineers questioned the algorithm's accuracy."
+    },
+    {
+      "n": 8,
+      "A": "leg2",
+      "B": "leg1",
+      "sentence": "Meanwhile, Rachel photographed the cathedral, the harbor, and the quiet neighborhood at sunrise."
+    },
+    {
+      "n": 9,
+      "A": "leg2",
+      "B": "leg1",
+      "sentence": "Would you rather receive a colleague's recommendation, or evaluate the candidates yourself?"
+    },
+    {
+      "n": 10,
+      "A": "leg2",
+      "B": "leg1",
+      "sentence": "Frankly, it depends on the circumstances."
+    }
+  ]
+}

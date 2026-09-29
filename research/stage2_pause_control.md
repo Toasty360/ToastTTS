@@ -121,6 +121,23 @@ The clamp is a hard upper bound on intra-piece pauses; it cannot fix pauses
 the model never produces (libritts_r's 45 ms commas are untouched), and
 inter-piece pauses set by the handwritten pacing table remain as written.
 
+## Experiment 4: blind A/B pick between the finalists
+
+Stage 2 left two near-identical finalists — the leg-1 best (epoch 7059,
+val_mos 4.2126) and the leg-2 best (epoch 7214, val_mos 4.1975) — that
+metrics cannot separate. The pick is made by ear, blind, in
+`experiments/e19_stage2_ab/`.
+
+Fairness design: the only difference between the two files of a pair is
+the checkpoint. Each of the 10 reference/word-test sentences is rendered
+by both checkpoints with identical settings (noise_scale=0.3,
+noise_w=0.5, speed 1.0, ToastTTS "smart" split, same seed per sentence so
+the piece plan and pause-table draws match), and the A/B assignment is
+shuffled per sentence. The key is sealed in `key.json` until the answers
+are in.
+
+Verdict: pending listening.
+
 ## Honest negatives
 
 - A 93.6k-param BiLSTM pause model (F1 0.934) mostly learned
