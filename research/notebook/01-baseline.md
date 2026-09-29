@@ -4,7 +4,7 @@
 
 ## Question
 
-The original plan ([archive/original-plan.md](../archive/original-plan.md)) was written for a Raspberry Pi with targets set in advance. The actual goal is a **laptop CPU**, and the core idea is simple: speech should pause the way people do, instead of "spilling all the words in one go". Before building anything, a base model was needed that:
+The original plan ([archive/original-plan.md](../archive/original-plan.md)) was written for a Raspberry Pi with targets set in advance. The project's actual target is a **laptop CPU**, and the core idea is simple: speech should pause where a person would pause, instead of running all the words together. Before building anything, a base model was needed that:
 
 1. runs fast on a CPU, and
 2. still sounds acceptable when fed short pieces of text, because streaming means speaking before the whole reply exists.
@@ -27,7 +27,7 @@ E01 renders `samples/reference.txt` two ways per model: **whole** (one call) and
 | Kitten mini | 9.1 s | 19.93 s | 703 ms | 1.9× |
 
 - **Kitten pads every piece with silence.** Its "pieces" recordings were about 10 s longer than "whole" (48.8 s vs 38.5 s for mini). Piper's were almost the same length (35.8 s vs 34.9 s).
-- **Listening:** Kitten *whole* sounded good. Kitten *pieces* sounded choppy.
+- **Listening:** Kitten *whole* was judged good. Kitten *pieces* was heard as choppy.
 
 ## Findings
 

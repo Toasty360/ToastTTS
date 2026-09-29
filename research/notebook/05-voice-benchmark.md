@@ -12,7 +12,7 @@ No published benchmark compares Piper voices with each other (commercial TTS ser
 
 - All **38 English Piper voices** (US and UK, low/medium/high quality; 2.6 GB), plus **Kitten mini** as the reference to beat.
 - Multi-speaker models (arctic, l2arctic, vctk, semaine, libritts, libritts_r) were tested with their **first speaker only**.
-- Every voice goes through our pipeline (`smart` split, speed 0.9, each voice's default randomness):
+- Every voice goes through the pipeline (`smart` split, speed 0.9, each voice's default randomness):
   - **TTFA:** full text, median of 3 runs.
   - **Wrong words:** Whisper small.en on 3 recordings (reference paragraph × 2 + `word_test.txt`), 241 words in total.
   - **Naturalness:** UTMOS, mean over the 5 sentences of the paragraph.
@@ -85,6 +85,6 @@ Sorted by naturalness; voices with more than 2 wrong words are listed after the 
 - **Several medium voices match or beat Kitten on predicted naturalness** (lessac-high, ryan, amy), and all Piper voices start **5–40× sooner**. On this laptop Kitten ran at only 1.2× real time in this run, which leaves almost no margin against stutter.
 - **Differences under about 0.1 in naturalness are within noise.** Treat ryan, amy and lessac-medium as tied, and let listening decide.
 - **Quality level isn't a reliable guide.** Low and medium voices often beat high ones (ryan-high: 10 wrong words; libritts-high: 3.68).
-- **By ear** (the deciding test): ryan was rejected as unnatural despite its low error count; **amy was chosen** (see [07](07-cloud-reference-and-pacing.md)).
+- **Listener judgment** (the deciding test): ryan was rejected as unnatural despite its low error count; **amy was chosen** (see [07](07-cloud-reference-and-pacing.md)).
 
 → Next: [06: comparison with cloud providers](06-coval-comparison.md)

@@ -1,4 +1,4 @@
-﻿# 14: Human speech as the teacher, and a full-bandwidth converter
+# 14: Human speech as the teacher, and a full-bandwidth converter
 
 *2026-09-25 · Code: [`experiments/e13_vc_feasibility.py`](../../experiments/e13_vc_feasibility.py) (`--source dailytalk`), [`e13_evaluate.py`](../../experiments/e13_evaluate.py) · Results: [e14_vc_dailytalk.txt](../../experiments/results/e14_vc_dailytalk.txt) · Audio: `out/e13/20260925-2232-dailytalk/`, `out/listen/61_dt_*.wav`*
 
@@ -6,11 +6,11 @@
 
 Listening to E13 ([13](13-vc-feasibility.md)) raised three issues:
 
-- **The converted voice sounded soft.** Measured: it was 27% darker than amy (spectral centroid 580 vs 795 Hz). The causes were kNN-VC's 16 kHz output and Kokoro's own dark tone bleeding through.
+- **The converted voice was heard as soft.** Measured: it was 27% darker than amy (spectral centroid 580 vs 795 Hz). The causes were kNN-VC's 16 kHz output and Kokoro's own dark tone bleeding through.
 - **Kokoro's quirks were copied.** Kokoro says "dead," with a 9-semitone pitch swoop, and the converter faithfully copied it. **A student inherits its teacher's taste.**
 - **Licensing.** Soniox's terms forbid using outputs *or derived data* to train or improve any speech-synthesis model ([D35](../decisions.md)).
 
-**New teacher: real people.** DailyTalk is 20 hours of studio-recorded everyday conversation (CC BY-SA 4.0, 2,541 dialogues). We use speaker 1, the woman (median pitch 212 Hz vs 156 Hz for speaker 0). **Held-out rule:** conversations with `id % 10 == 0` are never used for training; evaluation clips come only from them.
+**New teacher: real people.** DailyTalk is 20 hours of studio-recorded everyday conversation (CC BY-SA 4.0, 2,541 dialogues). The project uses speaker 1, the woman (median pitch 212 Hz vs 156 Hz for speaker 0). **Held-out rule:** conversations with `id % 10 == 0` are never used for training; evaluation clips come only from them.
 
 ## E14: three converters on 10 held-out DailyTalk clips
 

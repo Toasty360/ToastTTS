@@ -136,7 +136,7 @@ the piece plan and pause-table draws match), and the A/B assignment is
 shuffled per sentence. The key is sealed in `key.json` until the answers
 are in.
 
-Verdict: pending listening.
+Verdict: pending listener judgment.
 
 ## Honest negatives
 
@@ -153,8 +153,8 @@ Verdict: pending listening.
 
 Stage-2 training complete (2 h 18 min new GPU time, 2 legs). Pause
 distributions and standard metrics measured; synthesis-time clamp verified.
-Listening clips rendered at every export point
-(`your_files/stage2_mid_*.wav`, `your_files/stage2_final_*.wav`);
+Listening clips were rendered at every export point (`stage2_mid_*.wav`,
+`stage2_final_*.wav`) and delivered to the listener;
 listening is the final quality gate. Not started: stage 3.
 
 Checkpoints preserved: Modal volume `toasttts-train` (full run histories)

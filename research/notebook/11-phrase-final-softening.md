@@ -42,7 +42,7 @@ Settings were swept with E09's measure, 2 renders each:
 | **500 ms** | **−6 dB** | +0.7 | −4.8 |
 | 500 ms | −9 dB | +0.4 | −4.9 |
 
-**The measure is too noisy to calibrate with.** The same "off" setting gave fade −2.9 dB in a first sweep and −3.9 dB here: about ±1 dB between runs, as large as the effect being tuned. Two reasons: Whisper's word boundaries are only approximate, and a 400–500 ms ramp also lowers the end of the *previous* word, which moves the "before" reference too. The measure shows the direction; **the setting is chosen by ear.**
+**The measure is too noisy to calibrate with.** The same "off" setting gave fade −2.9 dB in a first sweep and −3.9 dB here: about ±1 dB between runs, as large as the effect being tuned. Two reasons: Whisper's word boundaries are only approximate, and a 400–500 ms ramp also lowers the end of the *previous* word, which moves the "before" reference too. The measure shows the direction; **the setting was chosen by listener judgment.**
 
 Default for now: **500 ms, −6 dB** (closest to Kokoro in the first sweep).
 

@@ -1,4 +1,4 @@
-﻿# 09: First test on real input: `say.py`
+# 09: First test on real input: `say.py`
 
 *2026-09-25 · Code: `toast/engine.py` (`ToastEngine`), `scripts/say.py`, `toast/player.py`, `toast/text_normalize.py` · Tests: `tests/test_engine.py`, `tests/test_text_normalize.py`*
 
@@ -10,7 +10,7 @@ A public entry point was added so the engine can be tried on any text, not just 
 
 ## What the first live run showed
 
-A first run of `say.py "Order #4521 ships at 3:15 PM."` with playback gave:
+The first run of `say.py "Order #4521 ships at 3:15 PM."` with playback gave:
 
 ```
 TTFA 273 ms | 5.4 s of audio made in 6.13 s
@@ -31,18 +31,18 @@ After the fixes, without playback, Whisper heard "Order number 4521 ships at 3:1
 
 **Trade-off:** that sentence now has no acceptable early cut ("at" leans on the time, and "3:15 PM" stays together), so it's spoken as one piece: **159 ms** TTFA instead of 118 ms with the bad cut. Better phrasing was chosen over 40 ms. Longer replies still get an early cut.
 
-## Second run: the first words are swallowed
+## Second run: the first words were swallowed
 
-After those fixes the run showed `TTFA 163 ms | 4.8 s of audio made in 0.16 s`, but **the first words weren't heard**. The same thing had been seen in another project (InterviewAgent), which already adds 80 ms of silence before the first word "so the endpoint is already running". So 80 ms of *silence* isn't enough on this machine.
+After those fixes the run showed `TTFA 163 ms | 4.8 s of audio made in 0.16 s`, but **the first words weren't heard**. The same had been seen in another project (InterviewAgent), which already adds 80 ms of silence before the first word "so the endpoint is already running". So 80 ms of *silence* isn't enough on this machine.
 
-**Probable cause (not yet confirmed by ear):** the output device is a monitor's speakers ("Smart M70F", Samsung Smart Monitor M7, over HDMI/DisplayPort). Monitor and TV speakers commonly mute when they receive pure digital silence and take hundreds of ms to unmute once sound arrives. Our player made this worse in two ways: it sent exact zeros when idle, and it opened the device right before speaking.
+**Probable cause (not yet confirmed by measurement):** the output device is a monitor's speakers ("Smart M70F", Samsung Smart Monitor M7, over HDMI/DisplayPort). Monitor and TV speakers commonly mute when they receive pure digital silence and take hundreds of ms to unmute once sound arrives. The player made this worse in two ways: it sent exact zeros when idle, and it opened the device right before speaking.
 
 **Fix ([D23](../decisions.md)):**
-- When idle, `LivePlayer` plays the same -60 dB room tone that runs under our speech, never pure silence.
+- When idle, `LivePlayer` plays the same -60 dB room tone that runs under speech, never pure silence.
 - At startup, the device runs for 0.6 s (`DEVICE_WAKE_S`) before the first word. This happens once per program run, not per utterance, and isn't counted in TTFA.
 - `render.py` and E01 (which used `sd.play`) now use the same `toast.player.play()`.
 
-**Confirmed (2026-09-25):** the idle room tone plus 0.6 s wake did *not* fix it on the monitor ("still not hearing 'Order #'"). Switching Windows output to the **laptop speakers played every word**, and the saved audio transcribes completely ("Order number 4521 ships at 3:15 PM."). So the loss happens in the monitor's speakers, not in ToastTTS. Two settings were added to find what the monitor needs, `say.py --wake SECONDS` and `--idle-db DB`. **Shelved:** laptop speakers or headphones work, and per-device tuning can wait. Worth revisiting before anyone else uses ToastTTS on monitor/TV speakers.
+**Confirmed (2026-09-25):** the idle room tone plus 0.6 s wake did *not* fix it on the monitor — a follow-up test confirmed the monitor still dropped the first words. Switching Windows output to the **laptop speakers played every word**, and the saved audio transcribes completely ("Order number 4521 ships at 3:15 PM."). So the loss happens in the monitor's speakers, not in ToastTTS. Two settings were added to find what the monitor needs, `say.py --wake SECONDS` and `--idle-db DB`. **Shelved:** laptop speakers or headphones work, and per-device tuning can wait. Worth revisiting before ToastTTS is used on monitor/TV speakers by others.
 
 **Diagnosis tool:** `scripts/audio_check.py` plays three beeps three ways: immediately, after 1 s of digital silence, and after 0.6 s of room tone. It tells apart "needs time after opening" from "mutes on digital silence".
 

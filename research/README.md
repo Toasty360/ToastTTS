@@ -1,8 +1,8 @@
-﻿# ToastTTS: research notes
+# ToastTTS: research notes
 
 ## Summary
 
-Small on-device TTS models are fast but speak like they're reading a list: no pauses where a person would breathe, and a flat, even pace. ToastTTS is a streaming layer around such models (Piper, VITS) that:
+Small on-device TTS models are fast but speak like they are reading a list: no pauses where a person would breathe, and a flat, even pace. ToastTTS is a streaming layer around such models (Piper, VITS) that:
 
 - splits text at natural pause points as it arrives from an LLM;
 - inserts punctuation-dependent pauses with smooth fades and continuous room tone;
@@ -12,8 +12,8 @@ Small on-device TTS models are fast but speak like they're reading a list: no pa
 
 - **Fast start:** speech begins **89–104 ms after the first LLM token** at 30 tokens/s (223 ms at 10 tokens/s), with no playback stalls in either case. Most of that time is spent waiting for the LLM, not synthesizing.
 - **Voice choice:** 38 English Piper voices were benchmarked on naturalness (UTMOS), word errors (Whisper) and speed. Several match KittenTTS on predicted naturalness while starting **5–40× sooner**.
-- **Cloud comparison:** on a replication of the Coval cloud TTS benchmark, scored with the same `whisper-1` transcriber, our voices reach **5.1–6.3% WER**. That places them among commercial services such as Cartesia Sonic (5.3–5.8%) and ElevenLabs Flash v2.5 (6.5%), at **75–97 ms TTFA locally** (cloud TTFA includes the network).
-- **Pacing:** measured the same way, our pauses and (at 1.2×) speaking rate match reference recordings from Deepgram and Soniox.
+- **Cloud comparison:** on a replication of the Coval cloud TTS benchmark, scored with the same `whisper-1` transcriber, the local voices reach **5.1–6.3% WER**. That places them among commercial services such as Cartesia Sonic (5.3–5.8%) and ElevenLabs Flash v2.5 (6.5%), at **75–97 ms TTFA locally** (cloud TTFA includes the network).
+- **Pacing:** measured the same way, the engine's pauses and (at 1.2×) speaking rate match reference recordings from Deepgram and Soniox.
 - **The remaining gap is prosody:** word stress, pre-pause shaping and question intonation. A 15M-parameter model can't provide it through pacing alone ([08](notebook/08-open-questions.md)).
 
 ## Contents
@@ -23,11 +23,12 @@ Small on-device TTS models are fast but speak like they're reading a list: no pa
 | [methodology.md](methodology.md) | How every metric is measured, the environment, and known limits |
 | [decisions.md](decisions.md) | Decision log with evidence, including reversed decisions |
 | [distillation-plan.md](distillation-plan.md) | **Superseded:** the original Kokoro-teacher distillation design; replaced by human-speech sourcing ([14](notebook/14-human-source-and-converter.md)) and attempted in [15](notebook/15-training.md) |
+| [stage2_pause_control.md](stage2_pause_control.md) | Pause behavior in VITS fine-tuning and at synthesis time (Expresso ex02 fine-tune: noise_w quantification, pause-normalized training, synthesis-time clamp, blind A/B) |
 | **Lab notebook** | |
 | [01: Baseline](notebook/01-baseline.md) | Piper vs Kitten; fragment prosody, the core trade-off |
 | [02: Natural pauses](notebook/02-natural-pauses.md) | Why the engine inserts its own pauses; the pacing design; two corrected claims |
 | [03: Streaming](notebook/03-streaming.md) | Live chunker rules, TTFA, stalls, the "running low" rule |
-| [04: Intelligibility](notebook/04-voice-intelligibility.md) | "It never said semicolon": the word check, and why the voices were changed |
+| [04: Intelligibility](notebook/04-voice-intelligibility.md) | The word check, and why the voices were changed |
 | [05: Voice benchmark](notebook/05-voice-benchmark.md) | All 38 English Piper voices + Kitten |
 | [06: Cloud comparison](notebook/06-coval-comparison.md) | Coval replication vs ElevenLabs, Deepgram, Cartesia and others |
 | [07: Cloud pacing](notebook/07-cloud-reference-and-pacing.md) | Speaking rate and pauses vs Deepgram and Soniox; why amy at 1.2× |
@@ -48,5 +49,5 @@ Supporting material: [experiments](../experiments/README.md) (re-runnable invest
 
 - **Every number links to the file that produced it.** Anything measured only during exploration and not reproduced is labelled as such.
 - **Corrections are recorded, not erased.** Two early single-run findings didn't hold up when repeated ([02](notebook/02-natural-pauses.md)).
-- **Automatic metrics support listening; they don't replace it.** The final voice choice overrode the best WER (ryan) because it sounded less natural.
+- **Automatic metrics support listening; they don't replace it.** The final voice choice overrode the best WER (ryan) on listener judgment.
 - **One machine, one listener.** Timings drift by 20–30 ms with machine state, and listening judgments are one person's. See [methodology](methodology.md) for all limits.

@@ -1,10 +1,10 @@
-# 04: "It never said semicolon": intelligibility, and why the voices were changed
+# 04: Intelligibility, and why the voices were changed
 
 *2026-09-25 · Experiment [E05](../../experiments/e05_word_clarity_by_voice.py) · Scan: [`scripts/find_voices.py`](../../scripts/find_voices.py), data [`benchmarks/voice_scan_en_US-libritts_r-medium.csv`](../../benchmarks/voice_scan_en_US-libritts_r-medium.csv) · Code: `toast/word_check.py`, `toast/pronounce.py`*
 
 ## The problem
 
-After two rounds of fixes (see [02](02-natural-pauses.md)), listening caught it: "semicolon" was never spoken in the audio. Measuring audio length could only show the word was compressed: the phrase with "semicolon" was about 0.25 s longer than without it, while the word alone takes about 0.5 s. We needed to know what was actually said, and ears could catch it but the tooling couldn't.
+After two rounds of fixes (see [02](02-natural-pauses.md)), listening tests revealed that "semicolon" was never spoken in the audio. Measuring audio length could only show the word was compressed: the phrase with "semicolon" was about 0.25 s longer than without it, while the word alone takes about 0.5 s. Determining what was actually said required transcription; duration analysis could not answer it.
 
 ## New instrument: the word check
 
@@ -12,7 +12,7 @@ Whisper small.en (local) transcribes the generated audio, and the transcript is 
 
 ## Findings
 
-**1. It's the voice model, not our pipeline.** In E05 the plain model was called directly (no splitting, trimming or fades), 2 takes per sentence ([output](../../experiments/results/e05_word_clarity_by_voice.txt)):
+**1. It's the voice model, not the pipeline.** In E05 the plain model was called directly (no splitting, trimming or fades), 2 takes per sentence ([output](../../experiments/results/e05_word_clarity_by_voice.txt)):
 
 | Voice | "A semicolon is useful here." heard as | "It is about cadence." |
 |---|---|---|
@@ -39,7 +39,7 @@ lessac and amy got all 4 test sentences right in both takes. Both libritts model
 
 The pronunciation is correct; the voice still drops "-colon".
 
-**5. A tempting fix that breaks something else.** Piper accepts exact pronunciations inside `[[ ]]`, but the text around the brackets is then processed on its own, and "a" before the bracket turned into the letter "AY". Respellings keep neighbouring words in context, so `toast/pronounce.py` uses respellings (and says why).
+**5. A fix that breaks something else.** Piper accepts exact pronunciations inside `[[ ]]`, but the text around the brackets is then processed on its own, and "a" before the bracket turned into the letter "AY". Respellings keep neighbouring words in context, so `toast/pronounce.py` uses respellings (and says why).
 
 ## Likely explanation
 
@@ -47,7 +47,7 @@ libritts / libritts_r are trained on hundreds of audiobook speakers with little 
 
 ## Decision
 
-Switch the default voice from libritts_r 3922 to **lessac-medium**: 0 wrong words out of 95 in two paragraph takes, 38 ms TTFA, 22× real time. Listening confirmed it sounded good and fixed the semicolon issue. Later replaced by amy after the full benchmark ([05](05-voice-benchmark.md), [07](07-cloud-reference-and-pacing.md)).
+Switch the default voice from libritts_r 3922 to **lessac-medium**: 0 wrong words out of 95 in two paragraph takes, 38 ms TTFA, 22× real time. Listening tests confirmed the voice sounded good and the semicolon issue was fixed. Later replaced by amy after the full benchmark ([05](05-voice-benchmark.md), [07](07-cloud-reference-and-pacing.md)).
 
 Paragraph check at the time (`render.py --check-words`, one take):
 

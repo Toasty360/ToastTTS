@@ -14,7 +14,7 @@ Three cloud recordings of `samples/reference.txt` were used as a measurement ref
 - **Words per minute:** overall, and while talking (pauses of 80 ms or more removed).
 - **Pause lengths:** grouped by the punctuation before them.
 
-amy was rendered through our full pipeline at four speeds and measured the same way.
+amy was rendered through the full pipeline at four speeds and measured the same way.
 
 ## Results ([output](../../experiments/results/e06_cloud_pacing.txt))
 
@@ -32,13 +32,13 @@ Pause values are medians. Naturalness on a single 20 s clip varies by about ±0.
 
 ## Findings
 
-- **Our pause lengths already match the cloud voices** when measured the same way (commas ~440–520 ms vs 380–500; periods ~800–840 vs 800–910). They looked short on paper (the configured comma pause is 180–260 ms) only because Whisper's gaps also include the quiet edges of words.
+- **The pause lengths already match the cloud voices** when measured the same way (commas ~440–520 ms vs 380–500; periods ~800–840 vs 800–910). They looked short on paper (the configured comma pause is 180–260 ms) only because Whisper's gaps also include the quiet edges of words.
 - **The gap was speaking rate.** amy at 0.9× talked at 152 wpm against 183–195 for the cloud voices, confirming it needed to be faster. At 1.2× amy reaches 179 wpm.
 - **Predicted naturalness is in the same range as Soniox and Deepgram Thalia** at every speed. The measurable differences are now smaller than the metric's noise, so the remaining gap has to be judged by ear ([08](08-open-questions.md)).
 - Whisper writes "3.15 pm" for the cloud recordings too, which is relevant to the Coval time-format question ([06](06-coval-comparison.md)).
 
 ## Decision
 
-By ear, 1.2× was "nice". **Default: amy-medium at 1.2×** ([D16](../decisions.md)). ryan was dropped despite its best Coval WER.
+In listener judgment, 1.2× was preferred. **Default: amy-medium at 1.2×** ([D16](../decisions.md)). ryan was dropped despite its best Coval WER.
 
 → Next: [08: open questions](08-open-questions.md)

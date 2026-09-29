@@ -12,8 +12,8 @@ The remaining gap to cloud voices is prosody ([08](08-open-questions.md)). Kokor
 
 ## Setup
 
-- kokoro-onnx 0.6.1 with the v1.0 model (`models/kokoro/`, 310 MB) and 28 English voices.
-- Kokoro's built-in sentence and clause pauses are switched off inside our pipeline, so ToastTTS controls pausing.
+- kokoro-onnx 0.6.1 with the v1.0 model (downloaded to `models/kokoro/`, 310 MB; gitignored) and 28 English voices.
+- Kokoro's built-in sentence and clause pauses are switched off inside the pipeline, so ToastTTS controls pausing.
 - Five voices benchmarked with the standard method ([05](05-voice-benchmark.md): speed 0.9, `smart` split): the two highest-rated US female voices, a UK female voice and two US male voices.
 
 ## Results
@@ -26,7 +26,7 @@ The remaining gap to cloud voices is prosody ([08](08-open-questions.md)). Kokor
 | Kokoro int8 | 2145 ms | 13801 ms | 0.3–0.4× (can't keep up) |
 | Piper amy | 32 ms | 226 ms | 19–28× |
 
-Dynamic int8 quantization slows this convolution-heavy model down on CPU, which is the risk noted about INT8 in the [original plan](../archive/original-plan.md) review.
+Dynamic int8 quantization slows this convolution-heavy model down on CPU — the quantization risk the [original plan](../archive/original-plan.md) had counted on as an optimization.
 
 **Voice benchmark** (same method as the other 39 voices):
 
@@ -59,8 +59,8 @@ Dynamic int8 quantization slows this convolution-heavy model down on CPU, which 
 
 ## Findings
 
-- **Through ToastTTS, Kokoro at its natural speed matches Soniox's pacing almost exactly:** 194 vs 195 wpm while talking, the same comma and period pauses. Left to its own pacing, Kokoro rushes (212 wpm) with shorter sentence pauses (570 ms), so our pacing layer improves Kokoro too.
-- **Predicted naturalness doesn't separate Kokoro from amy** (4.30–4.43 on every render). UTMOS rates overall naturalness per clip; it evidently doesn't capture the stress and intonation differences the listener described. **This comparison must be settled by ear.**
+- **Through ToastTTS, Kokoro at its natural speed matches Soniox's pacing almost exactly:** 194 vs 195 wpm while talking, the same comma and period pauses. Left to its own pacing, Kokoro rushes (212 wpm) with shorter sentence pauses (570 ms), so the ToastTTS pacing layer improves Kokoro too.
+- **Predicted naturalness doesn't separate Kokoro from amy** (4.30–4.43 on every render). UTMOS rates overall naturalness per clip; it evidently doesn't capture the stress and intonation differences heard in listening tests. **This comparison must be settled by ear.**
 - **Latency cost:** about 0.35 s to first audio, 3–4× worse than amy. That's still in the range of cloud services' measured TTFA (ElevenLabs v3 320 ms, Soniox 255 ms, both including network), but with **one stall at 10 tokens/s**: only 2.4× real time end to end, so a slow LLM can starve playback.
 
 ## Pending

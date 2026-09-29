@@ -14,10 +14,10 @@ Sample texts were picked to stress the differences:
 
 | file | why |
 |---|---|
-| `01_list` | the model's home turf: list commas + period |
+| `01_list` | the model's favorable case: list commas + period |
 | `02_opener` | opener rule (60–140 ms) vs the model's flat 440 ms comma |
 | `03_flow` | subordinate-clause commas, no list |
-| `04_semicolon` | honest gap: the model never saw `;`, predicts no pause; the table gives 300–380 ms |
+| `04_semicolon` | known limitation: the model never saw `;`, predicts no pause; the table gives 300–380 ms |
 
 ## Re-render
 

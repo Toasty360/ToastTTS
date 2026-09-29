@@ -15,7 +15,7 @@ The distillation plan ([distillation-plan.md](../distillation-plan.md)) depends 
 - **Modal T4:** two MIT-licensed converters, one job each:
   - **kNN-VC** (WavLM-Large features + HiFi-GAN, 16 kHz output);
   - **OpenVoice v2** tone-color converter (22.05 kHz).
-- **Laptop (free):** evaluation with our tools, plus **speaker similarity** (SpeechBrain ECAPA): does it sound like amy or like Kokoro?
+- **Laptop (free):** evaluation with the project tools, plus **speaker similarity** (SpeechBrain ECAPA): does it sound like amy or like Kokoro?
 
 **Run safeguards:** a failed final export once lost a whole training run, so:
 - A `--smoke` run on 1 clip goes first.

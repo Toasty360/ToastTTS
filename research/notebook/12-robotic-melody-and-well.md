@@ -1,12 +1,11 @@
-﻿# 12: Why amy sounds robotic: a flat melody, and a "Well," that sounds final
+# 12: Why amy sounds robotic: a flat melody, and a "Well," that sounds final
 
 *2026-09-25 · Experiments [E11](../../experiments/e11_pitch_profile.py) ([output](../../experiments/results/e11_pitch_profile.txt)), [E12](../../experiments/e12_well.py) ([output](../../experiments/results/e12_well.txt)) · Code: `toast/prosody.py`, `toast/pacing.py` (`OPENER_PAUSE_MS`, softening cap), `toast/stream_chunker.py` (`OPENERS`, `attach_openers`)*
 
 ## Question
 
-Even with the soft last word ([11](11-phrase-final-softening.md)), amy was heard as robotic next to af_heart, raising the question of whether af_heart's or Grace's prosody could be transferred onto amy.
+Even with the soft last word ([11](11-phrase-final-softening.md)), amy was heard as robotic next to af_heart. A voice has two layers:
 
-A voice has two layers:
 - **Timbre:** what the voice sounds like. Voice conversion could transfer it, but it isn't what makes speech robotic.
 - **Prosody:** melody, stress and rhythm. This is where "robotic" usually lives, and it can be measured and partly edited.
 
@@ -31,14 +30,14 @@ amy uses about **two-thirds of the pitch range** of the natural voices, and its 
 
 Listening files: `out/listen/40_amy_pitch_as_is.wav`, `40_amy_pitch_like_af_heart_x1.43.wav`, `40_amy_pitch_like_grace_x1.46.wav`. Listening verdict pending.
 
-## E12: "the way they say 'Well,' is totally different"
+## E12: the "Well," contour differs between voices
 
 **Is it the pronunciation?** One hypothesis was that amy says "wl" where the others say "wɛl". Both models receive the **same phonetic spelling**, `wˈɛl`. The difference is in how the word is performed: vowel length and pitch.
 
 **Pitch shape** (Whisper word boundaries at the very start of a file include leading silence, so the loudness and duration figures in E12 are unreliable; pitch shape is usable):
 - **Kokoro:** rise then fall (−1.0 → +1.9 → −1.9 st), which sounds like "…and I'm continuing".
 - **amy:** a straight fall (+1.4 → 0 → −1.8 st), the shape of a finished statement. Whisper transcribed amy's isolated "Well," as **"Well."**; every other voice was transcribed "Well,".
-- **Cause:** our `smart` split makes "Well," a one-word piece spoken in isolation, so the model gives it a final contour. The phrase-final softening then faded half of that single word.
+- **Cause:** the `smart` split makes "Well," a one-word piece spoken in isolation, so the model gives it a final contour. The phrase-final softening then faded half of that single word.
 
 **The pause after it** (Whisper word gaps, same method for every voice):
 
@@ -63,7 +62,7 @@ Natural voices pause *less* after "Well," than after other commas; amy paused mo
 | Openers separate (default) | 94 ms | 228 ms |
 | `attach_openers` | 255 ms | 662 ms |
 
-Files: `out/listen/51_amy_well_separate_short_pause.wav`, `52_amy_well_attached.wav`. **Listening verdict:** both "sounded good"; the listener couldn't clearly prefer one. Since attaching costs about 160 ms of start time for no clear audible gain, **the default stays separate** (with the shorter opener pause and the softening cap); `--attach-openers` remains available.
+Files: `out/listen/51_amy_well_separate_short_pause.wav`, `52_amy_well_attached.wav`. **Listener judgment:** both renders were judged good, with no clear preference. Since attaching costs about 160 ms of start time for no clear audible gain, **the default stays separate** (with the shorter opener pause and the softening cap); `--attach-openers` remains available.
 
 ## What this implies
 

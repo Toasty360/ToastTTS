@@ -1,4 +1,4 @@
-﻿# 16: Word emphasis: let the LLM decide what matters
+# 16: Word emphasis: let the LLM decide what matters
 
 *2026-09-26 · Code: `toast/emphasis.py`, [`scripts/emphasis_demo.py`](../../scripts/emphasis_demo.py) · Results: [subtle](../../experiments/results/emphasis_demo.txt), [strong](../../experiments/results/emphasis_demo_strong.txt) · Audio: `out/listen/emphasis/`*
 
@@ -34,8 +34,8 @@ Word boundaries are the space phonemes. If espeak splits words differently from 
 The sentence-final "it." can't be measured: creaky voice at the end defeats the pitch tracker (a false +31.7 st in the subtle run, no value in the strong run). It has to be judged by ear.
 
 **Listening:**
-- **subtle:** barely noticeable — too weak to carry meaning reliably.
-- **strong:** clearly noticeable. The strong preset is the default for integration.
+- **subtle:** judged barely noticeable — too weak to carry meaning reliably.
+- **strong:** judged clearly noticeable. The strong preset is the default for integration.
 
 ## Status
 

@@ -20,7 +20,7 @@ Cloud TTS comparison (Coval `tts-v1` prompts, scored by OpenAI `whisper-1` as Co
 | **ToastTTS + amy-medium** (default voice) | **5.9%** | **97 ms** | laptop CPU |
 | ElevenLabs Flash v2.5 | 6.5% | 185 ms | cloud |
 
-Cloud TTFA includes the network round trip; ours doesn't. About 3.5 WER points of ours come from how Whisper writes times ("2.30 pm"). Full table, method and caveats: [research/notebook/06](research/notebook/06-coval-comparison.md).
+Cloud TTFA includes the network round trip; ToastTTS's does not. About 3.5 WER points come from how Whisper writes times ("2.30 pm"). Full table, method and caveats: [research/notebook/06](research/notebook/06-coval-comparison.md).
 
 All findings, methods and decisions: **[research/](research/README.md)**.
 
@@ -37,7 +37,7 @@ uv pip install --python .venv\Scripts\python.exe -r requirements.txt
 
 Optional, for the more expressive but slower Kokoro voices ([notebook/10](research/notebook/10-kokoro.md)): put `kokoro-v1.0.onnx` and `voices-v1.0.bin` from the [kokoro-onnx model-files-v1.1 release](https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.1) in `models/kokoro/`, then use `--voice kokoro:af_heart`.
 
-`live.py` streams a reply from a simulated LLM (30 tokens/s), plays it live, and prints when each piece was cut plus the TTFA. Try `--tokens-per-second 10`, or `--text samples\no_early_comma.txt`.
+`live.py` streams a reply from a simulated LLM (30 tokens/s), plays it live, and prints when each piece was cut plus the TTFA. Options include `--tokens-per-second 10`, or `--text samples\no_early_comma.txt`.
 
 ### Speak your own text
 
@@ -68,9 +68,9 @@ tts.save("Any text.", "out.wav")
 | Path | Contents |
 |---|---|
 | [`toast/`](toast/) | The engine: `engine` (the public entry point, `ToastEngine`), `text_normalize`, `stream_chunker` (where to cut), `pacing` (pauses, fades, room tone), `voices` (one interface for Piper/Kitten), `metrics`, `word_check` (Whisper), `naturalness` (UTMOS), `speech_stats` |
-| [`scripts/`](scripts/) | Tools: `say.py` (speak any text: typed, argument or piped), `audio_check.py` (do your speakers swallow the first word?), `live.py` (streaming demo), `render.py` (recordings + timing), `bench_voices.py` (all voices), `bench_coval.py` (cloud comparison), `find_voices.py` (multi-speaker scan) |
-| [`research/`](research/README.md) | Write-up: lab notebook 01–08, methodology, decision log, original plan |
-| [`experiments/`](experiments/README.md) | E01–E07: re-runnable investigations with saved outputs |
+| [`scripts/`](scripts/) | Tools: `say.py` (speak any text: typed, argument or piped), `audio_check.py` (checks whether the speakers swallow the first word), `live.py` (streaming demo), `render.py` (recordings + timing), `bench_voices.py` (all voices), `bench_coval.py` (cloud comparison), `find_voices.py` (multi-speaker scan) |
+| [`research/`](research/README.md) | Write-up: lab notebook 01–16, methodology, decision log, original plan |
+| [`experiments/`](experiments/README.md) | E01–E19: re-runnable investigations with saved outputs |
 | [`benchmarks/`](benchmarks/README.md) | All measured data (CSV), documented |
 | [`samples/`](samples/README.md) | Test texts, including Coval's prompts (Apache-2.0) |
 | [`cloud_voices/`](cloud_voices/README.md) | Cloud reference recordings (listening and measurement only) |
@@ -87,4 +87,4 @@ tts.save("Any text.", "out.wav")
 
 ## Status
 
-Pacing, streaming and measurement are working. The open problem is **prosody**: stress, pre-pause shaping and question intonation, which the cloud voices have and a 15M-parameter model doesn't. Next steps (a more expressive model such as Kokoro, distillation, a learned pause model) are in [research/notebook/08](research/notebook/08-open-questions.md).
+Pacing, streaming and measurement are working. Stage-2 of the ex02 voice fine-tune is complete: comma pauses measured at p50 140 ms (down from 330 ms in stage 1), 11 word errors versus amy's 12 and UTMOS naturalness of 4.25 versus amy's 4.35 on the standard 40-sentence eval, with all six pre-registered pipeline checks passed (method and metrics in [research/stage2_pause_control.md](research/stage2_pause_control.md); checkpoint pick in [experiments/e19_stage2_ab](experiments/e19_stage2_ab/README.md), verdict pending blind listening). The open problem is still **prosody**: stress, pre-pause shaping and question intonation, which the cloud voices have and a 15M-parameter model doesn't. Next steps (a more expressive model such as Kokoro, distillation, a learned pause model) are in [research/notebook/08](research/notebook/08-open-questions.md).

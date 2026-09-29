@@ -1,16 +1,16 @@
-﻿# 08: Open questions and where to go next
+# 08: Open questions and where to go next
 
 *2026-09-25*
 
 ## The remaining gap is prosody, not pacing
 
-Listening next to Soniox Grace showed the gap clearly: a natural voice knows where to stress a word, how to shape the word before a natural pause, and how to end a question. Our engine now matches cloud voices on speaking rate and pause lengths ([07](07-cloud-reference-and-pacing.md)), and its predicted naturalness is in the same range. But three things are missing:
+Listening next to Soniox Grace showed the gap clearly: a natural voice knows where to stress a word, how to shape the word before a natural pause, and how to end a question. The engine now matches cloud voices on speaking rate and pause lengths ([07](07-cloud-reference-and-pacing.md)), and its predicted naturalness is in the same range. But three things are missing:
 
 1. **Stress:** which word in a sentence carries the emphasis.
 2. **Pre-pause shaping:** the lengthening and pitch movement on the word *before* a pause.
 3. **Question intonation:** a rise at the end of yes/no questions.
 
-**Why Piper can't do these:** it is a ~15M-parameter VITS model that sees phonemes, not meaning, so its stress and intonation are generic. Our chunking narrows its view further: the piece "Does it handle subtle micro-breaks, like after a semicolon," doesn't reveal that it begins a question. Large cloud models read the whole sentence and plan its melody.
+**Why Piper can't do these:** it is a ~15M-parameter VITS model that sees phonemes, not meaning, so its stress and intonation are generic. The chunking narrows its view further: the piece "Does it handle subtle micro-breaks, like after a semicolon," doesn't reveal that it begins a question. Large cloud models read the whole sentence and plan its melody.
 
 The engine controls *when* speech happens; it can't give a small model understanding.
 
@@ -33,10 +33,10 @@ The engine controls *when* speech happens; it can't give a small model understan
 ## Measurement questions
 
 - **Gasping with high `noise_scale`:** heard, but not captured by the breathiness measure ([E03](../../experiments/results/e03_randomness_breathiness.txt)). Needs a better detector, or a blind listening test.
-- **Coval time formatting:** does Whisper write "2.30 pm" for cloud voices on the Coval prompts too? It does on our reference paragraph ([E06](../../experiments/results/e06_cloud_pacing.txt)). Rendering a cloud voice on the Coval prompts would settle it.
+- **Coval time formatting:** does Whisper write "2.30 pm" for cloud voices on the Coval prompts too? It does on the reference paragraph ([E06](../../experiments/results/e06_cloud_pacing.txt)). Rendering a cloud voice on the Coval prompts would settle it.
 - **`en_GB-cori-medium`:** a transcript dropped about 30 words. Is that the voice or Whisper?
 - **Multi-speaker voices** (vctk, arctic, l2arctic, semaine) were benchmarked with speaker 0 only; other speakers may score better.
 
 ## Update (2026-09-25)
 
-Kokoro was tested ([10](10-kokoro.md)); the listener found it natural mainly because of a soft last word before pauses ([11](11-phrase-final-softening.md)) and a livelier melody ([12](12-robotic-melody-and-well.md)). Option C, distillation, now has a written plan: [distillation-plan.md](../distillation-plan.md).
+Kokoro was tested ([10](10-kokoro.md)); the key naturalness difference was identified as a soft last word before pauses ([11](11-phrase-final-softening.md)) and a livelier melody ([12](12-robotic-melody-and-well.md)). Option C, distillation, got a written plan ([distillation-plan.md](../distillation-plan.md)); that Kokoro-teacher plan was later superseded by human-speech sourcing ([14](14-human-source-and-converter.md)), and the training was attempted in [15](15-training.md). The word-emphasis route in [16](16-word-emphasis.md) addresses the stress half of the prosody gap.

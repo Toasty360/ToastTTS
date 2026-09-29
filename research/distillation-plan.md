@@ -1,4 +1,4 @@
-﻿# Distillation plan: Kokoro-like delivery in our own Piper voices
+﻿# Distillation plan: Kokoro-like delivery in Piper's own voices
 
 *Drafted 2026-09-25, revised the same day · Status: **superseded** · Budget: Modal credits (~$20)*
 
@@ -80,7 +80,7 @@ A failed final export once lost a whole training run, hence these safeguards:
 
 ## Voices
 
-Candidates with public training checkpoints (`rhasspy/piper-checkpoints`) that did well in our benchmark ([05](notebook/05-voice-benchmark.md)):
+Candidates with public training checkpoints (`rhasspy/piper-checkpoints`) that did well in the voice benchmark ([05](notebook/05-voice-benchmark.md)):
 
 | Student (keeps its voice) | Accent / gender | Our benchmark | Kokoro teacher (same accent) |
 |---|---|---|---|

@@ -23,4 +23,4 @@ Measured results, one file per benchmark. How each metric is defined: [research/
 
 - Timings are from one laptop and drift by about 20–30 ms with machine state. Compare only within a file.
 - The power mode changed from "Balanced" to "Best performance" during the Coval run. The Coval TTFA values were re-measured together afterwards; `voice_benchmark.csv` timings are all from before the change.
-- Cloud numbers in the Coval comparison come from the published leaderboard (2026-09-08), not from our own runs.
+- Cloud numbers in the Coval comparison come from the published leaderboard (2026-09-08), not from project runs.

@@ -88,4 +88,4 @@ p.predict_pauses("Hello world, how are you?")
 - Add syntactic features (POS tags, dependency depth) so the model can
   generalize beyond punctuation.
 - Wire `predict_pauses` into ToastEngine's chunker, replacing fixed
-  punctuation rules; A/B by ear against the current engine.
+  punctuation rules; A/B by listening test against the current engine.

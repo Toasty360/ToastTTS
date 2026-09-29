@@ -9,7 +9,7 @@ finalist checkpoints that metrics cannot separate:
 The standard 40-sentence eval ran on the leg-2 voice (11 word errors vs
 amy's 12, UTMOS 4.25 vs 4.35, 0.74 similarity to ex02's recordings); the
 leg-1 best was not separately evaluated because the validation scores
-differ by 0.015. The pick is made by ear, blind.
+differ by 0.015. The pick is made by blind listening test.
 
 ## Fairness design
 
