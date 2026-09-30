@@ -138,6 +138,32 @@ are in.
 
 Verdict: pending listener judgment.
 
+## Experiment 5: ablation — continued training on unmodified data
+
+The one confound in Experiment 2: stage 2 added 2 h 18 min of training *and*
+normalized the data, so the pause collapse could in principle be a
+convergence effect. The ablation isolates it: same stage-1 checkpoint, same
+hyperparameters, ~2.3 h of continued training on the **unmodified**
+`expresso_ex02` set (2 legs: 2,670 s, then 7,017 s after an L4 preemption;
+2.69 h total new training, ~$2.40 on the L4).
+
+Pause distributions (3-repeat protocol, clamp off), best ablation checkpoint
+(epoch 7124, val_mos 4.1909):
+
+| voice | comma p50 | comma p95 | comma max | general p50 | general p95 | general max |
+|---|---|---|---|---|---|---|
+| amy (teacher) | 180 | 260 | 260 | 140 | 220 | 340 |
+| ex02 stage 1 | 330 | 443 | 500 | 200 | 600 | 960 |
+| ex02 stage 2 final | 140 | 205 | 300 | 140 | 260 | 280 |
+| ex02 ablation (+2.69 h, unmodified) | 270 | 448 | 600 | 160 | 506 | 680 |
+
+Reading: continued training alone did not reproduce the collapse. The
+ablation voice sits near stage 1 on every tail metric, far from stage 2.
+A small convergence effect is visible (comma p50 330→270 ms, general max
+960→680 ms), but stage 2's shift into the teacher's range is attributable
+to the normalization, not to more training. Full detail in
+`experiments/e20_ablation/` (ONNX, eval JSON, run ids, cost).
+
 ## Honest negatives
 
 - A 93.6k-param BiLSTM pause model (F1 0.934) mostly learned
@@ -153,8 +179,10 @@ Verdict: pending listener judgment.
 
 Stage-2 training complete (2 h 18 min new GPU time, 2 legs). Pause
 distributions and standard metrics measured; synthesis-time clamp verified.
-Listening clips were rendered at every export point (`stage2_mid_*.wav`,
-`stage2_final_*.wav`) and delivered to the listener;
+Ablation complete (Experiment 5): 2.69 h continued training on unmodified
+data did not reproduce the pause collapse — the effect is attributed to
+normalization, not convergence. Listening clips were rendered at every export
+point (`stage2_mid_*.wav`, `stage2_final_*.wav`) and delivered to the listener;
 listening is the final quality gate. Not started: stage 3.
 
 Checkpoints preserved: Modal volume `toasttts-train` (full run histories)
