@@ -23,3 +23,6 @@ openai
 
 # Tests
 pytest
+
+# scripts/ask_mcp.py (lets Claude ask you questions out loud)
+mcp
