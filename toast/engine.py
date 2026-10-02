@@ -57,7 +57,8 @@ class SpeechResult:
 
 class ToastEngine:
     def __init__(self, voice=DEFAULT_VOICE, speed=None, seed=None, open_audio=False,
-                 wake_s=None, idle_db=None, attach_openers=False, pause_model=None, threads=None):
+                 wake_s=None, idle_db=None, attach_openers=False, pause_model=None, threads=None,
+                 player=None):
         """voice: any name load_voice() accepts ("amy", "lessac", "piper:en_US-ryan-medium",
         "kitten", ...). seed: fix it for repeatable pause lengths; None varies them.
         open_audio: open the sound device now rather than on the first say(), so
@@ -72,7 +73,10 @@ class ToastEngine:
         is known up front; live token streams and any misaligned piece fall back
         to the table. speed: None uses the voice's profile (PROFILES).
         threads: cap the CPU threads speech may use, to leave room for a
-        speech recognizer and an LLM on the same machine."""
+        speech recognizer and an LLM on the same machine. player: play through
+        something else than the sound card, e.g. an echo-cancelling audio unit
+        that must see what the speakers play. It needs LivePlayer's add(chunk)
+        -> start sample, clear(fade_ms), played, wait() and close()."""
         profile = PROFILES.get(voice, {})
         self.voice = load_voice(voice, threads=threads)
         self.speed = speed or profile.get("speed", DEFAULT_SPEED)
@@ -81,7 +85,7 @@ class ToastEngine:
         self.sample_rate = self.voice.sample_rate
         self.attach_openers = attach_openers
         self.pause_model = pause_model
-        self._player = None
+        self._player = player
         self._audio_options = {k: v for k, v in (("wake_s", wake_s), ("idle_db", idle_db)) if v is not None}
         self.voice.synthesize("Warm up.")  # the first call is always slower
         if open_audio:
