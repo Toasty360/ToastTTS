@@ -13,7 +13,8 @@ Rules (same as the "smart" split):
     after a long clause the comma stays inside so the voice keeps its flow
   - cut before "because / but / although ..." once the piece has 6+ words
   - first piece: if no pause point turns up within a few words, cut anyway
-    so speech can start fast ("flash" piece)
+    so speech can start fast ("flash" piece). A pause point that's already
+    in view wins if it costs at most twice as long to synthesize.
   - running low: if the audio queued for playback is about to run out
     (a slow LLM), stop waiting for the ideal spot and take the first
     reasonable one. A short hesitation sounds human; dead air doesn't.
@@ -46,6 +47,19 @@ LEANING_WORDS = {
     "those", "is", "are", "was", "were", "be", "as", "than", "very", "so",
 }
 PIVOT_MIN_WORDS = 6
+
+# Synthesis time is a fixed overhead plus a cost per spoken character. The
+# overhead is worth about 11 characters on amy and 22 on Kokoro (2026-10-02).
+OVERHEAD_CHARS = 15
+# A hurried piece may run to a pause point if that costs at most this many
+# times the quick cut: "Wisdom is the right use of knowledge." stays whole.
+MAX_COST_RATIO = 2.0
+
+
+def synthesis_cost(text):
+    # ponytail: a digit is read as several words ("347" → "three hundred
+    # forty-seven"), so count it as 7 characters; time a real synthesis if this misleads.
+    return OVERHEAD_CHARS + len(text) + 6 * sum(c.isdigit() for c in text)
 
 # Punctuation followed by a space and the start of the next word, or a dash
 # followed by the next word.
@@ -96,12 +110,13 @@ class StreamChunker:
 
         for match in _CANDIDATE.finditer(self._buffer):
             piece = self._buffer[:match.end()].strip()
-            if self._is_good_cut(piece, hurry):
+            if self._is_good_cut(piece, hurry) and not self._glued_tail(piece, match.end(), hurry):
                 cut = self._pivot_cut(words, before=match.start()) or match.end()
-                # A pause point just past the flash length is still worth
-                # the wait; one much further away is not.
-                too_far = len(self._buffer[:cut].split()) > self.flash_words + 2
-                return flash if flash and too_far else cut
+                # A pause point that's cheap enough to reach is worth the
+                # wait; one that would delay the first sound a lot is not.
+                too_slow = flash and (synthesis_cost(self._buffer[:cut].strip())
+                                      > MAX_COST_RATIO * synthesis_cost(self._buffer[:flash].strip()))
+                return flash if too_slow else cut
 
         if pivot := self._pivot_cut(words):
             return min(pivot, flash) if flash else pivot
@@ -124,6 +139,21 @@ class StreamChunker:
             clause = piece.rstrip(",").split(",")[-1]
             return len(clause.split()) <= self.short_piece_words
         return True
+
+    def _glued_tail(self, piece, end, hurry):
+        """"Good evening, | sir." sounds broken: a lone last word after a comma
+        (sir, a name, please) is said in one breath with the words before it.
+        A number stays a list item ("12, 45, 108.")."""
+        if ending_mark(piece) != ",":
+            return False
+        tail = self._buffer[end:].split()
+        if tail and re.match(r"[#$]?\d", tail[0]):
+            return False
+        if tail and tail[0][-1] in ".?!":
+            return True
+        # ponytail: a live stream's first piece can't wait to see the tail, so
+        # "Good evening, | sir." is still cut there; waiting costs a word of TTFA.
+        return len(tail) < 2 and not hurry
 
     def _pivot_cut(self, words, before=None):
         """Position just before a pivot word like "because", if the piece

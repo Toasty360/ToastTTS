@@ -10,8 +10,8 @@ The output device is opened once and kept running: opening it takes
 first audio. "low" latency keeps the sound card's own buffer small, so
 audio is heard sooner after it's queued.
 
-When idle it plays very quiet room tone (the same -60 dB hiss that runs
-under our speech) rather than exact digital silence. Some outputs,
+When idle it plays very quiet room tone (a -60 dB hiss; speech itself has
+none since D44) rather than exact digital silence. Some outputs,
 especially monitor/TV speakers over HDMI or DisplayPort and some Bluetooth
 devices, mute on digital silence and take hundreds of ms to wake up, which
 swallows the first word (research/notebook/09).
@@ -28,7 +28,7 @@ DEVICE_WAKE_S = 0.6  # how long a freshly opened device runs before the first wo
 
 class LivePlayer:
     def __init__(self, sample_rate, latency="low", keep_awake=True, idle_db=None, wake_s=DEVICE_WAKE_S):
-        """idle_db: loudness of the keep-awake room tone (default -60 dB, same as
+        """idle_db: loudness of the keep-awake room tone (default -60 dB; was the level
         under speech). wake_s: how long a freshly opened device runs before the
         first word; some monitors/TVs need more than the default."""
         import sounddevice as sd
@@ -39,6 +39,10 @@ class LivePlayer:
         self._chunks = collections.deque()
         self._current = np.zeros(0, dtype=np.float32)
         self._lock = threading.Lock()
+        # Sample counts of queued audio (idle tone not included): what the
+        # sound card has taken so far, and where the next added chunk starts.
+        self.played = 0
+        self.queued = 0
         self._idle = RoomTone(sample_rate, level_db=idle_db, seed=1) if keep_awake else None
         self.wake_s = wake_s
         self._stream = sd.OutputStream(samplerate=sample_rate, channels=1, dtype="float32",
@@ -47,8 +51,20 @@ class LivePlayer:
         self.started_at = time.perf_counter()
 
     def add(self, chunk):
+        """Queue a chunk; returns the sample position where it will start."""
         with self._lock:
             self._chunks.append(np.asarray(chunk, dtype=np.float32))
+            start = self.queued
+            self.queued += len(chunk)
+            return start
+
+    def clear(self, fade_ms=20):
+        """Barge-in: fade out what's playing within fade_ms and drop the rest."""
+        with self._lock:
+            n = min(len(self._current), int(self.sample_rate * fade_ms / 1000))
+            self._current = self._current[:n] * np.linspace(1, 0, n, dtype=np.float32)
+            self._chunks.clear()
+            self.queued = self.played + n
 
     def _fill(self, out, frames, time_info, status):
         written = 0
@@ -62,6 +78,7 @@ class LivePlayer:
                 out[written:written + take, 0] = self._current[:take]
                 self._current = self._current[take:]
                 written += take
+                self.played += take
         out[written:, 0] = self._idle.next(frames - written) if self._idle else 0.0
 
     def wait_until_awake(self):

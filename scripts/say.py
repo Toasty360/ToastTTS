@@ -12,7 +12,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from toast.engine import DEFAULT_SPEED, DEFAULT_VOICE, ToastEngine
+from toast.engine import DEFAULT_VOICE, PROFILES, ToastEngine
 
 
 def report(result):
@@ -29,8 +29,8 @@ def stdin_stream():
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("text", nargs="*", help="text to speak; '-' reads a stream from stdin; none = interactive")
-    parser.add_argument("--voice", default=DEFAULT_VOICE)
-    parser.add_argument("--speed", type=float, default=DEFAULT_SPEED)
+    parser.add_argument("--voice", default=DEFAULT_VOICE, help=f"a profile ({', '.join(PROFILES)}) or any voice name")
+    parser.add_argument("--speed", type=float, help="default: the voice's profile speed")
     parser.add_argument("--save", type=Path, help="also write the audio to this .wav file")
     parser.add_argument("--no-play", action="store_true", help="don't play, just make (and --save) the audio")
     parser.add_argument("--wake", type=float, help="seconds the speakers run before the first word (default 0.6)")
@@ -58,7 +58,7 @@ def main():
         elif args.text:
             run(" ".join(args.text))
         else:
-            print(f"ToastTTS ({tts.voice.name}, speed {args.speed}). Type a line and press Enter; empty line to quit.")
+            print(f"ToastTTS ({tts.voice.name}, speed {tts.speed}). Type a line and press Enter; empty line to quit.")
             while (line := input("> ").strip()):
                 run(line)
 

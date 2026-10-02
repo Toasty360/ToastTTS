@@ -9,8 +9,8 @@ For every piece:
   2. fade the edges so nothing clicks
   3. add a pause whose length depends on the punctuation, with a little
      randomness so it never sounds like a metronome
-Quiet "room tone" runs under everything, so pauses sound like a person in
-a room, not a recording that switched off.
+Pauses are clean silence: the -60 dB room tone under everything (D5) was
+heard as background noise on Kokoro, so it was dropped.
 
 Audio comes out as a stream (a generator), so the first piece can start
 playing while the rest is still being made.
@@ -58,7 +58,7 @@ SOFT_TAIL_MS = 500   # set with experiments/e10 to match Kokoro / Soniox (E09)
 SOFT_TAIL_DB = -6.0
 
 FADE_MS = 12
-ROOM_TONE_DB = -60  # very quiet: felt more than heard
+ROOM_TONE_DB = -60  # keep-awake hiss the player plays while idle (D23)
 
 
 def trim_silence(audio, sample_rate, threshold_db=-45, keep_start_ms=10, keep_end_ms=25):
@@ -240,7 +240,7 @@ def plan_pieces(text, split="smart"):
 
 
 def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms=None,
-                 max_pause_ms=None):
+                 max_pause_ms=None, on_piece=None):
     """Yield audio chunks: a spoken piece, then its pause, for each piece.
 
     `pieces` can arrive over time (from a live LLM), which is why every piece
@@ -256,10 +256,12 @@ def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms
     pauses longer than this are shrunk to it (see clamp_pauses). None (the
     default) leaves the model's audio untouched. The pauses *between* pieces
     always come from pause_ms / the table and are never clamped.
+
+    `on_piece` is called with each piece's text just before its speech chunk
+    is yielded, so a caller can tell which audio says which words.
     """
     rng = np.random.default_rng(seed)
     sr = voice.sample_rate
-    room = RoomTone(sr, seed=seed)
     starts_sentence = True
 
     for piece, ends_sentence in pieces:
@@ -270,14 +272,16 @@ def speak_pieces(voice, pieces, speed=1.0, seed=0, final_slowdown=True, pause_ms
         if max_pause_ms is not None:
             audio = clamp_pauses(audio, sr, max_pause_ms=max_pause_ms)
         speech = fade_edges(soften_ending(audio, sr), sr)
-        yield np.clip(speech + room.next(len(speech)), -1.0, 1.0)
+        if on_piece is not None:
+            on_piece(piece)
+        yield np.clip(speech, -1.0, 1.0)
 
         ms = pause_ms(piece, ends_sentence) if pause_ms is not None else None
         if ms is None:
             low, high = OPENER_PAUSE_MS if is_opener(piece) else PAUSES_MS.get(ending_mark(piece), PAUSES_MS[""])
             ms = rng.uniform(low, high)
         if ms > 0:
-            yield room.next(int(sr * ms / 1000))
+            yield np.zeros(int(sr * ms / 1000), dtype=np.float32)
         starts_sentence = ends_sentence
 
 
@@ -290,7 +294,7 @@ def stream_speech(voice, text, split="smart", speed=1.0, seed=0, pause_ms=None,
 
 
 def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=None,
-                    max_pause_ms=None):
+                    max_pause_ms=None, on_piece=None, low_queue_s=LOW_QUEUE_SECONDS):
     """Speech for text that arrives bit by bit, e.g. an LLM reply.
 
     Playback starts with the first chunk, so at any moment we know how much
@@ -301,6 +305,8 @@ def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=Non
     speak_pieces. None (default) uses the hand-written PAUSES_MS table.
     `max_pause_ms`: optional guardrail on the model's own mid-piece pauses,
     as in speak_pieces. None (default) leaves the model's audio untouched.
+    `low_queue_s`: hurry when less audio than this is queued; slower voices
+    need a bigger margin, since their next piece takes longer to make.
     """
     chunker = chunker or StreamChunker()
     first_audio_at = None
@@ -310,7 +316,7 @@ def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=Non
         if first_audio_at is None:
             return False
         queued = audio_made - (time.perf_counter() - first_audio_at)
-        return queued < LOW_QUEUE_SECONDS
+        return queued < low_queue_s
 
     chunker.running_low = running_low
 
@@ -320,7 +326,7 @@ def stream_from_llm(voice, tokens, speed=1.0, seed=0, chunker=None, pause_ms=Non
         yield from chunker.finish()
 
     for chunk in speak_pieces(voice, pieces(), speed, seed, pause_ms=pause_ms,
-                             max_pause_ms=max_pause_ms):
+                             max_pause_ms=max_pause_ms, on_piece=on_piece):
         if first_audio_at is None:
             first_audio_at = time.perf_counter()
         audio_made += len(chunk) / voice.sample_rate

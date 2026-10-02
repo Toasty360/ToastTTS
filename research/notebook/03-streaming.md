@@ -27,7 +27,8 @@ A cut happens only once **the start of the next word has been seen**. That one r
 | Cut before *because / but / although / though / unless / whereas* once the piece has 6+ words | a natural breathing point ("…leave by noon \| because traffic…") |
 | **Flash:** the first piece may cut after 4 words if no pause point comes sooner, but never right after a number or initial ("at 3 \| PM") | fast start |
 | **Running low:** if less than 0.4 s of audio is queued, accept any comma or a 4-word cut | a short hesitation sounds human; dead air doesn't |
-| When hurrying, prefer a pause point within 6 words over the 4-word cut | "building a fast voice pipeline," beats "building a fast voice \| pipeline," |
+| When hurrying, prefer a visible pause point that costs at most 2× the 4-word cut to synthesize ([D42](../decisions.md)) | "Wisdom is the right use of knowledge." beats "Wisdom is the right \| use of knowledge." |
+| A lone last word after a comma stays attached ([D43](../decisions.md)) | "Good evening, sir." not "Good evening, \| sir." |
 | Cut long run-ons (24+ words) before a conjunction | safety ceiling |
 
 ## Results (3922 voice, then lessac, then amy)

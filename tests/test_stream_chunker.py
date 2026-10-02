@@ -40,8 +40,14 @@ def test_first_piece_is_cut_early_when_no_comma_comes():
 
 def test_first_piece_stays_short_when_whole_text_arrives_at_once():
     chunker = StreamChunker()
-    pieces = chunker.feed("There's a slight delay with your order, but it ships Friday.") + chunker.finish()
+    pieces = chunker.feed("There's a slight delay with your $347.89 order, but it ships Friday.") + chunker.finish()
     assert pieces[0][0] == "There's a slight delay"
+
+
+def test_first_piece_runs_to_a_pause_point_that_is_cheap_to_reach():
+    chunker = StreamChunker()
+    pieces = chunker.feed("Wisdom is the right use of knowledge. To know is not to be wise.") + chunker.finish()
+    assert pieces[0][0] == "Wisdom is the right use of knowledge."
 
 
 def test_flash_cut_does_not_split_a_number_from_its_unit():
@@ -80,3 +86,11 @@ def test_running_low_takes_the_first_reasonable_cut():
     chunker.running_low = lambda: True
     hurried = chunker.feed(text + " ") + chunker.finish()
     assert hurried[1][0] == "building a fast voice pipeline,"
+
+
+def test_lone_last_word_after_a_comma_stays_attached():
+    chunker = StreamChunker()
+    pieces = chunker.feed("Good evening, sir. All systems are online.") + chunker.finish()
+    assert pieces[0][0] == "Good evening, sir."
+    assert pieces_from("It works. Thank you, John. Bye.") == ["It works.", "Thank you, John.", "Bye."]
+    assert pieces_from("It works. Pick 12, 45, 108.") == ["It works.", "Pick 12,", "45,", "108."]

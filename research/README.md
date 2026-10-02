@@ -5,7 +5,7 @@
 Small on-device TTS models are fast but speak like they are reading a list: no pauses where a person would breathe, and a flat, even pace. ToastTTS is a streaming layer around such models (Piper, VITS) that:
 
 - splits text at natural pause points as it arrives from an LLM;
-- inserts punctuation-dependent pauses with smooth fades and continuous room tone;
+- inserts punctuation-dependent pauses with smooth fades (room tone was dropped in D44);
 - starts speaking before the reply is complete.
 
 **Results** on one laptop CPU (i7-13700H, 2026-09-25):

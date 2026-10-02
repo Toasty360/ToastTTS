@@ -16,12 +16,24 @@ from toast.pronounce import apply_respellings
 MODELS_DIR = Path(__file__).resolve().parent.parent / "models"
 
 
+def _cpu_session(model_path, threads):
+    """An ONNX session limited to `threads` CPU threads, so speech shares the
+    CPU with a speech recognizer and an LLM instead of grabbing every core."""
+    import onnxruntime as ort
+
+    options = ort.SessionOptions()
+    options.intra_op_num_threads = threads
+    return ort.InferenceSession(str(model_path), options, providers=["CPUExecutionProvider"])
+
+
 class PiperEngine:
     def __init__(self, voice_name="en_US-lessac-medium", speaker=None,
-                 noise_scale=None, noise_w_scale=None):
+                 noise_scale=None, noise_w_scale=None, threads=None):
         from piper import PiperVoice
 
         self._voice = PiperVoice.load(MODELS_DIR / f"{voice_name}.onnx")
+        if threads:
+            self._voice.session = _cpu_session(MODELS_DIR / f"{voice_name}.onnx", threads)
         # Two randomness knobs (None = whatever the voice file says; libritts_r
         # says 0.333 for both, which sounds flat and bored):
         #   noise_scale    randomness of the sound itself: more expressive, but
@@ -88,11 +100,13 @@ class KokoroEngine:
 
     sample_rate = 24000
 
-    def __init__(self, voice="af_heart", precision="fp32"):
+    def __init__(self, voice="af_heart", precision="fp32", threads=None):
         from kokoro_onnx import Kokoro
 
-        model = "kokoro-v1.0.onnx" if precision == "fp32" else f"kokoro-v1.0.{precision}.onnx"
-        self._kokoro = Kokoro(str(MODELS_DIR / "kokoro" / model), str(MODELS_DIR / "kokoro" / "voices-v1.0.bin"))
+        model = MODELS_DIR / "kokoro" / ("kokoro-v1.0.onnx" if precision == "fp32" else f"kokoro-v1.0.{precision}.onnx")
+        voices = str(MODELS_DIR / "kokoro" / "voices-v1.0.bin")
+        self._kokoro = (Kokoro.from_session(_cpu_session(model, threads), voices) if threads
+                        else Kokoro(str(model), voices))
         self._voice = voice
         self._lang = "en-gb" if voice.startswith("b") else "en-us"
         self.name = f"kokoro:{voice}" + ("" if precision == "fp32" else f":{precision}")
@@ -104,13 +118,14 @@ class KokoroEngine:
         return np.asarray(audio, dtype=np.float32).reshape(-1)
 
 
-def load_voice(name):
+def load_voice(name, threads=None):
     """name is "piper", "kitten" or "kokoro", optionally with details:
     "piper:en_US-libritts_r-medium:3922", "kitten:micro", "kitten:mini:Luna",
     "kokoro:af_heart", "kokoro:af_heart:int8".
-    "amy" is the default voice (en_US-amy-medium, best at speed 1.2): natural,
-    0 wrong words in our benchmark, fast. "lessac" (en_US-lessac-medium) and
-    "3922" (libritts_r) are shortcuts too.
+    "daniel" (kokoro:bm_daniel) and "amy" (en_US-amy-medium) are the two
+    tuned voices, both at speed 1.2 (see toast/engine.py PROFILES).
+    "lessac" (en_US-lessac-medium) and "3922" (libritts_r) are shortcuts too.
+    threads: cap the CPU threads a Piper or Kokoro voice may use (None = all).
     Piper randomness can be added after "@": "3922@0.333/0.8" means
     noise_scale 0.333, noise_w_scale 0.8. "+lively" means "@0.667/0.8".
     """
@@ -126,13 +141,15 @@ def load_voice(name):
         name = "piper:en_US-lessac-medium"
     if name == "amy":
         name = "piper:en_US-amy-medium"
+    if name == "daniel":
+        name = "kokoro:bm_daniel"
     kind, *options = name.split(":")
     if kind == "piper":
-        return PiperEngine(*options, noise_scale=noise[0], noise_w_scale=noise[1])
+        return PiperEngine(*options, noise_scale=noise[0], noise_w_scale=noise[1], threads=threads)
     if kind == "kitten":
         model = f"KittenML/kitten-tts-{options[0]}-0.8" if options else "KittenML/kitten-tts-mini-0.8"
         voice = options[1] if len(options) > 1 else "Jasper"
         return KittenEngine(model, voice)
     if kind == "kokoro":
-        return KokoroEngine(*options)  # "kokoro", "kokoro:af_bella", "kokoro:af_heart:int8"
+        return KokoroEngine(*options, threads=threads)  # "kokoro", "kokoro:af_bella", "kokoro:af_heart:int8"
     raise ValueError(f"Unknown voice '{name}'. Use 'piper', 'kitten' or 'kokoro'.")
