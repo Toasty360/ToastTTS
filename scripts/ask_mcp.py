@@ -17,6 +17,7 @@ import plistlib
 import subprocess
 import sys
 import threading
+import traceback
 from pathlib import Path
 
 from mcp.server.mcpserver import MCPServer
@@ -49,7 +50,7 @@ DIALOG = """on run argv
   end timeout
 end run"""
 
-mcp = MCPServer("ask-me")
+mcp = MCPServer("ask-me", log_level="WARNING")  # no access-log line per request
 _tts = None
 _one_at_a_time = threading.Lock()  # one of you: sessions asking at once take turns
 
@@ -63,11 +64,18 @@ def ask_user(question: str, options: list[str] | None = None) -> str:
     the user may also add a note. Blocks until answered."""
     with _one_at_a_time:
         spoken = question + (" Options: " + ", ".join(options) + "." if options else "")
-        speech = _tts.speak(spoken)
-        dialog = subprocess.run(["osascript", "-e", DIALOG, question, *(options or [])],
-                                capture_output=True, text=True)
-        speech.stop()
-        _tts.close()  # don't leave the idle keep-awake tone running between questions
+        try:
+            speech = _tts.speak(spoken)
+        except Exception:
+            traceback.print_exc()  # no voice; still ask with the dialog
+            speech = None
+        try:
+            dialog = subprocess.run(["osascript", "-e", DIALOG, question, *(options or [])],
+                                    capture_output=True, text=True)
+        finally:
+            if speech:
+                speech.stop()
+            _tts.close()  # don't leave the idle keep-awake tone running between questions
     if dialog.returncode:
         return f"(dialog failed: {dialog.stderr.strip()})"
     return dialog.stdout.strip() or "(empty answer)"
